@@ -2,13 +2,8 @@
 
 A = |2|5|
     |1|3|
-A = 
-```
-2 5
-1 3
-```
 
-	| Syntax | Description |
-| --- | --- |
+| Syntax | Description |
+| ---- | ---- |
 | 2 | 5 |
 | 1 | 3 |
