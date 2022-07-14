@@ -7,7 +7,12 @@
 *how
 
 # WHAT THE FUCK
+# SUKA NU I NAHUI KAK BLAT
 
+
+	- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 
 <H1> how </H1>
 
