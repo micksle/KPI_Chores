@@ -4,7 +4,7 @@
 
 # я нахуй не понимаю что блять за залупа 
 
-**writing smt
+# KPI_Chores
 #and where is teh header
 
 
