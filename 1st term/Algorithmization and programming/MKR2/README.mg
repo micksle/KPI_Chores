@@ -4,13 +4,8 @@
 
 # я нахуй не понимаю что блять за залупа 
 
-$\sqrt{2x}$
-
-** smt 
-*how
-
-# WHAT THE FUCK
-# SUKA NU I NAHUI KAK BLAT
+**writing smt
+#and where is teh header
 
 
 - [x] Write the press release
