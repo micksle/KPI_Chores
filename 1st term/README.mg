@@ -1,7 +1,3 @@
-# Это нахуй худший сайт что я видел блять это же пиздец эта залупа нихуя не может сделать вы че аухели7
+# Here will be the example of my works at 1st term
 
-**гандоны блять
-
-## sosite hui
-
-# faggots
+**i mean the term**
