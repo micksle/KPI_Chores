@@ -61,7 +61,6 @@ namespace Lab1
             }
 
             GamesCount++;
-            // CurrentRating += rating;
             games.Add(new Game(opponentName, "Victory", rating));
         }
 
@@ -73,7 +72,6 @@ namespace Lab1
             }
 
             GamesCount++;
-            // CurrentRating -= rating;
             games.Add(new Game(opponentName, "Defeat", -rating));
         }
 
