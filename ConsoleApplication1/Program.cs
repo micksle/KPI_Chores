@@ -8,6 +8,7 @@ namespace ConsoleApplication1
         {
             Console.Write("new");
             Console.Write("new");
+            Console.Write("new");
         }
     }
 }
