@@ -7,6 +7,7 @@ namespace ConsoleApplication1
         public static void Main(string[] args)
         {
             Console.Write("new");
+            Console.Write("new");
         }
     }
 }
