@@ -40,13 +40,18 @@ h2 {
     font-size: 50px;
     color: #FFFAF0;;
     padding-top: 15px;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
+}
+
+li {
+    display:inline-block;
 }
 
 .navigation {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #FFFAF0;;
     margin-inline: 10px;
+    display:inline-block;
 }
 
 .div_photos {
