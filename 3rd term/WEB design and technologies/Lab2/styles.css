@@ -1,0 +1,313 @@
+body {
+    margin: 0px;
+    background-color: #F8F8FF;
+}
+
+p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin: 0 30px;
+    text-align: justify;
+}
+
+
+h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0px;
+}
+
+/* --------------------------------------------------------HEADER-------------------------------------------------------- */
+
+header {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    height: 100px;
+    box-shadow: 0 0 25px rgba(0,0,0,1);
+}
+
+#header_title {
+    text-align: center;
+    font-size: 50px;
+    color: #F8F8FF;
+    padding-top: 15px;
+}
+
+#header_additional_title {
+    font-size: 18px;
+    color: #F8F8FF;
+    padding-left: 80%;
+}
+
+/* --------------------------------------------------------TEXT-SECTION-------------------------------------------------------- */
+
+#first_part {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+#left_side_first {
+    float: left;
+    width: 70%;
+    text-align: justify;
+    margin: 30 30px;
+    margin-bottom: 30px;
+}
+
+#picture1 {
+    height: 80px;
+    float: left;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#picture2 {
+    height: 80px;
+    float: right;
+    margin-left: 20px;
+}
+
+#picture3 {
+    height: 80px;
+}
+
+#right_side_first img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+#right_side {
+    float: right;
+    width: 30%;
+}
+
+#z1 {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+  
+#z2 {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-left: 70px;
+    margin-top: -50px;
+}
+
+#z3 {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    margin-left: 140px;
+    margin-top: -50px;
+}
+
+/* --------------------------------------------------------FORMS-SECTION-------------------------------------------------------- */
+
+#second_part {
+    background-color: black;
+    clear: both; 
+    position: relative;                                                    /* might be deleted?? */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    padding-top: 10px;                                                     /* delete for sticky*/
+}
+
+nav {
+    /* position: sticky;                                                    made sticky? */
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+li {
+    display: inline-block;
+}
+
+.link {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-inline: 10px;
+    
+}
+a:hover {
+    color: #00ffff;
+}
+
+.input {
+    border-radius: 10px;
+    margin-bottom: 25px;
+    width: 150px;
+    padding: 10px 10px;
+    background-color: #F8F8FF;
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: #F8F8FF; 
+}
+/* -------------------------------------------Registration-form------------------------------------------- */
+
+#registration {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#registration_form {
+    display:inline-block;
+    width: 800px;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+    background-color:#F8F8FF;
+}
+
+#right_side_second {
+    float: left;
+    width: 50%;
+}
+
+#left_side_second {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+#registration_icon {
+    width: 100px;
+    margin-bottom: 25px;
+}
+
+.input_block {
+    width: 300px;
+    display: flex;
+    padding-left: 40px;
+}
+
+.label_block {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 10px 10px;
+}
+
+#submit_area {
+    clear: both;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.check_block {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 10px 5px;
+    width: 200px;
+}
+
+#check {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 10px;
+    margin-bottom: 25px;
+}
+
+#reset_area {
+    clear: both;
+    align-items: center;
+}
+
+/* -------------------------------------------Login-form------------------------------------------- */
+
+#login {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#login_form {
+    display: inline-block;
+    width: 300px;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 250, 240, 0.5);
+    background-color: #F8F8FF;
+    text-align: center;
+}
+
+/* -------------------------------------------Feedback-form------------------------------------------- */
+
+#feedback {
+    text-align: center;
+    /* position: sticky;  */
+    bottom: 30px; 
+    z-index: 10; 
+    background-color: #F8F8FF; 
+    box-shadow: 0 0 25px rgba(255, 250, 240, 0.6);
+}
+
+#feedback_form {
+    display: inline-block;  
+    width: 600px;
+    padding: 40px 60px;
+    margin: 40px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 0 0 25px rgba(0,0,0,1);
+    background-color: #F8F8FF; 
+    text-align: center;
+}
+
+#input_area {
+    float: left;
+    text-align: center;
+    margin-right: 100px;
+}
+
+#text_area {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    background-color: #F8F8FF;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#button_area {
+    clear: both;
+    align-items: center;
+}
+
+/* --------------------------------------------------------FOOTER-------------------------------------------------------- */
+
+footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: #F8F8FF; 
+    font-size: 18px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+#footer_links {
+    float: left;
+    margin-left: 30px;  
+}
+
+#footer_text {
+    margin-top: 5px;
+    margin-left: 9px;
+}
+
+.footer_logo {
+    width:50px;
+    margin-inline: 10px;
+    margin-top: 10px;
+}
+
+#footer_copyright {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 80%;
+}
