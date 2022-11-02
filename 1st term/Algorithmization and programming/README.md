@@ -1,3 +1,3 @@
-## Тема: Робота з масивами
+# Algorithmization and programming
 
-Елементи масиву, розміщені перед першим додатнім, впорядкувати за зростанням
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
