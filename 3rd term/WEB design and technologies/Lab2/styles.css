@@ -112,10 +112,20 @@ header {
     padding-top: 10px;                                                     /* delete for sticky*/
 }
 
+#navigation {
+    position: sticky;
+    top: -1px;
+    z-index: 5;
+    display:
+    inline-block;
+    width: 100%;
+    background-color: black;
+    border-bottom: solid 1px #f8f8ff;
+    box-shadow: 0 -25px 25px -25px rgba(248, 248, 255, 0.6) inset;
+}
+
 nav {
-    /* position: sticky;                                                    made sticky? */
     text-align: center;
-    padding-bottom: 16px;
 }
 
 li {
@@ -154,6 +164,7 @@ button {
 #registration {
     text-align: center;
     margin-bottom: 40px;
+    padding-top: 60px;
 }
 
 #registration_form {
@@ -213,6 +224,7 @@ button {
 #check {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 10px;
+    padding-left: 60px;
     margin-bottom: 25px;
 }
 
@@ -225,7 +237,8 @@ button {
 
 #login {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    padding-top: 60px;
 }
 
 #login_form {
@@ -242,9 +255,8 @@ button {
 
 #feedback {
     text-align: center;
-    /* position: sticky;  */
     bottom: 30px; 
-    z-index: 10; 
+    padding-top: 10px;
     background-color: #F8F8FF; 
     box-shadow: 0 0 25px rgba(255, 250, 240, 0.6);
 }
@@ -287,6 +299,10 @@ footer {
     color: #F8F8FF; 
     font-size: 18px;
     height: 100px;
+    /* bottom: 0px; */
+    /* width: 100%; */
+    z-index: 5;
+    /* position: fixed; */
     vertical-align: middle;
 }
 

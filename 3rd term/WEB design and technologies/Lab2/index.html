@@ -42,15 +42,17 @@
 				<div id="z3"><img src="C:\Users\mickle\Desktop\WEB\images\logo2.jpg"></div>
 			</div>
 		</div>
-		
+
 		<div id="second_part">
-			<nav>
-                <ul>
-                    <li><a href="index.html#registration" class="link">Форма реєстрації</a></li>
-                    <li><a href="index.html#login"        class="link">Форма входу</a></li>
-                    <li><a href="index.html#feedback"     class="link">Форма зворотнього зв'язку</a></li>
-                </ul>
-			</nav>
+			<div id="navigation">
+				<nav>
+                	<ul>
+                    	<li><a href="index.html#registration" class="link">Форма реєстрації</a></li>
+                    	<li><a href="index.html#login"        class="link">Форма входу</a></li>
+                    	<li><a href="index.html#feedback"     class="link">Форма зворотнього зв'язку</a></li>
+                	</ul>
+				</nav>
+			</div>
 				
 			<div id="registration">
 				<form id="registration_form">
@@ -81,7 +83,7 @@
 							<label for="birth" class="label_block">Date of birth</label><input class="input" type="date" name="birth" id="birth" min="1950-01-01" max="2010-01-01" value="2000-01-01" required>
 						</div>
 						<div class="input_block">
-							<label for="country" class="label_block">Country</label><input class="input" list="countries" name="country" id="country" required>
+							<label for="country" class="label_block">Country</label><input class="input" list="countries" name="country" id="country" placeholder="country" required>
 							<datalist id="countries">
 								<option value="Ukraine">
 								<option value="Engalnd">
