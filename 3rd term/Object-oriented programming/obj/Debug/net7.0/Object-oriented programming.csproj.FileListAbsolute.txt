@@ -1,0 +1,5 @@
+C:\Users\mickle\projects\KPI_Chores\3rd term\Object-oriented programming\obj\Debug\net7.0\Object-oriented programming.csproj.AssemblyReference.cache
+C:\Users\mickle\projects\KPI_Chores\3rd term\Object-oriented programming\obj\Debug\net7.0\Object-oriented programming.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mickle\projects\KPI_Chores\3rd term\Object-oriented programming\obj\Debug\net7.0\Object-oriented programming.AssemblyInfoInputs.cache
+C:\Users\mickle\projects\KPI_Chores\3rd term\Object-oriented programming\obj\Debug\net7.0\Object-oriented programming.AssemblyInfo.cs
+C:\Users\mickle\projects\KPI_Chores\3rd term\Object-oriented programming\obj\Debug\net7.0\Object-oriented programming.csproj.CoreCompileInputs.cache

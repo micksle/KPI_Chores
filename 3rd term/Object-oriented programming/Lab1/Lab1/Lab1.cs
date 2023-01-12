@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using System.Text;
 
+enum STATE {
+    WIN,
+    LOSE;
+}
 
 namespace Lab1
 {
     internal class Lab1
     {
         public static void Main(string[] args)
-        {
-            GameAccount player1 = new GameAccount("player1", 50);
-            GameAccount player2 = new GameAccount("player2", 100);
+        {   
+            var player2 = new GameAccount("player2", 100);
+            var player1 = new GameAccount("player1", 50);
             GameAccount.PlayGame(player1, player2, 6);
         }
     }
 
     class GameAccount
     {
-        private List<Game> games = new List<Game>();
+        private var games = new List<Game>();
         public string UserName { get; }
         private int CurrentRating { get; set; }
         private int GamesCount { get; set; }
@@ -119,7 +123,7 @@ namespace Lab1
             Rating = battleRating;
             if (!Status.Equals("Defeat"))
             {
-                Index += 3;
+                Index += 1;
             }
 
             GameIndex = Index;
