@@ -42,7 +42,7 @@ namespace CourseWork
 
         private bool CheckUser(string login)
         {
-            return userService.IsUser(login);
+            return userService.UserExists(login);
         }
     }
 }

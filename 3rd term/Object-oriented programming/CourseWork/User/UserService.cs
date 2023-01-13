@@ -28,17 +28,19 @@ namespace CourseWork.User
 
             return null;
         }
-        public Guid GetUser(string userName)
+        public User GetUser(string userName)
         {
             var list = dataBase.Get();
             foreach (var u in list)
             {
                 if (u.UserName.Equals(userName))
                 {
-                    return u.Id;
+                    return u;
                 }
             }
-            return Guid.Empty;
+
+            return null;
+            // return Guid.Empty;
         }
 
         public void DeleteUser(string userName)
@@ -57,7 +59,7 @@ namespace CourseWork.User
             Console.WriteLine("User " + userName + " was not found");
         }
 
-        public bool IsUser(string userName)
+        public bool UserExists(string userName)
         {
             var list = dataBase.Get();
             // Console.WriteLine(list[0].Id);
@@ -84,6 +86,21 @@ namespace CourseWork.User
             {
                 Console.WriteLine(u);
             }
+        }
+
+        public float GetBalance(string userName)
+        {
+            if (UserExists(userName))
+            {
+                return GetUser(userName).Balance;
+            }
+
+            return 0;
+        }
+
+        public void IncreaseBalance(string userName, float amount)
+        {
+            GetUser(userName).Balance += amount;
         }
     }
 }

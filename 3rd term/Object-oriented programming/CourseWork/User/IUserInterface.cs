@@ -6,9 +6,9 @@ namespace CourseWork.User
     {
         void CreateUser(string userName);
         User GetUserByID(Guid id);
-        Guid GetUser(string userName);
+        User GetUser(string userName);
         void DeleteUser(string userName);
-        bool IsUser(string userName);
+        bool UserExists(string userName);
         void GetAllUsers();
     }
 }
