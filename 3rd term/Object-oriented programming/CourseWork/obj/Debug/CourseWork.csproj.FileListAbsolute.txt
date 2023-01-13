@@ -1,0 +1,7 @@
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\bin\Debug\Object_oriented_programming.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\bin\Debug\Object_oriented_programming.pdb
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\CourseWork.csproj.AssemblyReference.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\CourseWork.csproj.SuggestedBindingRedirects.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\Object_oriented_programming.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\Object_oriented_programming.pdb
