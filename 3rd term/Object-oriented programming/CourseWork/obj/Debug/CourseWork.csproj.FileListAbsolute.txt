@@ -5,3 +5,6 @@ C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\Co
 C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\CourseWork.csproj.CoreCompileInputs.cache
 C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\Object_oriented_programming.exe
 C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\Object_oriented_programming.pdb
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete

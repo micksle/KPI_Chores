@@ -6,11 +6,8 @@
         public float Price { get; set; }
         public string Description { get; set; }
         public int Amount { get; set;  }
-        // purpose   
-        // ID
-        
-        // public void 
-        
+        // TODO purpose / category  and ID
+
         public Product(string name, float price, string description, int amount)
         {
             Name = name;

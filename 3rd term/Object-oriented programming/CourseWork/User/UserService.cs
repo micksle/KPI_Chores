@@ -1,59 +1,44 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using CourseWork.Purchase;
 
 namespace CourseWork.User
 {
-    public class UserService : IUserInterface
+    public class UserService : IUserService
     {
-        private DataBase dataBase;
+        private DataBase.DataBase DB;
 
         public UserService()
         {
-            dataBase = new DataBase();
+            DB = new DataBase.DataBase();
         }
 
         public void CreateUser(string userName)
         {
             var user = new User(userName);
-            dataBase.Add(user);
-            Console.WriteLine("User " + userName + " created successfully");
+            DB.Users.Add(user);
+            Console.WriteLine("User " + userName + " registered successfully");
         }
 
-        public User GetUserByID(Guid id)
-        {
-            var list = dataBase.Get();
-            if (list[0].Id.Equals(id))
-            {
-                return list[0];
-            }
-
-            return null;
-        }
         public User GetUser(string userName)
         {
-            var list = dataBase.Get();
-            foreach (var u in list)
+            if (UserExists(userName))
             {
-                if (u.UserName.Equals(userName))
-                {
-                    return u;
-                }
+                return DB.Users.Find(x => x.UserName.Equals(userName));
             }
 
-            return null;
-            // return Guid.Empty;
+            return new User("unknown");
         }
 
         public void DeleteUser(string userName)
         {
-            var list = dataBase.Get();
-            foreach (var u in list)
+            if (UserExists(userName))
             {
-                if (u.UserName.Equals(userName))
-                {
-                    dataBase.Delete(u);
-                    Console.WriteLine("User " + userName + " deleted successfully");
-                    return;
-                }
+                var user = GetUser(userName);
+                DB.Users.Remove(user);
+                Console.WriteLine("User " + userName + " deleted successfully");
+                return;
             }
 
             Console.WriteLine("User " + userName + " was not found");
@@ -61,11 +46,9 @@ namespace CourseWork.User
 
         public bool UserExists(string userName)
         {
-            var list = dataBase.Get();
-            // Console.WriteLine(list[0].Id);
-            foreach (var u in list)
+            foreach (var user in DB.Users)
             {
-                if (u.UserName.Equals(userName))
+                if (user.UserName.Equals(userName))
                 {
                     return true;
                 }
@@ -74,35 +57,41 @@ namespace CourseWork.User
             return false;
         }
 
-        public void GetAllUsers()
+        public void PrintAllUsers()
         {
-            var list = dataBase.Get();
-            if (list.Count == 0)
+            if (DB.Users.Count == 0)
             {
                 Console.WriteLine("The list of users is empty");
+                return;
             }
 
-            foreach (var u in list)
-            {
-                Console.WriteLine(u);
-            }
+            DB.Users.ForEach(Console.WriteLine);
         }
 
         public float GetBalance(string userName)
         {
-            if (UserExists(userName))
+            var user = GetUser(userName).UserName;
+            if (UserExists(user))
             {
-                return GetUser(userName).Balance;
+                return GetUser(user).Balance;
             }
 
             return 0;
         }
 
+        public List<PurchaseHistory> GetHistory(string userName)
+        {
+            return GetUser(userName).Purchase.ToList();
+            // todo purchase wut 
+            // todo check if null
+        }
+
         public void IncreaseBalance(string userName, float amount)
         {
             GetUser(userName).Balance += amount;
+            // todo if sum < 0
         }
-        
+
         public void DecreaseBalance(string userName, float amount)
         {
             GetUser(userName).Balance -= amount;

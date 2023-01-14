@@ -5,7 +5,7 @@ namespace CourseWork.Product
     public interface IProductService
     {
         void CreateProduct(string productName, float price, string description, int amount);
-        Product FindProduct(string productName);
+        Product GetProduct(string productName);
         void DeleteProduct(string productName);
         bool ProductExists(string productName);
         List<Product> GetAllProducts();

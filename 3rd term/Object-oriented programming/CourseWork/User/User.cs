@@ -9,7 +9,7 @@ namespace CourseWork.User
         public string UserName { get; }
         public Guid Id { get; }
         public float Balance { get; set; }
-        public List<PurchaseHistory> Purchase;
+        public List<PurchaseHistory> Purchase { get; }
 
         public User(string userName)
         {
