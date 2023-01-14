@@ -102,5 +102,10 @@ namespace CourseWork.User
         {
             GetUser(userName).Balance += amount;
         }
+        
+        public void DecreaseBalance(string userName, float amount)
+        {
+            GetUser(userName).Balance -= amount;
+        }
     }
 }
