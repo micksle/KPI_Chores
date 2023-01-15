@@ -43,6 +43,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="DataBase\DataBase.cs" />
+        <Compile Include="DataBase\ParserDB.cs" />
         <Compile Include="Product\IProductService.cs" />
         <Compile Include="Product\ProductService.cs" />
         <Compile Include="Product\Product.cs" />
@@ -51,6 +52,7 @@
         <Compile Include="Purchase\PurchaseHistory.cs" />
         <Compile Include="UI\Controllers\AddProductController.cs" />
         <Compile Include="UI\Controllers\AuthorizationController.cs" />
+        <Compile Include="UI\Controllers\DataBaseController.cs" />
         <Compile Include="UI\Controllers\ExitController.cs" />
         <Compile Include="UI\Controllers\MainController.cs" />
         <Compile Include="UI\Controllers\ShowProductController.cs" />
@@ -63,7 +65,8 @@
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="DataBase\Files" />
+      <Content Include="DataBase\Files\Products.json" />
+      <Content Include="DataBase\Files\Users.json" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

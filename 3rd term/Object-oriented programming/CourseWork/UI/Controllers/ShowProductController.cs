@@ -1,5 +1,4 @@
-﻿using System;
-using CourseWork.Product;
+﻿using CourseWork.Product;
 
 namespace CourseWork.UI
 {
@@ -19,9 +18,8 @@ namespace CourseWork.UI
 
         public void DoAction() // TODO: what if list is empty?
         {
-            var ps = new ProductService();
-            ps.FillDB();
-            DB.Products.ForEach(Console.WriteLine);
+            var ps = new ProductService(DB);
+            ps.ShowProducts();
         }
     }
 }

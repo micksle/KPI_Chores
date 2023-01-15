@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using CourseWork.DataBase;
+using CourseWork.Product;
 using CourseWork.UI;
+using CourseWork.User;
 
 /*
  * Запит імені користувача при вході
@@ -15,15 +20,11 @@ namespace CourseWork
         public static void Main(string[] args)
         {
         Console.WriteLine("________________________________________\n");
-             
+
         var controller = new MainController();
         controller.RunProgram();
-        
-        var dataBase = new DataBase.DataBase();
-
 
         // var userService = new UserService();
-        //     
         // userService.CreateUser("Mickle");
         // Console.WriteLine("contains user " + userService.IsUser("Mickle"));
         // // Guid user1_ID = userService.GetUser("Mickle");
@@ -32,8 +33,6 @@ namespace CourseWork
         // userService.DeleteUser("Mickle");
         // Console.WriteLine("contains user " + userService.IsUser("Mickle"));
         // userService.GetAllUsers();
-        // var loginForm = new LoginForm();
-        // loginForm.Login();
         }
     }
 }

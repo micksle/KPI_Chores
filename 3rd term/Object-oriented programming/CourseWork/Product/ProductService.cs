@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CourseWork.DataBase;
 
 namespace CourseWork.Product
 {
@@ -8,9 +9,9 @@ namespace CourseWork.Product
     {
         private DataBase.DataBase DB;
 
-        public ProductService()
+        public ProductService(DataBase.DataBase dataBase)
         {
-            DB = new DataBase.DataBase();
+            DB = dataBase;
         }
 
         public void CreateProduct(string productName, float price, string description, int amount)
@@ -44,18 +45,31 @@ namespace CourseWork.Product
             Console.WriteLine("Product " + productName + " was not found");
         }
 
-        public void FillDB()
+        public List<Product> GetAllProducts()
         {
-            CreateProduct("Flower pot", 17.99f,
-                "Round ceramic flowerpot for your cosy house. Available in several sizes.", 10);
-            CreateProduct("Bath towel", 6.99f,
-                "Extra absorbent cotton towel, very wash resistant - will serve you for years.", 3);
-            CreateProduct("Irregular shaper candle", 19.99f,
-                "Candle with an irregular design. Burns up to 30 hours.", 1);
-            CreateProduct("Wool stripped rug", 52.99f,
-                "Rectangular wool rug in a combination of colours. A perfect for dull floor designs.", 16);
-            CreateProduct("Bar hand soap", 12.99f,
-                "Rectangular hand and body perfumed soap bar. It will hide all your naughties consequences", 13);
+            return DB.Products.Select(x => x).ToList();
+        }
+        
+        public void GetProductsFromDB()
+        {
+            var parser = new ParseInfo();
+            var products = parser.ReadProductsFromDB();
+            foreach (var product in products)
+            {
+                DB.Products.Add(product);
+            }
+        }
+
+        public void ShowProducts()
+        {
+            // GetProductsFromDB();
+            DB.Products.ForEach(Console.WriteLine);
+        }
+
+        public void GetProductsToDB(List<Product> products)
+        {
+            var parser = new ParseInfo();
+            parser.SaveAllProductsToDB(products);
         }
 
         public bool ProductExists(string productName)
@@ -69,11 +83,6 @@ namespace CourseWork.Product
             }
 
             return false;
-        }
-
-        public List<Product> GetAllProducts()
-        {
-            return DB.Products.Select(x => x).ToList();
         }
 
         public void ChangeAmount(string productName, int newAmount)

@@ -11,6 +11,7 @@ namespace CourseWork.UI
         public MainController()
         {
             var dataBase = new DataBase.DataBase();
+            new DataBaseController(dataBase);
             UIs = new List<IControllerInterface>(5);
             UIs.Add(new AuthorizationController(dataBase));
             UIs.Add(new ShowProductController(dataBase));

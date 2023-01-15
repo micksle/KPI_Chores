@@ -6,11 +6,12 @@ namespace CourseWork.UI
     public class AuthorizationController : IControllerInterface
     {
         private DataBase.DataBase DB { get; }
-        private UserService UserService = new UserService();
+        private UserService UserService { get; }
 
         public AuthorizationController(DataBase.DataBase dataBase)
         {
             DB = dataBase;
+            UserService  = new UserService(DB);
         }
 
         public string PrintMessage()

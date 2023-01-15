@@ -7,11 +7,11 @@ namespace CourseWork.User
 {
     public class UserService : IUserService
     {
-        private DataBase.DataBase DB;
+        private DataBase.DataBase DB { get; }
 
-        public UserService()
+        public UserService(DataBase.DataBase dataBase)
         {
-            DB = new DataBase.DataBase();
+            DB = dataBase;
         }
 
         public void CreateUser(string userName)
