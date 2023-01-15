@@ -4,7 +4,7 @@ namespace CourseWork.User
 {
     public interface IUserService
     {
-        void CreateUser(string userName);
+        void CreateUser(string userName, string password);
         User GetUser(string userName);
         void DeleteUser(string userName);
         bool UserExists(string userName);

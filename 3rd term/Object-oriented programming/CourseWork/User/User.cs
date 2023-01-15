@@ -7,14 +7,17 @@ namespace CourseWork.User
     public class User
     {
         public string UserName { get; }
-        public Guid Id { get; }
+        public string Password { get; }
+        private Guid Id { get; }
+        
         public float Balance { get; set; }
         public List<PurchaseHistory> Purchase { get; }
 
-        public User(string userName)
+        public User(string userName, string password)
         {
             Id = Guid.NewGuid();
             UserName = userName;
+            Password = password;
             Balance = 0;
         }
 

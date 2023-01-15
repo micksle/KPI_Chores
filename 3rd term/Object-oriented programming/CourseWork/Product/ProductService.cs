@@ -85,6 +85,12 @@ namespace CourseWork.Product
             return false;
         }
 
+        public void DecreaseAmount(string productName, int amount)
+        {
+            var product = GetProduct(productName);
+            product.Amount -= amount;
+        }
+        
         public void ChangeAmount(string productName, int newAmount)
         {
             var product = GetProduct(productName);

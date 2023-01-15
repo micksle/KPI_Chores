@@ -19,6 +19,11 @@ namespace CourseWork.UI
 
         public void DoAction() // TODO safe parsing
         {
+            AddProduct();
+        }
+
+        private void AddProduct()
+        {
             Console.WriteLine("Add the name of the product");
             var name = Console.ReadLine();
             Console.WriteLine("Add the price of the product");

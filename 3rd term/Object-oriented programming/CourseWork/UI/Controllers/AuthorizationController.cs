@@ -7,16 +7,17 @@ namespace CourseWork.UI
     {
         private DataBase.DataBase DB { get; }
         private UserService UserService { get; }
+        private bool Authorized { get; set; }
 
         public AuthorizationController(DataBase.DataBase dataBase)
         {
             DB = dataBase;
-            UserService  = new UserService(DB);
+            UserService = new UserService(DB);
         }
 
         public string PrintMessage()
         {
-            return " - authorize user";
+            return "Log in into your account, please";
         }
 
         public void DoAction()
@@ -26,20 +27,40 @@ namespace CourseWork.UI
 
             if (UserService.UserExists(userName))
             {
+                var isChecked = false;
+                while (isChecked == false)
+                {
+                    Console.WriteLine("Enter your password, please: ");
+                    var password = Console.ReadLine();
+                    isChecked = UserService.CheckUsersPassword(userName, password);
+                }
+
                 Console.WriteLine("Greetings, " + userName);
+                Authorized = true;
             }
             else
             {
-                Console.WriteLine("Sorry, you have to register");
-                doRegistration();
+                Console.WriteLine("Sorry, you have to register, redirect you? (Y/N)");
+                var agreement = Console.ReadLine().ToLower().Equals("y");
+                if (agreement)
+                {
+                    doRegistration();
+                }
             }
+        }
+
+        public bool GetState()
+        {
+            return Authorized;
         }
 
         private void doRegistration()
         {
             Console.Write("Enter your registration name, please: ");
             var userName = Console.ReadLine();
-            UserService.CreateUser(userName);  // todo check the name
+            Console.Write("Enter your password: ");
+            var password = Console.ReadLine();
+            UserService.CreateUser(userName, password); // todo check the name
         }
     }
 }

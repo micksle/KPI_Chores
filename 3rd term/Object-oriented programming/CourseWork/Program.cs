@@ -20,7 +20,7 @@ namespace CourseWork
         public static void Main(string[] args)
         {
         Console.WriteLine("________________________________________\n");
-
+        
         var controller = new MainController();
         controller.RunProgram();
 

@@ -14,9 +14,9 @@ namespace CourseWork.User
             DB = dataBase;
         }
 
-        public void CreateUser(string userName)
+        public void CreateUser(string userName, string password)
         {
-            var user = new User(userName);
+            var user = new User(userName, password);
             DB.Users.Add(user);
             Console.WriteLine("User " + userName + " registered successfully");
         }
@@ -28,7 +28,14 @@ namespace CourseWork.User
                 return DB.Users.Find(x => x.UserName.Equals(userName));
             }
 
-            return new User("unknown");
+            return new User("unknown", "qwertyui");
+        }
+
+        public bool CheckUsersPassword(string userName, string password)
+        {
+            var passwordService = new PasswordService(DB);
+            var user = GetUser(userName);
+            return passwordService.ComparePasswords(user ,password);
         }
 
         public void DeleteUser(string userName)

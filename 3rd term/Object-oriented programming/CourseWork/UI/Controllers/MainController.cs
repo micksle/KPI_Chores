@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using CourseWork.Product;
+using CourseWork.User;
 
 namespace CourseWork.UI
 {
     public class MainController
     {
         private List<IControllerInterface> UIs { get; }
+        private DataBase.DataBase dataBase { get; }
 
         public MainController()
         {
-            var dataBase = new DataBase.DataBase();
+            dataBase = new DataBase.DataBase();
             new DataBaseController(dataBase);
             UIs = new List<IControllerInterface>(5);
-            UIs.Add(new AuthorizationController(dataBase));
             UIs.Add(new ShowProductController(dataBase));
             UIs.Add(new AddProductController(dataBase));
+            UIs.Add(new BuyProductController(dataBase));
             UIs.Add(new ExitController());
         }
 
         public void RunProgram()
         {
-            try
+            // // throw new Exception("\n----Stopping the program----\n");
+            if (GotAuthorized(dataBase))
             {
                 while (true)
                 {
@@ -29,10 +31,19 @@ namespace CourseWork.UI
                     DoAction();
                 }
             }
-            catch (Exception)
+        }
+
+        private bool GotAuthorized(DataBase.DataBase dataBase)
+        {
+            var auto = new AuthorizationController(dataBase);
+            var access = false;
+            while (access == false)
             {
-                throw new Exception("\n----Stopping the program----\n");
+                auto.DoAction();
+                access = auto.GetState();
             }
+
+            return true;
         }
 
         private void ShowActions()
