@@ -7,6 +7,7 @@ namespace CourseWork.UI
     {
         private DataBase.DataBase DB { get; }
         private UserService UserService { get; }
+        private User.User User { get; set; }
         private bool Authorized { get; set; }
 
         public AuthorizationController(DataBase.DataBase dataBase)
@@ -35,6 +36,7 @@ namespace CourseWork.UI
                     isChecked = UserService.CheckUsersPassword(userName, password);
                 }
 
+                User = UserService.GetUser(userName);
                 Console.WriteLine("Greetings, " + userName);
                 Authorized = true;
             }
@@ -52,6 +54,11 @@ namespace CourseWork.UI
         public bool GetState()
         {
             return Authorized;
+        }
+
+        public User.User GetUser()
+        {
+            return User;
         }
 
         private void doRegistration()

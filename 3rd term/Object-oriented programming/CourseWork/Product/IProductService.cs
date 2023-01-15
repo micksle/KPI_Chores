@@ -9,6 +9,7 @@ namespace CourseWork.Product
         void DeleteProduct(string productName);
         bool ProductExists(string productName);
         List<Product> GetAllProducts();
+        bool DecreaseAmount(string productName, int amount);
         void ChangeAmount(string productName, int newAmount);
         void ChangeDescription(string productName, string newDescription);
         void ChangePrice(string productName, float newPrice);

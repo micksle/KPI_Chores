@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CourseWork.User;
 
 namespace CourseWork.UI
 {
@@ -8,22 +7,28 @@ namespace CourseWork.UI
     {
         private List<IControllerInterface> UIs { get; }
         private DataBase.DataBase dataBase { get; }
+        
+        private User.User User { get; set; }
+        private bool auth;
 
         public MainController()
         {
             dataBase = new DataBase.DataBase();
             new DataBaseController(dataBase);
+            auth = GotAuthorized(dataBase);
             UIs = new List<IControllerInterface>(5);
             UIs.Add(new ShowProductController(dataBase));
+            UIs.Add(new UserController(dataBase, User));
             UIs.Add(new AddProductController(dataBase));
-            UIs.Add(new BuyProductController(dataBase));
-            UIs.Add(new ExitController());
+            UIs.Add(new BuyProductController(dataBase, User));
+            UIs.Add(new ExitController(dataBase));
         }
 
         public void RunProgram()
         {
             // // throw new Exception("\n----Stopping the program----\n");
-            if (GotAuthorized(dataBase))
+            // if (GotAuthorized(dataBase))
+            if (auth)
             {
                 while (true)
                 {
@@ -40,6 +45,7 @@ namespace CourseWork.UI
             while (access == false)
             {
                 auto.DoAction();
+                User = auto.GetUser();
                 access = auto.GetState();
             }
 

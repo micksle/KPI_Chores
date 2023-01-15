@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using CourseWork.DataBase;
 
@@ -66,12 +67,6 @@ namespace CourseWork.Product
             DB.Products.ForEach(Console.WriteLine);
         }
 
-        public void GetProductsToDB(List<Product> products)
-        {
-            var parser = new ParseInfo();
-            parser.SaveAllProductsToDB(products);
-        }
-
         public bool ProductExists(string productName)
         {
             foreach (var product in DB.Products)
@@ -85,15 +80,25 @@ namespace CourseWork.Product
             return false;
         }
 
-        public void DecreaseAmount(string productName, int amount)
+        public bool DecreaseAmount(string productName, int amount)
         {
             var product = GetProduct(productName);
+            if (product.Amount == 0)
+            {
+                return false;
+            }
             product.Amount -= amount;
+            return true;
         }
         
         public void ChangeAmount(string productName, int newAmount)
         {
             var product = GetProduct(productName);
+            if (newAmount < 0)
+            {
+                product.Price = 0;
+                return;
+            }
             product.Amount = newAmount;
         }
 
@@ -106,6 +111,11 @@ namespace CourseWork.Product
         public void ChangePrice(string productName, float newPrice)
         {
             var product = GetProduct(productName);
+            if (newPrice < 0.99)
+            {
+                product.Price = 0.99f;
+                return;
+            }
             product.Price = newPrice;
         }
     }

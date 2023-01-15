@@ -5,19 +5,19 @@ namespace CourseWork.Purchase
     public class PurchaseHistory
     {
         public string PurchasedItem { get; }
-        public float PurchasedValue { get; }
+        public float PurchasedPrice { get; }
         public DateTime Date { get; }
 
-        public PurchaseHistory(string purchasedItem, float purchasedValue)
+        public PurchaseHistory(string purchasedItem, float purchasedPrice)
         {
             PurchasedItem = purchasedItem;
-            PurchasedValue = purchasedValue;
+            PurchasedPrice = purchasedPrice;
             Date = DateTime.Now;
         }
 
         public override string ToString()
         {
-            return PurchasedItem + " price: " + PurchasedValue + " | " + Date;
+            return PurchasedItem + " price: " + PurchasedPrice + " | " + Date;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace CourseWork.User
             UserName = userName;
             Password = password;
             Balance = 0;
+            Purchase = new List<PurchaseHistory>();
         }
 
         public override string ToString()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CourseWork.Purchase;
 
 namespace CourseWork.User
 {
@@ -9,8 +10,8 @@ namespace CourseWork.User
         void DeleteUser(string userName);
         bool UserExists(string userName);
         void PrintAllUsers();
-        List<Purchase.PurchaseHistory> GetHistory(string userName);
-        void IncreaseBalance(string userName, float amount);
-        void DecreaseBalance(string userName, float amount);
+        List<PurchaseHistory> GetHistory(User user);
+        void IncreaseBalance(User user, float amount);
+        bool DecreaseBalance(User user, float price, int amount);
     }
 }

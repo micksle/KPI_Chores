@@ -3,9 +3,12 @@
     public class Product
     {
         public string Name { get; }
+
         public float Price { get; set; }
+
         public string Description { get; set; }
-        public int Amount { get; set;  }
+
+        public int Amount { get; set; }
         // TODO purpose / category  and ID
 
         public Product(string name, float price, string description, int amount)
@@ -18,7 +21,7 @@
 
         public override string ToString()
         {
-            return "Product " + Name + ", that costs " + Price + "$ - " + Description + " Only " + Amount + " left.";
+            return Name + "  | price: " + Price + "$  | " + Description + "  | " + Amount + " left.";
         }
     }
 }

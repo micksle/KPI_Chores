@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
@@ -21,17 +20,17 @@ namespace CourseWork.DataBase
         //     File.WriteAllText(path, serialized);
         // } //todo redundant?
 
-        public void SaveAllProductsToDB(List<Product.Product> products)
+        public void SaveAllProductsToDB(DataBase dataBase)
         {
             var path = string.Concat(FilePath, "Products.json");
-            var serialized = JsonConvert.SerializeObject(products);
+            var serialized = JsonConvert.SerializeObject(dataBase.Products);
             File.WriteAllText(path, serialized);
         }
 
-        public void SaveAllUsersToDB(List<User.User> users)
+        public void SaveAllUsersToDB(DataBase dataBase)
         {
             var path = string.Concat(FilePath, "Users.json");
-            var serialized = JsonConvert.SerializeObject(users);
+            var serialized = JsonConvert.SerializeObject(dataBase.Users);
             File.WriteAllText(path, serialized);
         }
 

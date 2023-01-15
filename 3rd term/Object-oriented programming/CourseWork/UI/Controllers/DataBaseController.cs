@@ -26,6 +26,12 @@ namespace CourseWork.UI
             InvokeUsersDB();
         }
 
+        public void CloseDB()
+        {
+            SleepProductsDB();
+            SleepUsersDB();
+        }
+
         private void InvokeProductsDB()
         {
             var products = Parse.ReadProductsFromDB();
@@ -42,6 +48,16 @@ namespace CourseWork.UI
             {
                 DB.Users.Add(user);
             } // todo safe method
+        }
+        
+        private void SleepProductsDB()
+        {
+            Parse.SaveAllProductsToDB(DB);
+        }
+
+        private void SleepUsersDB()
+        {
+            Parse.SaveAllUsersToDB(DB);
         }
     }
 }

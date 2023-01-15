@@ -35,7 +35,7 @@ namespace CourseWork.User
         {
             var passwordService = new PasswordService(DB);
             var user = GetUser(userName);
-            return passwordService.ComparePasswords(user ,password);
+            return passwordService.ComparePasswords(user, password);
         }
 
         public void DeleteUser(string userName)
@@ -75,33 +75,63 @@ namespace CourseWork.User
             DB.Users.ForEach(Console.WriteLine);
         }
 
-        public float GetBalance(string userName)
+        public float GetBalance(User user)
         {
-            var user = GetUser(userName).UserName;
-            if (UserExists(user))
+            if (UserExists(user.UserName))
             {
-                return GetUser(user).Balance;
+                return user.Balance;
             }
-
+            
             return 0;
         }
 
-        public List<PurchaseHistory> GetHistory(string userName)
+        public void AddPurchase(User user, PurchaseHistory purchase)
         {
-            return GetUser(userName).Purchase.ToList();
+            if (UserExists(user.UserName))
+            {
+                user.Purchase.Add(purchase);
+            }
+        }
+
+        public List<PurchaseHistory> GetHistory(User user)
+        {
+            if (UserExists(user.UserName))
+            {
+                return user.Purchase.ToList();   
+            }
+
+            return new List<PurchaseHistory>();
             // todo purchase wut 
             // todo check if null
         }
 
-        public void IncreaseBalance(string userName, float amount)
+        public void IncreaseBalance(User user, float amount)
         {
-            GetUser(userName).Balance += amount;
+            if (UserExists(user.UserName))
+            {
+                user.Balance += amount;
+            }
             // todo if sum < 0
         }
 
-        public void DecreaseBalance(string userName, float amount)
+        public void Action()
         {
-            GetUser(userName).Balance -= amount;
+            Console.WriteLine("What would you like to do: ");
+            Console.WriteLine("show balance" +
+                              "increase balance" +
+                              "show purchase history");
+        }
+        
+        public bool DecreaseBalance(User user, float price, int amount)
+        {
+            Console.WriteLine("price*amount: " + amount * price);
+            if (price * amount >= user.Balance)
+            {
+                user.Balance -= price * amount;
+                return true;
+            }
+
+            return false;
         }
     }
 }

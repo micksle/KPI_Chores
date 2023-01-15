@@ -58,6 +58,7 @@
         <Compile Include="UI\Controllers\ExitController.cs" />
         <Compile Include="UI\Controllers\MainController.cs" />
         <Compile Include="UI\Controllers\ShowProductController.cs" />
+        <Compile Include="UI\Controllers\UserController.cs" />
         <Compile Include="UI\Interfaces\IUserInterface.cs" />
         <Compile Include="User\IUserService.cs" />
         <Compile Include="User\PasswordService.cs" />
