@@ -43,10 +43,13 @@ namespace CourseWork.UI
             else
             {
                 Console.WriteLine("Sorry, you have to register, redirect you? (Y/N)");
-                var agreement = Console.ReadLine().ToLower().Equals("y");
-                if (agreement)
+                var agreement = Console.ReadLine();
+                if (!string.IsNullOrEmpty(agreement))
                 {
-                    doRegistration();
+                    if (agreement.ToLower().Equals("y"))
+                    {
+                        DoRegistration();
+                    }
                 }
             }
         }
@@ -61,12 +64,18 @@ namespace CourseWork.UI
             return User;
         }
 
-        private void doRegistration()
+        private void DoRegistration()
         {
             Console.Write("Enter your registration name, please: ");
             var userName = Console.ReadLine();
             Console.Write("Enter your password: ");
             var password = Console.ReadLine();
+            if (string.IsNullOrEmpty(password) || password.Length < 6)
+            {
+                Console.WriteLine("Error, password must be with length 6 or more!");
+                return;
+            }
+            
             UserService.CreateUser(userName, password); // todo check the name
         }
     }

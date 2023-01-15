@@ -114,17 +114,8 @@ namespace CourseWork.User
             // todo if sum < 0
         }
 
-        public void Action()
-        {
-            Console.WriteLine("What would you like to do: ");
-            Console.WriteLine("show balance" +
-                              "increase balance" +
-                              "show purchase history");
-        }
-        
         public bool DecreaseBalance(User user, float price, int amount)
         {
-            Console.WriteLine("price*amount: " + amount * price);
             if (price * amount >= user.Balance)
             {
                 user.Balance -= price * amount;

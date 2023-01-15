@@ -7,7 +7,7 @@ namespace CourseWork.UI
     {
         private List<IControllerInterface> UIs { get; }
         private DataBase.DataBase dataBase { get; }
-        
+
         private User.User User { get; set; }
         private bool auth;
 
@@ -16,11 +16,11 @@ namespace CourseWork.UI
             dataBase = new DataBase.DataBase();
             new DataBaseController(dataBase);
             auth = GotAuthorized(dataBase);
-            UIs = new List<IControllerInterface>(5);
-            UIs.Add(new ShowProductController(dataBase));
-            UIs.Add(new UserController(dataBase, User));
+            UIs = new List<IControllerInterface>(8);
             UIs.Add(new AddProductController(dataBase));
             UIs.Add(new BuyProductController(dataBase, User));
+            UIs.Add(new UserController(dataBase, User));
+            UIs.Add(new ShowProductController(dataBase));
             UIs.Add(new ExitController(dataBase));
         }
 
@@ -63,11 +63,31 @@ namespace CourseWork.UI
 
         private void DoAction()
         {
-            Console.WriteLine("\n Enter what would you like to do:");
-            var action = int.Parse(Console.ReadLine());
-            UIs[action].DoAction();
+            Console.WriteLine("\n Enter what would you like to do (digit):");
+            var option = Console.ReadLine();
 
-            // todo action massage equals enum == number from dict?
+            if (!string.IsNullOrEmpty(option))
+            {
+                var action = int.Parse(option);
+                switch (action)
+                {
+                    case 1:
+                        UIs[0].DoAction();
+                        break;
+                    case 2:
+                        UIs[1].DoAction();
+                        break;
+                    case 3:
+                        UIs[2].DoAction();
+                        break;
+                    case 4:
+                        UIs[3].DoAction();
+                        break;
+                    case 5:
+                        UIs[4].DoAction();
+                        break;
+                }
+            }  // todo action massage equals enum == number from dict?
         }
     }
 }

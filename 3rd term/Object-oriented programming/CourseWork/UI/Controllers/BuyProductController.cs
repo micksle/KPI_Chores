@@ -15,7 +15,7 @@ namespace CourseWork.UI
 
         public string PrintMessage()
         {
-            return " - buy products";
+            return " 2. Buy products";
         }
 
         public void DoAction()

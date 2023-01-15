@@ -13,7 +13,7 @@ namespace CourseWork.UI
 
         public string PrintMessage()
         {
-            return " - show available products";
+            return " 4. Show available products";
         }
 
         public void DoAction() // TODO: what if list is empty?

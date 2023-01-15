@@ -3,7 +3,8 @@
 namespace CourseWork.UI
 {
     public class ExitController : IControllerInterface
-    {private DataBase.DataBase DB { get; }
+    {
+        private DataBase.DataBase DB { get; }
 
         public ExitController(DataBase.DataBase dataBase)
         {
@@ -11,13 +12,13 @@ namespace CourseWork.UI
         }
         public string PrintMessage()
         {
-            return " - stop the program";
+            return " 5. Stop the program";
         }
 
         public void DoAction()
         {
-            DataBaseController DBController = new DataBaseController(DB);
-            DBController.CloseDB();
+            var dataBaseControllerController = new DataBaseController(DB);
+            dataBaseControllerController.CloseDB();
             throw new Exception("\n----Stopping the program----\n");
         }
     }

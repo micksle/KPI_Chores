@@ -1,4 +1,5 @@
 ﻿using System;
+using CourseWork.Product;
 
 namespace CourseWork.UI
 {
@@ -14,7 +15,7 @@ namespace CourseWork.UI
         // TODO add safe-add method / buy product controller?
         public string PrintMessage()
         {
-            return " - add products to the store";
+            return " 1. Add products to the store";
         }
 
         public void DoAction() // TODO safe parsing
@@ -24,17 +25,8 @@ namespace CourseWork.UI
 
         private void AddProduct()
         {
-            Console.WriteLine("Add the name of the product");
-            var name = Console.ReadLine();
-            Console.WriteLine("Add the price of the product");
-            var price = float.Parse(Console.ReadLine());
-            Console.WriteLine("Add the description of the product");
-            var description = Console.ReadLine();
-            Console.WriteLine("Add the amount of the product");
-            var amount = int.Parse(Console.ReadLine());
-
-            var product = new Product.Product(name, price, description, amount);
-            DB.Products.Add(product);
+            var ps = new ProductService(DB);
+            ps.AddProduct();
         }
     }
 }

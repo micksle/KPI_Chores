@@ -80,6 +80,21 @@ namespace CourseWork.Product
             return false;
         }
 
+        public void AddProduct()
+        {
+            Console.WriteLine("Add the name of the product");
+            var name = Console.ReadLine();
+            Console.WriteLine("Add the price of the product");
+            var price = float.Parse(Console.ReadLine());
+            Console.WriteLine("Add the description of the product");
+            var description = Console.ReadLine();
+            Console.WriteLine("Add the amount of the product");
+            var amount = int.Parse(Console.ReadLine());
+
+            var product = new Product(name, price, description, amount);
+            DB.Products.Add(product);
+        }
+
         public bool DecreaseAmount(string productName, int amount)
         {
             var product = GetProduct(productName);

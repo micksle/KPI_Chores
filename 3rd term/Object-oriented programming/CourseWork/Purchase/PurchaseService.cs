@@ -46,6 +46,7 @@ namespace CourseWork.Purchase
             var product = ProductService.GetProduct(productName);
             if (ProductService.DecreaseAmount(productName, amount))
             {
+                Console.WriteLine("price " + product.Price);
                 if (UserService.DecreaseBalance(user, product.Price, product.Amount))
                 {
                     return true;
