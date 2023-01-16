@@ -7,25 +7,31 @@ namespace CourseWork.User
 {
     public class UserService : IUserService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
 
         public UserService(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Data = dataBase;
         }
 
         public void CreateUser(string userName, string password)
         {
-            var user = new User(userName, password);
-            DB.Users.Add(user);
-            Console.WriteLine("User " + userName + " registered successfully");
+            if (!string.IsNullOrEmpty(userName))
+            {
+                var user = new User(userName, password);
+                Data.Users.Add(user);
+                Console.WriteLine("User " + userName + " registered successfully");   
+                return;
+            }
+
+            Console.WriteLine("Error, wrong user name.");
         }
 
         public User GetUser(string userName)
         {
             if (UserExists(userName))
             {
-                return DB.Users.Find(x => x.UserName.Equals(userName));
+                return Data.Users.Find(x => x.UserName.Equals(userName));
             }
 
             return new User("unknown", "qwertyui");
@@ -33,7 +39,7 @@ namespace CourseWork.User
 
         public bool CheckUsersPassword(string userName, string password)
         {
-            var passwordService = new PasswordService(DB);
+            var passwordService = new PasswordService(Data);
             var user = GetUser(userName);
             return passwordService.ComparePasswords(user, password);
         }
@@ -43,7 +49,7 @@ namespace CourseWork.User
             if (UserExists(userName))
             {
                 var user = GetUser(userName);
-                DB.Users.Remove(user);
+                Data.Users.Remove(user);
                 Console.WriteLine("User " + userName + " deleted successfully");
                 return;
             }
@@ -53,7 +59,7 @@ namespace CourseWork.User
 
         public bool UserExists(string userName)
         {
-            foreach (var user in DB.Users)
+            foreach (var user in Data.Users)
             {
                 if (user.UserName.Equals(userName))
                 {
@@ -62,17 +68,6 @@ namespace CourseWork.User
             }
 
             return false;
-        }
-
-        public void PrintAllUsers()
-        {
-            if (DB.Users.Count == 0)
-            {
-                Console.WriteLine("The list of users is empty");
-                return;
-            }
-
-            DB.Users.ForEach(Console.WriteLine);
         }
 
         public float GetBalance(User user)
@@ -85,7 +80,7 @@ namespace CourseWork.User
             return 0;
         }
 
-        public void AddPurchase(User user, PurchaseHistory purchase)
+        public void AddPurchase(User user, PurchaseData purchase)
         {
             if (UserExists(user.UserName))
             {
@@ -93,14 +88,14 @@ namespace CourseWork.User
             }
         }
 
-        public List<PurchaseHistory> GetHistory(User user)
+        public List<PurchaseData> GetHistory(User user)
         {
             if (UserExists(user.UserName))
             {
                 return user.Purchase.ToList();   
             }
 
-            return new List<PurchaseHistory>();
+            return new List<PurchaseData>();
             // todo purchase wut 
             // todo check if null
         }
@@ -116,7 +111,7 @@ namespace CourseWork.User
 
         public bool DecreaseBalance(User user, float price, int amount)
         {
-            if (price * amount >= user.Balance)
+            if (price * amount <= user.Balance)
             {
                 user.Balance -= price * amount;
                 return true;

@@ -1,16 +1,17 @@
 ﻿using System;
 using CourseWork.User;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class UserController: IControllerInterface
+    public class UserController: IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
         private User.User User { get; }
 
         public UserController(DataBase.DataBase dataBase, User.User user)
         {
-            DB = dataBase;
+            Data = dataBase;
             User = user;
         }
 
@@ -36,7 +37,7 @@ namespace CourseWork.UI
             Console.WriteLine(" 4. Exit");
             Console.WriteLine("\n Enter what would you like to do (digit):");
             var option = Console.ReadLine();
-            var us = new UserService(DB);
+            var us = new UserService(Data);
             var exit = false;
             
             if (!string.IsNullOrEmpty(option))

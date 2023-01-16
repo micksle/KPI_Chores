@@ -11,7 +11,7 @@ namespace CourseWork.User
         private Guid Id { get; }
         
         public float Balance { get; set; }
-        public List<PurchaseHistory> Purchase { get; }
+        public List<PurchaseData> Purchase { get; }
 
         public User(string userName, string password)
         {
@@ -19,7 +19,7 @@ namespace CourseWork.User
             UserName = userName;
             Password = password;
             Balance = 0;
-            Purchase = new List<PurchaseHistory>();
+            Purchase = new List<PurchaseData>();
         }
 
         public override string ToString()

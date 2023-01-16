@@ -1,16 +1,15 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 namespace CourseWork.User
 {
     public class PasswordService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Db { get; }
 
         public PasswordService(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Db = dataBase;
         }
 
         public bool ComparePasswords(User user, string password)
@@ -22,7 +21,7 @@ namespace CourseWork.User
         {
             var givenBytePassword = CreateBytePassword(password);
             var storedPassword = GetStoredPassword(user);
-            var storedBytePassword = EncodePassword(storedPassword);
+            var storedBytePassword = CreateBytePassword(storedPassword);
 
             // Console.WriteLine(isEqual ? "The two hash values are the same" : "The two hash values are not the same");
             return Compare(givenBytePassword, storedBytePassword);
@@ -46,7 +45,7 @@ namespace CourseWork.User
 
         private string GetStoredPassword(User user)
         {
-            var users = DB.Users;
+            var users = Db.Users;
 
             foreach (var u in users)
             {
@@ -61,16 +60,8 @@ namespace CourseWork.User
 
         private static byte[] CreateBytePassword(string password)
         {
-            // todo check the length
             var bytePassword = Encoding.ASCII.GetBytes(password);
-            var hashPassword = new MD5CryptoServiceProvider().ComputeHash(bytePassword);
-            return hashPassword;
-        }
-
-        private byte[] EncodePassword(string password)
-        {
-            var bytes = Encoding.ASCII.GetBytes(password);
-            return new MD5CryptoServiceProvider().ComputeHash(bytes);
+            return new MD5CryptoServiceProvider().ComputeHash(bytePassword);
         }
 
         private static string ConvertToString(byte[] arrInput)
@@ -83,6 +74,6 @@ namespace CourseWork.User
             }
 
             return sOutput.ToString();
-        }
+        } // try: convert saved pass to string and the create byte password to store it properly, not like a string - ? 
     }
 }

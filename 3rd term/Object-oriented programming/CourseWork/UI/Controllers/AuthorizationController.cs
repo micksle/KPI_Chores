@@ -1,19 +1,20 @@
 ﻿using System;
 using CourseWork.User;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class AuthorizationController : IControllerInterface
+    public class AuthorizationController : IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
         private UserService UserService { get; }
         private User.User User { get; set; }
-        private bool Authorized { get; set; }
+        private bool IsAuthorized { get; set; }
 
         public AuthorizationController(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
-            UserService = new UserService(DB);
+            Data = dataBase;
+            UserService = new UserService(Data);
         }
 
         public string PrintMessage()
@@ -38,7 +39,7 @@ namespace CourseWork.UI
 
                 User = UserService.GetUser(userName);
                 Console.WriteLine("Greetings, " + userName);
-                Authorized = true;
+                IsAuthorized = true;
             }
             else
             {
@@ -56,7 +57,7 @@ namespace CourseWork.UI
 
         public bool GetState()
         {
-            return Authorized;
+            return IsAuthorized;
         }
 
         public User.User GetUser()
@@ -76,7 +77,7 @@ namespace CourseWork.UI
                 return;
             }
             
-            UserService.CreateUser(userName, password); // todo check the name
+            UserService.CreateUser(userName, password);
         }
     }
 }

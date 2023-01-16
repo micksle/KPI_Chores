@@ -6,7 +6,7 @@ namespace CourseWork.DataBase
 {
     public class ParseInfo
     {
-        private string FilePath =
+        private string _filePath =
             @"C:\Users\mickle\RiderProjects\KPI_Chores\3rd term\Object-oriented programming\CourseWork\DataBase\Files\";
 
         // public void SaveToDB(User.User user)
@@ -20,30 +20,30 @@ namespace CourseWork.DataBase
         //     File.WriteAllText(path, serialized);
         // } //todo redundant?
 
-        public void SaveAllProductsToDB(DataBase dataBase)
+        public void SaveAllProductsToDb(DataBase dataBase)
         {
-            var path = string.Concat(FilePath, "Products.json");
+            var path = string.Concat(_filePath, "Products.json");
             var serialized = JsonConvert.SerializeObject(dataBase.Products);
             File.WriteAllText(path, serialized);
         }
 
-        public void SaveAllUsersToDB(DataBase dataBase)
+        public void SaveAllUsersToDb(DataBase dataBase)
         {
-            var path = string.Concat(FilePath, "Users.json");
+            var path = string.Concat(_filePath, "Users.json");
             var serialized = JsonConvert.SerializeObject(dataBase.Users);
             File.WriteAllText(path, serialized);
         }
 
-        public List<Product.Product> ReadProductsFromDB()
+        public List<Product.Product> ReadProductsFromDb()
         {
-            var path = string.Concat(FilePath, "Products.json");
+            var path = string.Concat(_filePath, "Products.json");
             var products = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<List<Product.Product>>(products);
         }
 
-        public List<User.User> ReadUsersFromDB()
+        public List<User.User> ReadUsersFromDb()
         {
-            var path = string.Concat(FilePath, "Users.json");
+            var path = string.Concat(_filePath, "Users.json");
             var users = File.ReadAllText(path);
             return JsonConvert.DeserializeObject<List<User.User>>(users);
         }

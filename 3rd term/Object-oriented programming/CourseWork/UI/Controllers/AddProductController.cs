@@ -1,31 +1,25 @@
-﻿using System;
+﻿using UI;
 using CourseWork.Product;
 
 namespace CourseWork.UI
 {
-    public class AddProductController : IControllerInterface
+    public class AddProductController : IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
 
         public AddProductController(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Data = dataBase;
         }
 
-        // TODO add safe-add method / buy product controller?
         public string PrintMessage()
         {
             return " 1. Add products to the store";
         }
 
-        public void DoAction() // TODO safe parsing
+        public void DoAction()
         {
-            AddProduct();
-        }
-
-        private void AddProduct()
-        {
-            var ps = new ProductService(DB);
+            var ps = new ProductService(Data);
             ps.AddProduct();
         }
     }

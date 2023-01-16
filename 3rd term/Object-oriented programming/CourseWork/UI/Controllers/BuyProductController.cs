@@ -1,15 +1,16 @@
 ﻿using CourseWork.Purchase;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class BuyProductController : IControllerInterface
+    public class BuyProductController : IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
         private User.User User { get; }
 
         public BuyProductController(DataBase.DataBase dataBase, User.User user)
         {
-            DB = dataBase;
+            Data = dataBase;
             User = user;
         }
 
@@ -20,7 +21,7 @@ namespace CourseWork.UI
 
         public void DoAction()
         {
-            var ps = new PurchaseService(DB);
+            var ps = new PurchaseService(Data);
             ps.Buy(User);
         }
     }

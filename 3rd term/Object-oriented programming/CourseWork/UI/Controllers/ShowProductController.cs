@@ -1,14 +1,15 @@
 ﻿using CourseWork.Product;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class ShowProductController : IControllerInterface
+    public class ShowProductController : IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Db { get; }
 
         public ShowProductController(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Db = dataBase;
         }
 
         public string PrintMessage()
@@ -16,9 +17,9 @@ namespace CourseWork.UI
             return " 4. Show available products";
         }
 
-        public void DoAction() // TODO: what if list is empty?
+        public void DoAction() 
         {
-            var ps = new ProductService(DB);
+            var ps = new ProductService(Db);
             ps.ShowProducts();
         }
     }

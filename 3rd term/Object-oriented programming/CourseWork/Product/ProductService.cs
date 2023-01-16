@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using CourseWork.DataBase;
 
 namespace CourseWork.Product
 {
     public class ProductService : IProductService
     {
-        private DataBase.DataBase DB;
+        private DataBase.DataBase Data { get; }
 
         public ProductService(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Data = dataBase;
         }
 
         public void CreateProduct(string productName, float price, string description, int amount)
         {
             var product = new Product(productName, price, description, amount);
-            DB.Products.Add(product);
+            Data.Products.Add(product);
             Console.WriteLine("Product " + productName + " created successfully");
         }
 
@@ -26,7 +24,7 @@ namespace CourseWork.Product
         {
             if (ProductExists(productName))
             {
-                return DB.Products.Find(x => x.Name.Equals(productName));
+                return Data.Products.Find(x => x.Name.Equals(productName));
             }
 
             return new Product("unknown", 0, "", 0);
@@ -36,9 +34,8 @@ namespace CourseWork.Product
         {
             if (ProductExists(productName))
             {
-                // DB.Products.Remove(DB.Products.Find(x => x.Name.Equals(productName)));
                 var product = GetProduct(productName);
-                DB.Products.Remove(product);
+                Data.Products.Remove(product);
                 Console.WriteLine("Product " + productName + " deleted successfully");
                 return;
             }
@@ -48,28 +45,17 @@ namespace CourseWork.Product
 
         public List<Product> GetAllProducts()
         {
-            return DB.Products.Select(x => x).ToList();
-        }
-        
-        public void GetProductsFromDB()
-        {
-            var parser = new ParseInfo();
-            var products = parser.ReadProductsFromDB();
-            foreach (var product in products)
-            {
-                DB.Products.Add(product);
-            }
+            return Data.Products.Select(x => x).ToList();
         }
 
         public void ShowProducts()
         {
-            // GetProductsFromDB();
-            DB.Products.ForEach(Console.WriteLine);
+            Data.Products.ForEach(Console.WriteLine);
         }
 
         public bool ProductExists(string productName)
         {
-            foreach (var product in DB.Products)
+            foreach (var product in Data.Products)
             {
                 if (product.Name.Equals(productName))
                 {
@@ -85,20 +71,29 @@ namespace CourseWork.Product
             Console.WriteLine("Add the name of the product");
             var name = Console.ReadLine();
             Console.WriteLine("Add the price of the product");
-            var price = float.Parse(Console.ReadLine());
+            var priceStr = Console.ReadLine();
+            var price = 0f;
+            if (!string.IsNullOrEmpty(priceStr))
+            {
+                price = float.Parse(priceStr);
+            }
             Console.WriteLine("Add the description of the product");
             var description = Console.ReadLine();
             Console.WriteLine("Add the amount of the product");
-            var amount = int.Parse(Console.ReadLine());
-
+            var amountStr = Console.ReadLine();
+            var amount = 0;
+            if (!string.IsNullOrEmpty(amountStr))
+            {
+                amount = int.Parse(amountStr);
+            }
             var product = new Product(name, price, description, amount);
-            DB.Products.Add(product);
+            Data.Products.Add(product);
         }
 
         public bool DecreaseAmount(string productName, int amount)
         {
             var product = GetProduct(productName);
-            if (product.Amount == 0)
+            if (product.Amount < amount)
             {
                 return false;
             }

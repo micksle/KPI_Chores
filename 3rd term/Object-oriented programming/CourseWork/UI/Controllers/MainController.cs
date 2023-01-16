@@ -1,34 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using UI;
 
-namespace CourseWork.UI
+namespace CourseWork.UI  //todo реалізувати інтерфейс контролеру і додати метод шоу "авторизуйся" після чого в ду робити авторизацію поки не пройде, а потім надати доступ до інших опцій
 {
     public class MainController
     {
-        private List<IControllerInterface> UIs { get; }
-        private DataBase.DataBase dataBase { get; }
+        private List<IControllerService> UIs { get; }
+        private DataBase.DataBase Data { get; }
 
         private User.User User { get; set; }
-        private bool auth;
+        private bool IsAuthorized { get; }
 
         public MainController()
         {
-            dataBase = new DataBase.DataBase();
-            new DataBaseController(dataBase);
-            auth = GotAuthorized(dataBase);
-            UIs = new List<IControllerInterface>(8);
-            UIs.Add(new AddProductController(dataBase));
-            UIs.Add(new BuyProductController(dataBase, User));
-            UIs.Add(new UserController(dataBase, User));
-            UIs.Add(new ShowProductController(dataBase));
-            UIs.Add(new ExitController(dataBase));
+            Data = new DataBase.DataBase();
+            new DataBaseController(Data);
+            IsAuthorized = GotAuthorized(Data);
+            UIs = new List<IControllerService>(8);
+            UIs.Add(new AddProductController(Data));
+            UIs.Add(new BuyProductController(Data, User));
+            UIs.Add(new UserController(Data, User));
+            UIs.Add(new ShowProductController(Data));
+            UIs.Add(new ExitController(Data));
         }
 
         public void RunProgram()
         {
-            // // throw new Exception("\n----Stopping the program----\n");
-            // if (GotAuthorized(dataBase))
-            if (auth)
+            if (IsAuthorized)
             {
                 while (true)
                 {

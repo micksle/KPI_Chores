@@ -1,17 +1,17 @@
-﻿using System;
-using CourseWork.DataBase;
+﻿using CourseWork.DataBase;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class DataBaseController : IControllerInterface
+    public class DataBaseController : IControllerService // TODO в конструктор бд запхати звернення до бд
     {
-        private DataBase.DataBase DB { get; }
-        private ParseInfo Parse { get; }
+        private DataBase.DataBase Data { get; }
+        private ParseInfo Parser { get; }
 
         public DataBaseController(DataBase.DataBase dataBase)
         {
-            Parse = new ParseInfo();
-            DB = dataBase;
+            Parser = new ParseInfo();
+            Data = dataBase;
             DoAction();
         }
 
@@ -22,42 +22,42 @@ namespace CourseWork.UI
 
         public void DoAction()
         {
-            InvokeProductsDB();
-            InvokeUsersDB();
+            InvokeProductsDb();
+            InvokeUsersDb();
         }
 
-        public void CloseDB()
+        public void CloseDb()
         {
-            SleepProductsDB();
-            SleepUsersDB();
+            SleepProductsDb();
+            SleepUsersDb();
         }
 
-        private void InvokeProductsDB()
+        private void InvokeProductsDb()
         {
-            var products = Parse.ReadProductsFromDB();
+            var products = Parser.ReadProductsFromDb();
             foreach (var product in products)
             {
-                DB.Products.Add(product);
+                Data.Products.Add(product);
             }
         }
 
-        private void InvokeUsersDB()
+        private void InvokeUsersDb()
         {
-            var users = Parse.ReadUsersFromDB();
+            var users = Parser.ReadUsersFromDb();
             foreach (var user in users)
             {
-                DB.Users.Add(user);
+                Data.Users.Add(user);
             } // todo safe method
         }
         
-        private void SleepProductsDB()
+        private void SleepProductsDb()
         {
-            Parse.SaveAllProductsToDB(DB);
+            Parser.SaveAllProductsToDb(Data);
         }
 
-        private void SleepUsersDB()
+        private void SleepUsersDb()
         {
-            Parse.SaveAllUsersToDB(DB);
+            Parser.SaveAllUsersToDb(Data);
         }
     }
 }

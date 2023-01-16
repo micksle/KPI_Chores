@@ -7,30 +7,33 @@ namespace CourseWork.Purchase
 {
     public class PurchaseService
     {
-        private DataBase.DataBase DB;
         private ProductService ProductService { get; }
         private UserService UserService { get; }
 
         public PurchaseService(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
             ProductService = new ProductService(dataBase);
             UserService = new UserService(dataBase);
         }
 
         public void Buy(User.User user)
         {
-            showInfo();
+            ShowInfo();
             Console.WriteLine("Enter what would you like to buy: ");
-            var product = Console.ReadLine(); // todo asser safe input (length>0)
-            if (checkProduct(product))
+            var product = Console.ReadLine();
+            if (!string.IsNullOrEmpty(product) && CheckProduct(product))
             {
+                var amount = 0;
                 Console.WriteLine("Enter the amount you want to buy: ");
-                var amount = int.Parse(Console.ReadLine());
-                var success = BuyOperation(user, product, amount);
+                var amountStr = Console.ReadLine();
+                if (!string.IsNullOrEmpty(amountStr))
+                {
+                    amount = int.Parse(amountStr);
+                }
+                var success = DoBuy(user, product, amount);
                 if (success)
                 {
-                    var purchase = new PurchaseHistory(product, ProductService.GetProduct(product).Price);
+                    var purchase = new PurchaseData(product, ProductService.GetProduct(product).Price, amount);
                     UserService.AddPurchase(user, purchase);
                     Console.WriteLine("Product bought successfully");
                     return;
@@ -41,28 +44,23 @@ namespace CourseWork.Purchase
             Console.WriteLine("Incorrect product name!");
         }
 
-        private bool BuyOperation(User.User user, string productName, int amount)
+        private bool DoBuy(User.User user, string productName, int amount)
         {
             var product = ProductService.GetProduct(productName);
-            if (ProductService.DecreaseAmount(productName, amount))
+            if (ProductService.DecreaseAmount(productName, amount) == false)
             {
-                Console.WriteLine("price " + product.Price);
-                if (UserService.DecreaseBalance(user, product.Price, product.Amount))
-                {
-                    return true;
-                }
+                return false;
             }
-
-            return false;
+            return UserService.DecreaseBalance(user, product.Price, product.Amount);
         }
 
-        private void showInfo()
+        private void ShowInfo()
         {
             Console.WriteLine("Available products:");
             ProductService.ShowProducts();
         }
 
-        private bool checkProduct(string productName)
+        private bool CheckProduct(string productName)
         {
             var names = GetProductsName();
             foreach (var product in names)

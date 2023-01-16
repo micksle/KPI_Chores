@@ -4,8 +4,8 @@ namespace Lab1
 {
     public class Game
     {
-        private static Random random = new Random();
-        private static int Index { get; set; } = random.Next(1102, 1437);
+        private static Random _random = new Random();
+        private static int Index { get; set; } = _random.Next(1102, 1437);
         private int GameIndex { get; }
         private string OpponentName { get; }
         private GameState Status { get; }

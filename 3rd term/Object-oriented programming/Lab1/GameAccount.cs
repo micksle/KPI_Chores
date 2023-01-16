@@ -6,7 +6,7 @@ namespace Lab1
 {
     public class GameAccount
     {
-        private List<Game> games = new List<Game>();
+        private List<Game> _games = new List<Game>();
         public string UserName { get; }
         private int CurrentRating { get; set; }
         private int GamesCount { get; set; }
@@ -52,7 +52,7 @@ namespace Lab1
 
             GamesCount++;
             // CurrentRating += rating;
-            games.Add(new Game(opponentName, GameState.Victory, rating));
+            _games.Add(new Game(opponentName, GameState.Victory, rating));
         }
 
         private void LoseGame(GameAccount opponentName, int rating)
@@ -64,7 +64,7 @@ namespace Lab1
 
             GamesCount++;
             // CurrentRating -= rating;
-            games.Add(new Game(opponentName, GameState.Defeat, -rating));
+            _games.Add(new Game(opponentName, GameState.Defeat, -rating));
         }
 
         private void GetStats()
@@ -72,7 +72,7 @@ namespace Lab1
             StringBuilder str = new StringBuilder();
             str.AppendLine("\n\t\t\t\t  BATTLE LOG:");
             str.AppendLine("\topponent name   |   battle status   |   rating   |    battle index");
-            foreach (var g in games)
+            foreach (var g in _games)
             {
                 str.AppendLine(g.ToString());
                 if (CurrentRating + g.Rating < 1)

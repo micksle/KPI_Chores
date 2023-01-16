@@ -1,6 +1,6 @@
-﻿namespace CourseWork.UI
+﻿namespace UI
 {
-    public interface IControllerInterface
+    public interface IControllerService
     {
         string PrintMessage();
         void DoAction();

@@ -1,14 +1,15 @@
 ﻿using System;
+using UI;
 
 namespace CourseWork.UI
 {
-    public class ExitController : IControllerInterface
+    public class ExitController : IControllerService
     {
-        private DataBase.DataBase DB { get; }
+        private DataBase.DataBase Data { get; }
 
         public ExitController(DataBase.DataBase dataBase)
         {
-            DB = dataBase;
+            Data = dataBase;
         }
         public string PrintMessage()
         {
@@ -17,8 +18,8 @@ namespace CourseWork.UI
 
         public void DoAction()
         {
-            var dataBaseControllerController = new DataBaseController(DB);
-            dataBaseControllerController.CloseDB();
+            var dataBaseControllerController = new DataBaseController(Data);
+            dataBaseControllerController.CloseDb();
             throw new Exception("\n----Stopping the program----\n");
         }
     }
