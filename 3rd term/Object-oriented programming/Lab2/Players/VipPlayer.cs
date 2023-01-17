@@ -10,23 +10,16 @@ namespace Lab2.Players
             Rating += 10;
         }
 
-        public override void WinGame(_GameEntity game)
+        public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating += (int) (game.Rating * 1.5);
-            Games.Add(new GameHistory(game.OpponentName, GameState.Victory, game.Rating, game.GameId));
+            Rating += (int) (gameRating * 1.5);
+            Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType, gameId));
         }
 
-        public override void LoseGame(_GameEntity game)
+        public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating -= (int) (game.Rating * 0.8);
-            Games.Add(new GameHistory(game.OpponentName, GameState.Defeat, game.Rating, game.GameId));
-        }
-        
-        public override void Print()
-        {
-            base.Print();
-            Console.WriteLine("and from VIP");
-            Console.WriteLine(Rating);
+            Rating -= (int) (gameRating * 0.8);
+            Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType, gameId));
         }
     }
 }

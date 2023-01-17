@@ -5,29 +5,24 @@ namespace Lab2
     public abstract class _GameEntity
     {
         public Guid GameId { get; set; }
-        public int GameIndex { get; } // redundant?
-        public string OpponentName { get; set; }
-        public GameState GameState { get; set; }
-        public int Rating { get; set; }
+        public int Rating { get; }
+        private Random Random { get; }
+        private _PlayerEntity Player1 { get; }
+        private _PlayerEntity Player2 { get; }
 
-        public _GameEntity(_PlayerEntity opponentName, GameState battleGameState, int battleRating)
+        protected _GameEntity(_PlayerEntity player1, _PlayerEntity player2, int battleRating)
         {
-            OpponentName = opponentName.UserName;
-            GameState = battleGameState;
             Rating = battleRating;
-            GameId = Guid.NewGuid();
-            // if (!Status.Equals(GameState.Defeat))
-            // {
-            //     Index += 1;
-            // }
-            //
-            // GameIndex = Index;
+            Player1 = player1;
+            Player2 = player2;
+            Random = new Random();
         }
-        
-        public virtual string ToString()
+
+        protected int GetRandom(int minValue, int maxValue)
         {
-            return $"{OpponentName} %5s {GameState} %5s {Rating} %5s {GameId}";
-            return $"\t   {OpponentName}\t|\t{GameState}\t    |\t {Rating}\t |\t{GameIndex}\t";
+            return Random.Next(minValue, maxValue);
         }
+
+        public abstract void PlayGame(_PlayerEntity player1, _PlayerEntity player2);
     }
 }

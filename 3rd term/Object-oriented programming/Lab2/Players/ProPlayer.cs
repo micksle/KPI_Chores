@@ -9,24 +9,19 @@ namespace Lab2.Players
         {
             
         }
+        //add to main class entity of gamehistory
+        //add to gamehist list of games
 
-        public override void WinGame(_GameEntity game)
+        public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating += (int) (game.Rating * 1.2);
-            Games.Add(new GameHistory(game.OpponentName, GameState.Victory, game.Rating, game.GameId));
+            Rating += (int) (gameRating * 1.2);
+            Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType, gameId));
         }
 
-        public override void LoseGame(_GameEntity game)
+        public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating -= game.Rating;
-            Games.Add(new GameHistory(game.OpponentName, GameState.Defeat, game.Rating, game.GameId));
-        }
-        
-        public override void Print()
-        {
-            base.Print();
-            Console.WriteLine("and from Pro");
-            Console.WriteLine(Rating);
+            Rating -= gameRating;
+            Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType, gameId));
         }
     }
 }

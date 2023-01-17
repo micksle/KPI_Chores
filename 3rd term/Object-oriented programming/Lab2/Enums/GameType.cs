@@ -2,6 +2,6 @@
 {
     public enum GameType
     {
-        Basic, Training, OneWay 
+        Basic, Training, DeathMatch 
     }
 }

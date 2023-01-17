@@ -10,23 +10,23 @@ namespace Lab2.Players
             
         }
 
-        public override void WinGame(_GameEntity game)
+        // public override void WinGame(_GameEntity game)
+        // {
+        //     Rating += game.Rating;
+        //     Games.Add(new GameHistory(game.OpponentName, GameState.Victory, game.Rating, game.GameId));
+        // }
+        
+        //mu impl
+        public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating += game.Rating;
-            Games.Add(new GameHistory(game.OpponentName, GameState.Victory, game.Rating, game.GameId));
+            Rating += gameRating;
+            Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType, gameId));
         }
 
-        public override void LoseGame(_GameEntity game)
+        public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
-            Rating -= game.Rating;
-            Games.Add(new GameHistory(game.OpponentName, GameState.Defeat, game.Rating, game.GameId));
-        }
-
-        public override void Print()
-        {
-            base.Print();
-            Console.WriteLine("and from BASIC");
-            Console.WriteLine(Rating);
+            Rating -= gameRating;
+            Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType, gameId));
         }
     }
 }

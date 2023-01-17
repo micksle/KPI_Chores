@@ -18,17 +18,12 @@ namespace Lab2
             Games = new List<GameHistory>();
         }
 
-        public abstract void WinGame(_GameEntity game);
-        public abstract void LoseGame(_GameEntity game);
+        public abstract void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
+        public abstract void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
 
-        // public override string ToString()
-        // {
-        //     return "its virtual hello";
-        // }
-
-        public virtual void Print()
+        public virtual void ShowStatistics()
         {
-            Console.WriteLine("its virtual hello");
+            Console.WriteLine("Current " + UserName + "`s rating: " + Rating + ", battles played: " + GamesCount);
         }
     }
 }
