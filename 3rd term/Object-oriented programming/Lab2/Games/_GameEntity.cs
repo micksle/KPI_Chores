@@ -4,11 +4,13 @@ namespace Lab2
 {
     public abstract class _GameEntity
     {
-        public Guid GameId { get; set; }
-        public int Rating { get; }
-        private Random Random { get; }
+        protected Guid GameId { get; set; }
+        private int Rating { get; }
+
         private _PlayerEntity Player1 { get; }
         private _PlayerEntity Player2 { get; }
+        
+        private Random Random { get; }
 
         protected _GameEntity(_PlayerEntity player1, _PlayerEntity player2, int battleRating)
         {

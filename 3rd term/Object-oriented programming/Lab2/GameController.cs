@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using Lab2.Games;
 using Lab2.Players;
@@ -80,7 +79,7 @@ namespace Lab2
             while (exit == false)
             {
                 Console.WriteLine(" - \"basic\"\n - \"training\"\n - \"death match\"");
-                Console.WriteLine(" Choose desired game:");
+                Console.WriteLine("\n Choose desired game:");
                 var desired = Console.ReadLine();
 
                 if (string.IsNullOrEmpty(desired)) continue;

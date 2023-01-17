@@ -11,9 +11,8 @@ namespace Lab2.Games
         public override void PlayGame(_PlayerEntity player1, _PlayerEntity player2)
         {
             var winNumber = GetRandom(0, 5);
-            var ratingValue = GetRandom(-1, 50);
+            var ratingValue = GetRandom(10, 30);
             Console.WriteLine("\trandom winNumber: " + winNumber + ", random battleRating value: " + ratingValue);
-           
             
             if (winNumber > 2)
             {

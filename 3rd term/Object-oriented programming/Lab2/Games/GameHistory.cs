@@ -4,11 +4,11 @@ namespace Lab2.Games
 {
     public class GameHistory
     {
-        public string OpponentName { get; set; }
-        public GameState Status { get; set; }
-        public int Rating { get; set; }
-        public GameType GameType { get; }
-        public Guid GameIndex { get; set; }
+        private string OpponentName { get; }
+        private GameState Status { get; }
+        private int Rating { get; }
+        private GameType GameType { get; }
+        private Guid GameIndex { get; }
 
         public GameHistory(string opponentName, GameState status, int rating, GameType gameType, Guid gameIndex)
         {

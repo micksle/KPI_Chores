@@ -7,17 +7,18 @@ namespace Lab2.Players
     {
         public VipPlayer(string userName, int initialRating) : base(userName, initialRating)
         {
-            Rating += 10;
         }
 
         public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
+            GamesCount++;
             Rating += (int) (gameRating * 1.5);
             Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType, gameId));
         }
 
         public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
         {
+            GamesCount++;
             Rating -= (int) (gameRating * 0.8);
             Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType, gameId));
         }
