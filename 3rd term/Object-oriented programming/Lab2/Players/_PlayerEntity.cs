@@ -21,9 +21,16 @@ namespace Lab2
         public abstract void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
         public abstract void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
 
-        public virtual void ShowStatistics()
+        public void ShowStatistics()
         {
             Console.WriteLine("Current " + UserName + "`s rating: " + Rating + ", battles played: " + GamesCount);
+        }
+
+        public void ShowBattles()
+        {
+            var title = $"{"Opponent Name", 15}  |{"Battle Status", 14} | {"Rating", 10} | {"Game Type", 10} |  {"GameIndex", -40}";
+            Console.WriteLine("\n" + title);
+            Games.ForEach(Console.WriteLine);
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using Lab2.Games;
 using Lab2.Players;
 
@@ -26,7 +25,8 @@ namespace Lab2
                 game.PlayGame(player1, player2);
             }
 
-            ShowResults(player1, player2);
+            player1.ShowBattles();
+            player2.ShowBattles();
             player1.ShowStatistics();
             player2.ShowStatistics();
         }
@@ -102,18 +102,6 @@ namespace Lab2
             }
 
             return game;
-        }
-
-        private static void ShowResults(_PlayerEntity player1, _PlayerEntity player2)
-        {
-            var title = new StringBuilder();
-            title.Append($"{"Opponent Name", 15}  |{"Battle Status", 14} | {"Rating", 10} | {"Game Type", 10} |  {"GameIndex", -40}");
-            
-            Console.WriteLine("\n" + title);
-            player1.Games.ForEach(Console.WriteLine);
-            Console.WriteLine("\n" + title);
-            player2.Games.ForEach(Console.WriteLine);
-            Console.WriteLine("");
         }
     }
 }
