@@ -17,14 +17,14 @@ namespace Lab2.Games
             if (winNumber > 2)
             {
                 GameId = Guid.NewGuid();
-                player1.WinGame(player2, GameType.Basic, ratingValue, GameId);
-                player2.LoseGame(player1, GameType.Basic, ratingValue, GameId);
+                player1.WinGame(player2, GameType.Basic, ratingValue);
+                player2.LoseGame(player1, GameType.Basic, ratingValue);
             }
             else
             {
                 GameId = Guid.NewGuid();
-                player2.WinGame(player1, GameType.Basic, ratingValue, GameId);
-                player1.LoseGame(player2, GameType.Basic, ratingValue, GameId);
+                player2.WinGame(player1, GameType.Basic, ratingValue);
+                player1.LoseGame(player2, GameType.Basic, ratingValue);
             }
         }
     }

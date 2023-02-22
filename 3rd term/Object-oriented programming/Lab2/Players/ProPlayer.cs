@@ -9,18 +9,18 @@ namespace Lab2.Players
         {
         }
 
-        public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
+        public override void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating)
         {
             GamesCount++;
             Rating += (int) (gameRating * 1.2);
-            Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType, gameId));
+            Games.Add(new GameHistory(opponent.UserName, GameState.Victory, gameRating, gameType));
         }
 
-        public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId)
+        public override void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating)
         {
             GamesCount++;
             Rating -= gameRating;
-            Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType, gameId));
+            Games.Add(new GameHistory(opponent.UserName, GameState.Defeat, gameRating, gameType));
         }
     }
 }

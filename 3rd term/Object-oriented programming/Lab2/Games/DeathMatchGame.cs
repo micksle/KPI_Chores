@@ -18,14 +18,14 @@ namespace Lab2.Games
             if (winNumber > 2)
             {
                 GameId = Guid.NewGuid();
-                player1.WinGame(player2, GameType.DeathMatch, ratingValue, GameId);
-                player2.LoseGame(player1, GameType.DeathMatch, 0, GameId);
+                player1.WinGame(player2, GameType.DeathMatch, ratingValue);
+                player2.LoseGame(player1, GameType.DeathMatch, 0);
             }
             else
             {
                 GameId = Guid.NewGuid();
-                player2.WinGame(player1, GameType.DeathMatch, ratingValue, GameId);
-                player1.LoseGame(player2, GameType.DeathMatch, 0, GameId);
+                player2.WinGame(player1, GameType.DeathMatch, ratingValue);
+                player1.LoseGame(player2, GameType.DeathMatch, 0);
             }
         }
     }

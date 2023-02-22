@@ -9,7 +9,7 @@ namespace Lab2
         public string UserName { get; }
         protected int Rating { get; set; }
         public List<GameHistory> Games { get; }
-        protected int GamesCount { get; set; } = 0;
+        protected int GamesCount { get; set; }
 
         protected _PlayerEntity(string userName, int initialRating)
         {
@@ -18,8 +18,8 @@ namespace Lab2
             Games = new List<GameHistory>();
         }
 
-        public abstract void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
-        public abstract void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating, Guid gameId);
+        public abstract void WinGame(_PlayerEntity opponent, GameType gameType, int gameRating);
+        public abstract void LoseGame(_PlayerEntity opponent, GameType gameType, int gameRating);
 
         public void ShowStatistics()
         {
