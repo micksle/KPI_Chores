@@ -42,6 +42,9 @@
         <Compile Include="CaesarsCipher.cs" />
         <Compile Include="Laboratory.cs" />
         <Compile Include="New.cs" />
+        <Compile Include="Proba.cs" />
+        <Compile Include="Probs\Prob1.cs" />
+        <Compile Include="Probs\Prob2.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

@@ -7,7 +7,7 @@ namespace Lab1
     {
         public void DoAction()
         {
-            Console.WriteLine("Enter what would you like to do:\n1. Encrypt\n2. Decrypt");
+            Console.WriteLine("Enter what would you like to do:\n 1. Encrypt\n 2. Decrypt");
             // var option = Console.ReadLine();
             var option = "1";
 
@@ -15,9 +15,9 @@ namespace Lab1
             {
                 Console.Write("Enter the string you would like to encrypt: ");
                 // var targetString = Console.ReadLine();
-                Console.Write("Enter the encrypt key: ");
+                Console.Write("\nEnter the encrypt key: ");
                 // var encryptingKey = Console.ReadLine();
-                var encryptingKey = "3";
+                var encryptingKey = "1";
                 var key = (byte) 0;
 
                 if (byte.TryParse(encryptingKey, out _) && !string.IsNullOrEmpty(encryptingKey))
@@ -25,35 +25,54 @@ namespace Lab1
                     key = byte.Parse(encryptingKey);
                 }
 
-                var targetString = "new string is awesome!7";
+                var targetString = "Факт ґринджол: бій псюг вщух, з'їм шче яєць. yoskiñ is awtsome!7";
+                Console.WriteLine("\nINITIAL STRING: " + targetString);
                 var result = Cipher(targetString, key, true);
-                Console.WriteLine("FINAL RESULT: " + result);
-                
-                var finalResult = Cipher(result, key, false);
-                Console.WriteLine("FINAL RESULT: " + finalResult);
+                Console.WriteLine("\nFINAL RESULT: " + result);
             }
         }
 
-        private static string Cipher(string executeString, byte key, bool encrypt)
+        private static string Cipher(string targetString, byte key, bool encrypt)
         {
-            var result = new StringBuilder();
-            for (var i = 0; i < executeString.Length; i++)
+            var chars = targetString.ToCharArray();
+            var resultString = new StringBuilder();
+
+            for (var i = 0; i < chars.Length; i++)
             {
-                var charValue = executeString[i];
-                var unicodeByte = Encoding.Unicode.GetBytes(charValue.ToString());
+                var bytes = GetUtf8Bytes(chars[i]);
 
-                byte finalByte;
-                if (encrypt)
-                    finalByte = (byte)(unicodeByte[0] + key);
-                else
-                    finalByte = (byte)(unicodeByte[0] - key);
+                foreach (var b in bytes)
+                {
+                    Console.WriteLine(b);
+                }
 
-                var smt = new byte[] { finalByte, 0 };
-                var finalChar = Encoding.Unicode.GetChars(smt);
-                result.Append(finalChar[0]);
+                for (var j = 0; j < bytes.Length; j++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        bytes[j] += key;
+                        Console.WriteLine(bytes[j] + "  |");
+                    }
+                }
+
+                var finalChar = GetStringFromUtf8(bytes);
+                Console.WriteLine("--------------");
+                resultString.Append(finalChar);
             }
 
-            return result.ToString();
+            return resultString.ToString();
+        }
+
+        private static byte[] GetUtf8Bytes(char c)
+        {
+            var encoding = new UTF8Encoding(false);
+            return encoding.GetBytes(new[] { c });
+        }
+
+        private static string GetStringFromUtf8(byte[] bytes)
+        {
+            var encoding = new UTF8Encoding(); // It should figure out if there's a BOM or not.
+            return encoding.GetString(bytes);
         }
     }
 }
