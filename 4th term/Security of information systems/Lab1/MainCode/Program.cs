@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using Security_of_information_systems.Forms;
 
-namespace Security_of_information_systems
+namespace Security_of_information_systems.MainCode
 {
-    static class Program
+    internal class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -4,38 +4,61 @@
     <projectFile>Security of information systems/Security of information systems.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.GenerateResource.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security of information systems.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Properties.Resources.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/CaesarsCipher.cs" beforeDir="false" />
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="update lab1 SIS">
+      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/read.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.exe.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.EncryptForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.KeyForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.MainForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.GenerateResource.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.SuggestedBindingRedirects.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.CreateFileForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.DecryptForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.EncryptForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.KeyForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.MainForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Properties.Resources.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/KeyForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/KeyForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/Lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Lab1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Lab1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Lab1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarsCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/CaesarsCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems/Security of information systems.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems/obj/Debug/Security of information systems.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Lab1/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,20 +71,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="Security of information systems" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+    <configuration name="Lab1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab1/bin/Debug" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -71,7 +94,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="Console" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.2" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -85,8 +108,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677443782539</updated>
-      <workItem from="1677443787518" duration="301000" />
+      <workItem from="1677443787518" duration="1678000" />
+      <workItem from="1677445501977" duration="2019000" />
+      <workItem from="1677447956060" duration="150000" />
+      <workItem from="1677448141513" duration="1478000" />
+      <workItem from="1677449867423" duration="2186000" />
     </task>
+    <task id="LOCAL-00001" summary="Update lab1 SIS">
+      <created>1677444364021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677444364021</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add config files">
+      <created>1677444393491</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677444393491</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +150,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Update lab1 SIS" />
+    <MESSAGE value="Add config files" />
+    <MESSAGE value="update lab1 SIS" />
+    <option name="LAST_COMMIT_MESSAGE" value="update lab1 SIS" />
   </component>
 </project>

@@ -86,11 +86,11 @@
             // 
             this.LabelText.AutoSize = true;
             this.LabelText.Font = new System.Drawing.Font("MV Boli", 15F);
-            this.LabelText.Location = new System.Drawing.Point(29, 32);
+            this.LabelText.Location = new System.Drawing.Point(80, 32);
             this.LabelText.Name = "LabelText";
-            this.LabelText.Size = new System.Drawing.Size(311, 32);
+            this.LabelText.Size = new System.Drawing.Size(197, 32);
             this.LabelText.TabIndex = 0;
-            this.LabelText.Text = "Enter the encrypting key";
+            this.LabelText.Text = "Enter key value";
             // 
             // KeyForm
             // 
@@ -105,7 +105,6 @@
             this.TextPanel.ResumeLayout(false);
             this.TextPanel.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

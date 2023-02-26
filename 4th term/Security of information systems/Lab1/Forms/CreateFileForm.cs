@@ -2,11 +2,11 @@
 using System.IO;
 using System.Windows.Forms;
 
-namespace Security_of_information_systems
+namespace Security_of_information_systems.Forms
 {
     public partial class CreateFileForm : Form
     {
-        MainForm mainForm = new MainForm();
+        private MainForm mainForm = new MainForm();
         public CreateFileForm()
         {
             InitializeComponent();
@@ -17,21 +17,21 @@ namespace Security_of_information_systems
             SaveFileDialog saveFileDialog= new SaveFileDialog();
             saveFileDialog.DefaultExt = ".txt";
             saveFileDialog.Filter = "Test files|*.txt";
-            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog.FileName.Length > 0)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName.Length > 0)
                 using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName, true))
                 {
                     sw.WriteLine(SaveFIleTextField.Text);
                     sw.Close();
-                    MessageBox.Show("File saved successfully");
                 }
-            this.Close();
+
             mainForm.Show();
+            Close();
         }
 
         private void Encrypt_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
             mainForm.Show();
+            Close();
         }
 
         private void CreateFileForm_Load(object sender, EventArgs e)

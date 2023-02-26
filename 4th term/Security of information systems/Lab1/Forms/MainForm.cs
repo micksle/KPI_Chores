@@ -1,41 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Security_of_information_systems
+namespace Security_of_information_systems.Forms
 {
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Decrypt_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            // DecryptionForm decryptForm = new DecryptionForm();
-           // decryptForm.Show();
+            Hide();
+            var decryptForm = new DecryptForm();
+            decryptForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
@@ -52,21 +41,22 @@ namespace Security_of_information_systems
 
         private void Create_file_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CreateFileForm createFileForm = new CreateFileForm();
+            Hide();
+            var createFileForm = new CreateFileForm();
             createFileForm.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            EncryptForm encryptForm = new EncryptForm();
+            Hide();
+            var encryptForm = new EncryptForm();
             encryptForm.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Close();
+            //e.Cancel = true;
         }
     }
 }

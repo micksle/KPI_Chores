@@ -1,4 +1,4 @@
-﻿namespace Security_of_information_systems
+﻿namespace Security_of_information_systems.Forms
 {
     partial class MainForm
     {
@@ -155,10 +155,10 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lab1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Menu_panel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

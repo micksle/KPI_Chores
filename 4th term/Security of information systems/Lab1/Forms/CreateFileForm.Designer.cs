@@ -1,4 +1,4 @@
-﻿namespace Security_of_information_systems
+﻿namespace Security_of_information_systems.Forms
 {
     partial class CreateFileForm
     {

@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Security_of_information_systems.Forms
 {
     public partial class KeyForm : Form
     {
+        private static string EncryptingKey { get; set; }
+        public bool Encrypt { get; set; } = true;
+        
         public KeyForm()
         {
             InitializeComponent();
-            this.CodePanel.AutoSize = false;
-            this.TextPanel.AutoSize = false;
+            CodePanel.AutoSize = false;
+            TextPanel.AutoSize = false;
             Accept.Enabled = false;
         }
 
@@ -23,18 +24,24 @@ namespace Security_of_information_systems.Forms
                 Accept.Enabled = true;
         }
 
-        public static string encryptingKey = null;
-
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            EncryptForm encryptForm = new EncryptForm();
+            var encryptForm = new EncryptForm();
+            var decryptForm = new DecryptForm();
+            EncryptingKey = keyBox.Text;
 
-            string targetString = EncryptForm.targetString;
-            encryptingKey = keyBox.Text;
-
-            encryptForm.Show();
-            encryptForm.Encrypt(encryptingKey);
-            this.Hide();
+            if (Encrypt)
+            {
+                encryptForm.Show();
+                encryptForm.Encrypt(EncryptingKey);
+                Close();
+            }
+            else
+            {
+                decryptForm.Show();
+                decryptForm.Decrypt(EncryptingKey);
+                Close();
+            }
         }
     }
 }

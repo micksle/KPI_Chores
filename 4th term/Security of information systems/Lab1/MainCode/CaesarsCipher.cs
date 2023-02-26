@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Security_of_information_systems
+namespace Security_of_information_systems.MainCode
 {
     internal class CaesarsCipher
     {

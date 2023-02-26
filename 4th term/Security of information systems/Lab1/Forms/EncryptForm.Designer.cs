@@ -1,4 +1,4 @@
-﻿namespace Security_of_information_systems
+﻿namespace Security_of_information_systems.Forms
 {
     partial class EncryptForm
     {
@@ -133,9 +133,9 @@
             this.EncryptTextField.BackColor = System.Drawing.SystemColors.Menu;
             this.EncryptTextField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EncryptTextField.Font = new System.Drawing.Font("MV Boli", 12F);
-            this.EncryptTextField.Location = new System.Drawing.Point(10, 16);
+            this.EncryptTextField.Location = new System.Drawing.Point(16, 31);
             this.EncryptTextField.Name = "EncryptTextField";
-            this.EncryptTextField.Size = new System.Drawing.Size(783, 377);
+            this.EncryptTextField.Size = new System.Drawing.Size(783, 364);
             this.EncryptTextField.TabIndex = 0;
             this.EncryptTextField.Text = "";
             this.EncryptTextField.TextChanged += new System.EventHandler(this.EncryptFIleTextField_TextChanged);
@@ -153,7 +153,6 @@
             this.Menu_panel.ResumeLayout(false);
             this.Main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

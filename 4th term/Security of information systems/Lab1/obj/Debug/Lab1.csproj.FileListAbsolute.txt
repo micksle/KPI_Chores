@@ -8,3 +8,8 @@ C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information system
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.exe
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.pdb
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.Forms.EncryptForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.Forms.KeyForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.Forms.MainForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.Forms.CreateFileForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Lab1\obj\Debug\Security_of_information_systems.Forms.DecryptForm.resources
