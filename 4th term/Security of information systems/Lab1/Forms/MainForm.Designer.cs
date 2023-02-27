@@ -34,7 +34,7 @@
             this.Create_file_button = new System.Windows.Forms.Button();
             this.Print_button = new System.Windows.Forms.Button();
             this.Info_button = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RichTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Menu_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,15 +132,16 @@
             this.Info_button.UseVisualStyleBackColor = false;
             this.Info_button.Click += new System.EventHandler(this.Info_button_Click);
             // 
-            // richTextBox1
+            // RichTextBox1
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("MV Boli", 14F);
-            this.richTextBox1.Location = new System.Drawing.Point(11, 68);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(814, 431);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.RichTextBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RichTextBox1.Font = new System.Drawing.Font("MV Boli", 13F);
+            this.RichTextBox1.Location = new System.Drawing.Point(25, 85);
+            this.RichTextBox1.Name = "RichTextBox1";
+            this.RichTextBox1.Size = new System.Drawing.Size(780, 405);
+            this.RichTextBox1.TabIndex = 3;
+            this.RichTextBox1.Text = "";
             // 
             // MainForm
             // 
@@ -149,7 +150,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(837, 511);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.RichTextBox1);
             this.Controls.Add(this.Menu_panel);
             this.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
@@ -161,13 +162,14 @@
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.RichTextBox RichTextBox1;
+
         #endregion
         private System.Windows.Forms.Button Decrypt_button;
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.Button Print_button;
         private System.Windows.Forms.Button Create_file_button;
         private System.Windows.Forms.Button Info_button;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
     }
 }

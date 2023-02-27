@@ -27,7 +27,7 @@ namespace Security_of_information_systems.Forms
             var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
+                RichTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
             }
         }
 
@@ -38,7 +38,6 @@ namespace Security_of_information_systems.Forms
         {
             MessageBox.Show($"   Personal info:\n\nName: {userName}\nSurname: {userSurname}\nGroup: TP-{userGroup}");
         }
-
         private void Create_file_button_Click(object sender, EventArgs e)
         {
             Hide();

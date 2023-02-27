@@ -4,23 +4,23 @@ namespace Security_of_information_systems.MainCode
 {
     // З'їв аґрусу — та ягода цілюща б'є жах інфекцій шипучим „ь“.
     // The five boxing wizards jump quickly
-    internal class CaesarNew
+    internal class CaesarCipher : Cryptography
     {
         public string FinalString;
 
-        public void DoAction(string targetString, string encryptingKey, bool encrypt)
+        public override void DoAction(string targetString, string encryptingKey, bool encrypt)
         {
             var key = int.Parse(encryptingKey);
             FinalString = Cipher(targetString, key, encrypt);
         }
 
-        public static string Cipher(string targetString, int key, bool encrypt)
+        public override string Cipher(string targetString, int key, bool encrypt)
         {
             var finalString = new StringBuilder();
 
-            for (var i = 0; i < targetString.Length; i++)
+            foreach (var s in targetString)
             {
-                var initialInt = (int) targetString[i];
+                var initialInt = (int) s;
                 int finalInt;
 
                 if (encrypt)

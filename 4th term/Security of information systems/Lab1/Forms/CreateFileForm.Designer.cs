@@ -96,7 +96,7 @@
             // 
             this.SaveFIleTextField.BackColor = System.Drawing.SystemColors.Menu;
             this.SaveFIleTextField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SaveFIleTextField.Font = new System.Drawing.Font("MV Boli", 12F);
+            this.SaveFIleTextField.Font = new System.Drawing.Font("MV Boli", 13F);
             this.SaveFIleTextField.Location = new System.Drawing.Point(3, 3);
             this.SaveFIleTextField.Name = "SaveFIleTextField";
             this.SaveFIleTextField.Size = new System.Drawing.Size(791, 390);
@@ -113,11 +113,9 @@
             this.Name = "CreateFileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateFileForm";
-            this.Load += new System.EventHandler(this.CreateFileForm_Load);
             this.Menu_panel.ResumeLayout(false);
             this.Main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

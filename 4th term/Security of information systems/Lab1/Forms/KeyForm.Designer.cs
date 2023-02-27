@@ -64,10 +64,10 @@
             // keyBox
             // 
             this.keyBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.keyBox.Font = new System.Drawing.Font("MV Boli", 12F);
+            this.keyBox.Font = new System.Drawing.Font("MV Boli", 14F);
             this.keyBox.Location = new System.Drawing.Point(82, 33);
             this.keyBox.Name = "keyBox";
-            this.keyBox.Size = new System.Drawing.Size(195, 33);
+            this.keyBox.Size = new System.Drawing.Size(195, 38);
             this.keyBox.TabIndex = 0;
             this.keyBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.keyBox.TextChanged += new System.EventHandler(this.keyBox_TextChanged);
@@ -86,7 +86,7 @@
             // 
             this.LabelText.AutoSize = true;
             this.LabelText.Font = new System.Drawing.Font("MV Boli", 15F);
-            this.LabelText.Location = new System.Drawing.Point(80, 32);
+            this.LabelText.Location = new System.Drawing.Point(92, 33);
             this.LabelText.Name = "LabelText";
             this.LabelText.Size = new System.Drawing.Size(197, 32);
             this.LabelText.TabIndex = 0;

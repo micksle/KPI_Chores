@@ -4,7 +4,7 @@ namespace Security_of_information_systems.MainCode
 {
     // З'їв аґрусу — та ягода цілюща б'є жах інфекцій шипучим „ь“.
     // The five boxing wizards jump quickly
-    internal class CaesarsCipher
+    internal class CaesarAlt
     {
         public string FinalString;
 
@@ -48,6 +48,8 @@ namespace Security_of_information_systems.MainCode
         {
             var encoding = new UTF8Encoding(); // It should figure out if there's a BOM or not.
             return encoding.GetString(bytes);
+            // Byte Order Mark . In short, the BOM is marker at the beginning of a file to indicate
+            // if the most significant byte, or the least significant byte should come first.
         }
     }
 }

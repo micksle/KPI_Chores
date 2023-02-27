@@ -31,7 +31,7 @@
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.EncryptSaveFileButton = new System.Windows.Forms.Button();
             this.Encrypt_button = new System.Windows.Forms.Button();
-            this.Open_file_button = new System.Windows.Forms.Button();
+            this.OpenFileButton = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
             this.Main_panel = new System.Windows.Forms.Panel();
             this.EncryptTextField = new System.Windows.Forms.RichTextBox();
@@ -44,7 +44,7 @@
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
             this.Menu_panel.Controls.Add(this.EncryptSaveFileButton);
             this.Menu_panel.Controls.Add(this.Encrypt_button);
-            this.Menu_panel.Controls.Add(this.Open_file_button);
+            this.Menu_panel.Controls.Add(this.OpenFileButton);
             this.Menu_panel.Controls.Add(this.Back_button);
             this.Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Menu_panel.Location = new System.Drawing.Point(0, 0);
@@ -84,21 +84,21 @@
             this.Encrypt_button.UseVisualStyleBackColor = false;
             this.Encrypt_button.Click += new System.EventHandler(this.Encrypt_button_Click);
             // 
-            // Open_file_button
+            // OpenFileButton
             // 
-            this.Open_file_button.BackColor = System.Drawing.Color.FloralWhite;
-            this.Open_file_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Open_file_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Open_file_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.Open_file_button.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Open_file_button.Location = new System.Drawing.Point(11, 7);
-            this.Open_file_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Open_file_button.Name = "Open_file_button";
-            this.Open_file_button.Size = new System.Drawing.Size(147, 39);
-            this.Open_file_button.TabIndex = 5;
-            this.Open_file_button.Text = "Chose file";
-            this.Open_file_button.UseVisualStyleBackColor = false;
-            this.Open_file_button.Click += new System.EventHandler(this.Save_file_button_Click);
+            this.OpenFileButton.BackColor = System.Drawing.Color.FloralWhite;
+            this.OpenFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OpenFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OpenFileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.OpenFileButton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenFileButton.Location = new System.Drawing.Point(11, 7);
+            this.OpenFileButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.OpenFileButton.Name = "OpenFileButton";
+            this.OpenFileButton.Size = new System.Drawing.Size(147, 39);
+            this.OpenFileButton.TabIndex = 5;
+            this.OpenFileButton.Text = "Chose file";
+            this.OpenFileButton.UseVisualStyleBackColor = false;
+            this.OpenFileButton.Click += new System.EventHandler(this.OpenFileButton_Click);
             // 
             // Back_button
             // 
@@ -132,7 +132,7 @@
             // 
             this.EncryptTextField.BackColor = System.Drawing.SystemColors.Menu;
             this.EncryptTextField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EncryptTextField.Font = new System.Drawing.Font("MV Boli", 12F);
+            this.EncryptTextField.Font = new System.Drawing.Font("MV Boli", 13F);
             this.EncryptTextField.Location = new System.Drawing.Point(16, 31);
             this.EncryptTextField.Name = "EncryptTextField";
             this.EncryptTextField.Size = new System.Drawing.Size(783, 364);
@@ -158,7 +158,7 @@
         #endregion
 
         private System.Windows.Forms.Panel Menu_panel;
-        private System.Windows.Forms.Button Open_file_button;
+        private System.Windows.Forms.Button OpenFileButton;
         private System.Windows.Forms.Button Back_button;
         private System.Windows.Forms.Panel Main_panel;
         private System.Windows.Forms.RichTextBox EncryptTextField;

@@ -70,8 +70,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs" />
-    <Compile Include="MainCode\CaesarNew.cs" />
-    <Compile Include="MainCode\CaesarsCipher.cs" />
+    <Compile Include="MainCode\CaesarCipher.cs" />
+    <Compile Include="MainCode\CaesarAlt.cs" />
+    <Compile Include="MainCode\Cryptography.cs" />
     <Compile Include="MainCode\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CreateFileForm.resx">

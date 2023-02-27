@@ -19,13 +19,12 @@ namespace Security_of_information_systems.Forms
             }
         }
 
-        private void Save_file_button_Click(object sender, EventArgs e)
+        private void OpenFileButton_Click(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 EncryptTextField.Text = File.ReadAllText(openFileDialog.FileName);
-                targetString = File.ReadAllText(openFileDialog.FileName);
             }
         }
 
@@ -45,10 +44,9 @@ namespace Security_of_information_systems.Forms
 
         public void Encrypt(string encryptingKey)
         {
-            // var caesarsCipher = new CaesarsCipher();
-            var caesarsCipher = new CaesarNew();
-            caesarsCipher.DoAction(targetString, encryptingKey, true);
-            EncryptTextField.Text = caesarsCipher.FinalString;
+            var caesarCipher = new CaesarCipher();
+            caesarCipher.DoAction(targetString, encryptingKey, true);
+            EncryptTextField.Text = caesarCipher.FinalString;
         }
 
         private void EncryptFIleTextField_TextChanged(object sender, EventArgs e)

@@ -7,7 +7,7 @@ namespace Security_of_information_systems.Forms
 {
     public partial class DecryptForm : Form
     {
-        public static string targetString;
+        private static string TargetString;
         public DecryptForm()
         {
             InitializeComponent();
@@ -28,10 +28,9 @@ namespace Security_of_information_systems.Forms
         
         public void Decrypt(string encryptingKey)
         {
-            var caesarsCipher = new CaesarNew();
-            // var caesarsCipher = new CaesarsCipher();
-            caesarsCipher.DoAction(targetString, encryptingKey, false);
-            DecryptTextField.Text = caesarsCipher.FinalString;
+            var caesarCipher = new CaesarCipher();
+            caesarCipher.DoAction(TargetString, encryptingKey, false);
+            DecryptTextField.Text = caesarCipher.FinalString;
         }
 
         private void SaveFileButton_Click(object sender, EventArgs e)
@@ -60,7 +59,7 @@ namespace Security_of_information_systems.Forms
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 DecryptTextField.Text = File.ReadAllText(openFileDialog.FileName);
-                targetString = File.ReadAllText(openFileDialog.FileName);
+                TargetString = File.ReadAllText(openFileDialog.FileName);
             }
         }
 
@@ -76,7 +75,7 @@ namespace Security_of_information_systems.Forms
                 SaveFileButton.Enabled = true;
             }
 
-            targetString = DecryptTextField.Text;
+            TargetString = DecryptTextField.Text;
         }
     }
 }

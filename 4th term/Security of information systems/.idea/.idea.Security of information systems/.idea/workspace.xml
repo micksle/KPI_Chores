@@ -4,22 +4,21 @@
     <projectFile>Security of information systems/Security of information systems.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/CaeserNew.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1/MainCode/CaesarNew.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/Lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/Lab1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" afterDir="false" />
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="additional features added">
+      <change afterPath="$PROJECT_DIR$/Lab1/MainCode/Cryptography.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/KeyForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/KeyForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/MainForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/Lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Lab1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarsCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/CaesarsCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarNew.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/CaesarCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarsCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/CaesarAlt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/MainCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/MainCode/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" afterDir="false" />
@@ -87,7 +86,7 @@
       <workItem from="1677445501977" duration="2019000" />
       <workItem from="1677447956060" duration="150000" />
       <workItem from="1677448141513" duration="1478000" />
-      <workItem from="1677449867423" duration="7311000" />
+      <workItem from="1677449867423" duration="11090000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -110,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677452118121</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update lab1 SIS">
+      <created>1677506451722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677506451722</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,8 +140,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Update lab1 SIS" />
     <MESSAGE value="Add config files" />
-    <MESSAGE value="update lab1 SIS" />
     <MESSAGE value="major update, fixed not able to be closed bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="major update, fixed not able to be closed bug" />
+    <MESSAGE value="update lab1 SIS" />
+    <MESSAGE value="additional features added" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional features added" />
   </component>
 </project>

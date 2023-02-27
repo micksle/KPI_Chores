@@ -46,7 +46,7 @@ namespace Security_of_information_systems.Forms
             // 
             this.DecryptTextField.BackColor = System.Drawing.SystemColors.Menu;
             this.DecryptTextField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DecryptTextField.Font = new System.Drawing.Font("MV Boli", 12F);
+            this.DecryptTextField.Font = new System.Drawing.Font("MV Boli", 13F);
             this.DecryptTextField.Location = new System.Drawing.Point(17, 38);
             this.DecryptTextField.Name = "DecryptTextField";
             this.DecryptTextField.Size = new System.Drawing.Size(777, 362);
