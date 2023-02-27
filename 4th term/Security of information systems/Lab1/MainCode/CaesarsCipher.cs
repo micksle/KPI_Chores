@@ -2,14 +2,16 @@
 
 namespace Security_of_information_systems.MainCode
 {
+    // З'їв аґрусу — та ягода цілюща б'є жах інфекцій шипучим „ь“.
+    // The five boxing wizards jump quickly
     internal class CaesarsCipher
     {
-        public string finalString;
+        public string FinalString;
 
         public void DoAction(string targetString, string encryptingKey, bool encrypt)
         {
             var key = byte.Parse(encryptingKey);
-            finalString = Cipher(targetString, key, encrypt);
+            FinalString = Cipher(targetString, key, encrypt);
         }
 
         public static string Cipher(string targetString, byte key, bool encrypt)

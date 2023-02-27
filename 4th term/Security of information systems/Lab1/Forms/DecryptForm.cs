@@ -28,9 +28,10 @@ namespace Security_of_information_systems.Forms
         
         public void Decrypt(string encryptingKey)
         {
-            var caesarsCipher = new CaesarsCipher();
+            var caesarsCipher = new CaesarNew();
+            // var caesarsCipher = new CaesarsCipher();
             caesarsCipher.DoAction(targetString, encryptingKey, false);
-            DecryptTextField.Text = caesarsCipher.finalString;
+            DecryptTextField.Text = caesarsCipher.FinalString;
         }
 
         private void SaveFileButton_Click(object sender, EventArgs e)

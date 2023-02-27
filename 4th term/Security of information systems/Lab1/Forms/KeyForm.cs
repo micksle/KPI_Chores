@@ -18,7 +18,7 @@ namespace Security_of_information_systems.Forms
 
         private void keyBox_TextChanged(object sender, EventArgs e)
         {
-            if (keyBox.Text.Length == 0 || !byte.TryParse(keyBox.Text, out _))
+            if (keyBox.Text.Length == 0 || !int.TryParse(keyBox.Text, out _))
                 Accept.Enabled = false;
             else
                 Accept.Enabled = true;

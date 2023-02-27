@@ -45,9 +45,10 @@ namespace Security_of_information_systems.Forms
 
         public void Encrypt(string encryptingKey)
         {
-            var caesarsCipher = new CaesarsCipher();
+            // var caesarsCipher = new CaesarsCipher();
+            var caesarsCipher = new CaesarNew();
             caesarsCipher.DoAction(targetString, encryptingKey, true);
-            EncryptTextField.Text = caesarsCipher.finalString;
+            EncryptTextField.Text = caesarsCipher.FinalString;
         }
 
         private void EncryptFIleTextField_TextChanged(object sender, EventArgs e)
