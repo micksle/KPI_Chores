@@ -35,6 +35,7 @@ namespace Security_of_information_systems.Forms
             this.SaveFileButton = new System.Windows.Forms.Button();
             this.DecryptButton = new System.Windows.Forms.Button();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.BruteDecrypt = new System.Windows.Forms.Button();
             this.OpenFileButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.Main_panel = new System.Windows.Forms.Panel();
@@ -89,6 +90,7 @@ namespace Security_of_information_systems.Forms
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.Menu_panel.Controls.Add(this.BruteDecrypt);
             this.Menu_panel.Controls.Add(this.SaveFileButton);
             this.Menu_panel.Controls.Add(this.DecryptButton);
             this.Menu_panel.Controls.Add(this.OpenFileButton);
@@ -98,6 +100,22 @@ namespace Security_of_information_systems.Forms
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(800, 53);
             this.Menu_panel.TabIndex = 8;
+            // 
+            // BruteDecrypt
+            // 
+            this.BruteDecrypt.BackColor = System.Drawing.Color.FloralWhite;
+            this.BruteDecrypt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BruteDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BruteDecrypt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.BruteDecrypt.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BruteDecrypt.Location = new System.Drawing.Point(492, 7);
+            this.BruteDecrypt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.BruteDecrypt.Name = "BruteDecrypt";
+            this.BruteDecrypt.Size = new System.Drawing.Size(179, 39);
+            this.BruteDecrypt.TabIndex = 10;
+            this.BruteDecrypt.Text = "Brute decrypt";
+            this.BruteDecrypt.UseVisualStyleBackColor = false;
+            this.BruteDecrypt.Click += new System.EventHandler(this.BruteDecrypt_Click);
             // 
             // OpenFileButton
             // 
@@ -157,6 +175,8 @@ namespace Security_of_information_systems.Forms
             this.Main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button BruteDecrypt;
 
         private System.Windows.Forms.RichTextBox DecryptTextField;
         private System.Windows.Forms.Button SaveFileButton;

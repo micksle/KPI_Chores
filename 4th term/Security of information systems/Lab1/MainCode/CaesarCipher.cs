@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Windows.Forms;
 
 namespace Security_of_information_systems.MainCode
 {
@@ -20,7 +21,7 @@ namespace Security_of_information_systems.MainCode
 
             foreach (var s in targetString)
             {
-                var initialInt = (int) s;
+                var initialInt = (int)s;
                 int finalInt;
 
                 if (encrypt)
@@ -28,11 +29,47 @@ namespace Security_of_information_systems.MainCode
                 else
                     finalInt = initialInt - key;
 
-                var finalChar = (char) finalInt;
+                var finalChar = (char)finalInt;
                 finalString.Append(finalChar);
             }
 
             return finalString.ToString();
+        }
+
+        public void BruteForce(string encryptedString, string toFind)
+        {
+            var find = false;
+            var i = 0;
+            string decryptedValue;
+            int encryptValue;
+
+            var firstEncrypted = (int)encryptedString[0];
+            var firstToFind = (int)toFind[0];
+            bool positive;
+
+            if (firstToFind - firstEncrypted < 0)
+                positive = true;
+            else
+                positive = false;
+
+            while (find == false)
+            {
+                if (!positive)
+                    encryptValue = i;
+                else
+                    encryptValue = -i;
+
+                decryptedValue = Cipher(encryptedString, encryptValue, false);
+                if (decryptedValue == toFind)
+                    find = true;
+
+                i++;
+            }
+
+            if (!positive)
+                MessageBox.Show("Text decrypted succesfully, with the key value = " + (i - 1));
+            else
+                MessageBox.Show("Text decrypted succesfully, with the key value = " + (-i + 1));
         }
     }
 }

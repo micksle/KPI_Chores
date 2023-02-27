@@ -15,6 +15,7 @@ namespace Security_of_information_systems.Forms
             {
                 DecryptButton.Enabled = false;
                 SaveFileButton.Enabled = false;
+                BruteDecrypt.Enabled = false;
             }
         }
 
@@ -65,14 +66,37 @@ namespace Security_of_information_systems.Forms
             {
                 DecryptButton.Enabled = false;
                 SaveFileButton.Enabled = false;
+                BruteDecrypt.Enabled = false;
             }
             else
             {
                 DecryptButton.Enabled = true;
                 SaveFileButton.Enabled = true;
+                BruteDecrypt.Enabled = true;
             }
 
             TargetString = DecryptTextField.Text;
+        }
+
+        private void BruteDecrypt_Click(object sender, EventArgs e)
+        {
+            string toFind = null;
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                toFind = File.ReadAllText(openFileDialog.FileName);
+            }
+
+            if (!string.IsNullOrEmpty(toFind))
+            {
+                var caesarCipher = new CaesarCipher();
+                caesarCipher.BruteForce(TargetString, toFind);
+                DecryptTextField.Text = caesarCipher.FinalString;   
+            }
+            else
+            {
+                MessageBox.Show("Error, can`t decrypt the null value");
+            }
         }
     }
 }
