@@ -72,7 +72,7 @@
     <Compile Include="Forms\MainForm.Designer.cs" />
     <Compile Include="MainCode\CaesarCipher.cs" />
     <Compile Include="MainCode\CaesarAlt.cs" />
-    <Compile Include="MainCode\Cryptography.cs" />
+    <Compile Include="MainCode\ICryptography.cs" />
     <Compile Include="MainCode\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CreateFileForm.resx">

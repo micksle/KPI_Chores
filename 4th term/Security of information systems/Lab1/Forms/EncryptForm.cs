@@ -68,14 +68,11 @@ namespace Security_of_information_systems.Forms
         private void EncryptSaveFileButton_Click(object sender, EventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".txt";
-            saveFileDialog.Filter = "Test files|*.txt";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName.Length > 0)
-                using (var sw = new StreamWriter(saveFileDialog.FileName, true))
-                {
-                    sw.WriteLine(EncryptTextField.Text);
-                    sw.Close();
-                }
+            saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            var filename = saveFileDialog.FileName;
+            File.WriteAllText(filename, EncryptTextField.Text);
         }
     }
 }

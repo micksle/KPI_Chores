@@ -36,14 +36,11 @@ namespace Security_of_information_systems.Forms
         private void SaveFileButton_Click(object sender, EventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.DefaultExt = ".txt";
-            saveFileDialog.Filter = "Test files|*.txt";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName.Length > 0)
-                using (var sw = new StreamWriter(saveFileDialog.FileName, true))
-                {
-                    sw.WriteLine(DecryptTextField.Text);
-                    sw.Close();
-                }
+            saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            var filename = saveFileDialog.FileName;
+            File.WriteAllText(filename, DecryptTextField.Text);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
