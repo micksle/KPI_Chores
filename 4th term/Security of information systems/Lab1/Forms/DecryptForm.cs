@@ -62,7 +62,8 @@ namespace Security_of_information_systems.Forms
         }
 
         private void DecryptTextField_TextChanged(object sender, EventArgs e)
-        {if (Text.Length == 0)
+        {
+            if (Text.Length == 0)
             {
                 DecryptButton.Enabled = false;
                 SaveFileButton.Enabled = false;

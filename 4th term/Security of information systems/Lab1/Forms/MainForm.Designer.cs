@@ -45,10 +45,10 @@
             this.Decrypt_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Decrypt_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.Decrypt_button.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Decrypt_button.Location = new System.Drawing.Point(273, 7);
+            this.Decrypt_button.Location = new System.Drawing.Point(233, 7);
             this.Decrypt_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Decrypt_button.Name = "Decrypt_button";
-            this.Decrypt_button.Size = new System.Drawing.Size(106, 39);
+            this.Decrypt_button.Size = new System.Drawing.Size(96, 39);
             this.Decrypt_button.TabIndex = 1;
             this.Decrypt_button.Text = "Decrypt";
             this.Decrypt_button.UseVisualStyleBackColor = false;
@@ -75,10 +75,10 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.button1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(163, 7);
+            this.button1.Location = new System.Drawing.Point(135, 7);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 39);
+            this.button1.Size = new System.Drawing.Size(94, 39);
             this.button1.TabIndex = 4;
             this.button1.Text = "Encrypt";
             this.button1.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.Create_file_button.Location = new System.Drawing.Point(11, 7);
             this.Create_file_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Create_file_button.Name = "Create_file_button";
-            this.Create_file_button.Size = new System.Drawing.Size(147, 39);
+            this.Create_file_button.Size = new System.Drawing.Size(120, 39);
             this.Create_file_button.TabIndex = 5;
             this.Create_file_button.Text = "Create file";
             this.Create_file_button.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@
             this.Print_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Print_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.Print_button.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Print_button.Location = new System.Drawing.Point(383, 7);
+            this.Print_button.Location = new System.Drawing.Point(333, 7);
             this.Print_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Print_button.Name = "Print_button";
             this.Print_button.Size = new System.Drawing.Size(106, 39);
@@ -123,7 +123,7 @@
             this.Info_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Info_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.Info_button.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Info_button.Location = new System.Drawing.Point(493, 7);
+            this.Info_button.Location = new System.Drawing.Point(443, 7);
             this.Info_button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Info_button.Name = "Info_button";
             this.Info_button.Size = new System.Drawing.Size(106, 39);

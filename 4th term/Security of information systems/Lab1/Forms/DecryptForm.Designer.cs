@@ -108,7 +108,7 @@ namespace Security_of_information_systems.Forms
             this.BruteDecrypt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BruteDecrypt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.BruteDecrypt.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BruteDecrypt.Location = new System.Drawing.Point(492, 7);
+            this.BruteDecrypt.Location = new System.Drawing.Point(382, 7);
             this.BruteDecrypt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BruteDecrypt.Name = "BruteDecrypt";
             this.BruteDecrypt.Size = new System.Drawing.Size(179, 39);
@@ -140,7 +140,7 @@ namespace Security_of_information_systems.Forms
             this.BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.BackButton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(382, 7);
+            this.BackButton.Location = new System.Drawing.Point(565, 7);
             this.BackButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(106, 39);
