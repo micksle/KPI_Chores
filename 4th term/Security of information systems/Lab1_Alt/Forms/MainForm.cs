@@ -70,6 +70,7 @@ namespace Lab1_Alt.Forms
         {
             caesarCipher.DoAction(targetString, encryptingKey, true);
             TextBox.Text = caesarCipher.FinalString;
+            caesarCipher.FinalString = "";
         }
 
         private void DecryptButton_Click(object sender, EventArgs e)
@@ -84,6 +85,7 @@ namespace Lab1_Alt.Forms
         {
             caesarCipher.DoAction(targetString, encryptingKey, false);
             TextBox.Text = caesarCipher.FinalString;
+            caesarCipher.FinalString = "";
         }
 
         private void BruteButton_Click(object sender, EventArgs e)
@@ -96,7 +98,7 @@ namespace Lab1_Alt.Forms
             {
                 toFind = File.ReadAllText(openFileDialog.FileName);
             }
-            
+
             if (!string.IsNullOrEmpty(toFind))
             {
                 caesarCipher.BruteForce(targetString, toFind);
@@ -104,7 +106,7 @@ namespace Lab1_Alt.Forms
             }
             else
             {
-                MessageBox.Show("Error, can`t decrypt the null value");
+                MessageBox.Show("Error, can`t decrypt the empty value");
             }
         }
 

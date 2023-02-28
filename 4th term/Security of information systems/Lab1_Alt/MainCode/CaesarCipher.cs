@@ -41,30 +41,40 @@ namespace Lab1_Alt.MainCode
         {
             var find = false;
             var i = 0;
-            string decryptedValue = "";
+            var decryptedValue = "";
             int encryptValue;
 
-            var firstEncrypted = (int)encryptedString[0];
-            var firstToFind = (int)toFind[0];
-            bool positive;
-
-            if (firstToFind - firstEncrypted < 0)
-                positive = true;
-            else
-                positive = false;
+            int firstEncrypted = encryptedString[0];
+            int firstToFind = toFind[0];
+            var positive = firstToFind - firstEncrypted < 0;
 
             while (find == false)
             {
-                if (positive)
-                    encryptValue = i;
-                else
-                    encryptValue = -i;
+                try
+                {
+                    if (positive)
+                        encryptValue = i;
+                    else
+                        encryptValue = -i;
 
-                decryptedValue = Cipher(encryptedString, encryptValue, false);
-                if (decryptedValue == toFind)
-                    find = true;
+                    decryptedValue = Cipher(encryptedString, encryptValue, false);
+                    if (decryptedValue == toFind)
+                        find = true;
 
-                i++;
+                    if (Math.Abs(i)  >= 17000)
+                    {
+                        throw new OutOfMemoryException();
+                    }
+
+                    i++;
+                }
+                catch (OutOfMemoryException e)
+                {
+                    MessageBox.Show(
+                        "\t\t\tERROR\n\nMemory limit exceeded, seems like the choosen file was unpropriate, unable to use \"brute decription\" method");
+                    Console.WriteLine(e);
+                    return;
+                }
             }
 
             FinalString = decryptedValue;

@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.BruteButton = new System.Windows.Forms.Button();
             this.OpenFileButton = new System.Windows.Forms.Button();
             this.EncryptButton = new System.Windows.Forms.Button();
@@ -189,6 +190,7 @@
             this.ClientSize = new System.Drawing.Size(868, 457);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.Menu_panel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

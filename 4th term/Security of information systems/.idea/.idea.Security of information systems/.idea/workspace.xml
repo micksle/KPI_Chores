@@ -7,58 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/1e1a8e11-9938-4dd1-a2ef-45b259f31063.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/629efee6-5649-4be9-8554-0d387e999687.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/cbef311b-3477-48f3-ba3a-b982144045a4.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/ef8b6402-da61-43b3-a2b8-684b01f0f443.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Lab1_Alt.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/ICryptography.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Properties/Resources.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Properties/Resources.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Properties/Settings.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/Properties/Settings.settings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.KeyForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.KeyForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.MainForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Properties.Resources.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.SuggestedBindingRedirects.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/TempPE/Lab2.MainForm.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/68824f2a-db09-453b-b6ea-aa8e78f0bb04.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/75cf73df-dfe8-43c3-b526-50e61ccb5f65.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +110,8 @@
       <workItem from="1677447956060" duration="150000" />
       <workItem from="1677448141513" duration="1478000" />
       <workItem from="1677449867423" duration="28691000" />
-      <workItem from="1677544646760" duration="1012000" />
+      <workItem from="1677544646760" duration="1137000" />
+      <workItem from="1677590632618" duration="12878000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -197,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677534122569</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add new app version">
+      <created>1677545752419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677545752419</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +197,7 @@
     <MESSAGE value="additional features added" />
     <MESSAGE value="update lab1 SIS" />
     <MESSAGE value="add brute force alg" />
-    <option name="LAST_COMMIT_MESSAGE" value="add brute force alg" />
+    <MESSAGE value="add new app version" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new app version" />
   </component>
 </project>
