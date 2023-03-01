@@ -6,20 +6,16 @@
     <projectFile>Security of information systems/Security of information systems.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/bin/Debug/Lab1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../3rd term/Object-oriented programming/Lab1/obj/Debug/Lab1.pdb" afterDir="false" />
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="add proper brute-force alg">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/MainCode/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.KeyForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.KeyForm.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" afterDir="false" />
@@ -46,15 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.Lab1_Alt">
     <configuration name="Lab1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" />
@@ -111,7 +108,7 @@
       <workItem from="1677448141513" duration="1478000" />
       <workItem from="1677449867423" duration="28691000" />
       <workItem from="1677544646760" duration="1137000" />
-      <workItem from="1677590632618" duration="12878000" />
+      <workItem from="1677590632618" duration="22319000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -169,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677545752419</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add proper brute-force alg">
+      <created>1677610755873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677610755873</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +202,7 @@
     <MESSAGE value="update lab1 SIS" />
     <MESSAGE value="add brute force alg" />
     <MESSAGE value="add new app version" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new app version" />
+    <MESSAGE value="add proper brute-force alg" />
+    <option name="LAST_COMMIT_MESSAGE" value="add proper brute-force alg" />
   </component>
 </project>

@@ -31,15 +31,6 @@ namespace Lab1_Alt.Forms
             MessageBox.Show($"   Personal info:\n\nName: {userName}\nSurname: {userSurname}\nGroup: TP-{userGroup}");
         }
 
-        private void PrintButton_Click(object sender, EventArgs e)
-        {
-            var openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                TextBox.Text = File.ReadAllText(openFileDialog.FileName);
-            }
-        }
-
         private void CreateFileButton_Click(object sender, EventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();

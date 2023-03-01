@@ -35,7 +35,6 @@
             this.EncryptButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.RichTextBox();
             this.CreateFileButton = new System.Windows.Forms.Button();
-            this.PrintButton = new System.Windows.Forms.Button();
             this.InfoButton = new System.Windows.Forms.Button();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.DecryptButton = new System.Windows.Forms.Button();
@@ -118,22 +117,6 @@
             this.CreateFileButton.UseVisualStyleBackColor = false;
             this.CreateFileButton.Click += new System.EventHandler(this.CreateFileButton_Click);
             // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FloralWhite;
-            this.PrintButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PrintButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PrintButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.PrintButton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintButton.Location = new System.Drawing.Point(640, 7);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(106, 39);
-            this.PrintButton.TabIndex = 3;
-            this.PrintButton.Text = "Print";
-            this.PrintButton.UseVisualStyleBackColor = false;
-            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
-            // 
             // InfoButton
             // 
             this.InfoButton.BackColor = System.Drawing.Color.FloralWhite;
@@ -141,7 +124,7 @@
             this.InfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InfoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.InfoButton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoButton.Location = new System.Drawing.Point(751, 7);
+            this.InfoButton.Location = new System.Drawing.Point(640, 7);
             this.InfoButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.InfoButton.Name = "InfoButton";
             this.InfoButton.Size = new System.Drawing.Size(106, 39);
@@ -157,7 +140,6 @@
             this.Menu_panel.Controls.Add(this.OpenFileButton);
             this.Menu_panel.Controls.Add(this.EncryptButton);
             this.Menu_panel.Controls.Add(this.CreateFileButton);
-            this.Menu_panel.Controls.Add(this.PrintButton);
             this.Menu_panel.Controls.Add(this.InfoButton);
             this.Menu_panel.Controls.Add(this.DecryptButton);
             this.Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -203,7 +185,6 @@
         private System.Windows.Forms.Button EncryptButton;
         private System.Windows.Forms.RichTextBox TextBox;
         private System.Windows.Forms.Button CreateFileButton;
-        private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button InfoButton;
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.Button DecryptButton;

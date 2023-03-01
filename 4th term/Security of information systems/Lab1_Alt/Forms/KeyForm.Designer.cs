@@ -31,6 +31,7 @@ namespace Lab1_Alt.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyForm));
             this.CodePanel = new System.Windows.Forms.Panel();
             this.Accept_Button = new System.Windows.Forms.Button();
             this.keyBox = new System.Windows.Forms.TextBox();
@@ -102,6 +103,9 @@ namespace Lab1_Alt.Forms
             this.ClientSize = new System.Drawing.Size(357, 219);
             this.Controls.Add(this.CodePanel);
             this.Controls.Add(this.TextPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(375, 266);
+            this.MinimumSize = new System.Drawing.Size(375, 266);
             this.Name = "KeyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KeyForm";
