@@ -33,6 +33,6 @@ return 0;
 } 
 
 int main(void){
-printf("\t\tResults of the first task \n\n");
+printf("\t\tThe result of the algorithm\n\n");
 task1();
 }
