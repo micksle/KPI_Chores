@@ -4,4 +4,4 @@ Teachers:
 - Lecturer: Szeged Iryna Vasylivna <br>
 - Practitioner: Bespala Olga Mykolayivna <br>
 
-The discipline consists of `7 labouratory works` and `2 modular control work`. All of them are represented in this folder
+The discipline consists of `7 labouratory works` and `2 modular control work`. Control works were performed in Google documents, so they are not presented in this folder, but all other works are presented here.
