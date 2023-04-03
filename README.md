@@ -6,6 +6,8 @@ This repo will show the major part of the programming tasks that were completed 
   - [Programming of algorithmic structures](https://github.com/mickzle/KPI_Chores/tree/main/1st%20term/Programming%20of%20algorithmic%20structures)
   - [Algorithmization and programming](https://github.com/mickzle/KPI_Chores/tree/main/1st%20term/Algorithmization%20and%20programming)
 - 2nd term
+  - [Programming of complex algorithms](https://github.com/mickzle/KPI_Chores/tree/main/2nd%20term/Programming%20of%20complex%20algorithms)
+  - [Operating Systems](https://github.com/mickzle/KPI_Chores/tree/main/2nd%20term/Operating%20systems)
 
 ## Second year
 - 1st term
