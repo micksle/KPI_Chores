@@ -1,4 +1,4 @@
-## The folder represents all the desciplines that were held during the `first term` of studying <!-- at Igor Sikorsky Kyiv Polytechnic Institute -->
+## The folder represents all the desciplines that were held during the `second term` of studying <!-- at Igor Sikorsky Kyiv Polytechnic Institute -->
 
 Represented disciplines:
 |Discipline|Language|
