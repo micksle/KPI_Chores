@@ -1,6 +1,6 @@
 # Database systems
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) <br><br>
-Teachers:
+Proffesors:
 - Lecturer: Szeged Iryna Vasylivna <br>
 - Practitioner: Bespala Olga Mykolayivna <br>
 
