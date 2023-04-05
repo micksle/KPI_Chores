@@ -14,4 +14,4 @@
 ---
 ## `To be continued..`
 Вигляд готової сторінки:<br><br>
-![Lr3](page.png)
+<!--![Lr3](page.png)-->
