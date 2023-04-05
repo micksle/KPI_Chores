@@ -4,4 +4,4 @@ Proffesors:
 - Lecturer: Onysko Andriy Ilyich <br>
 - Practitioner: Onysko Andriy Ilyich <br>
 
-The discipline consists of `7 labouratory works`. All of them are represented in current folder
+The discipline consists of `7 labouratory works (Lr)` and `6 practical works (Sr)`. All of them are represented in current folder
