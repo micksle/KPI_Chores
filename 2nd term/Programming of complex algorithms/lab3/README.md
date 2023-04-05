@@ -10,4 +10,4 @@
 2. Оцінити час виконання та складність алгоритму
 ---
 ### Умови завдання: <br>
-![Lr3]()
+![Lr3](https://github.com/mickzle/KPI_Chores/blob/6fec889ed963e111e4632f4fd3e272579064dade/2nd%20term/Programming%20of%20complex%20algorithms/lab3/Lr3.png)
