@@ -5,4 +5,4 @@ Teachers:
 - Lecturer: Yuriy Adamovych Tarnavskyi <br>
 - Practitioner: Yuriy Adamovych Tarnavskyi <br>
 
-The discipline consists of `6 labouratory works`. All of them are represented in this folder
+The discipline consists of `6 labouratory works (Lr)`. All of them are represented in this folder
