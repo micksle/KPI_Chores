@@ -4,4 +4,4 @@ Teachers:
 - Lecturer: Oleg Volodymyrovych Barabash <br>
 - Practitioner: Oleg Volodymyrovych Barabash <br>
 
-The discipline consists of `3 labouratory works`, `1 modular control work` and `1 calculated graphic work`. All of them are represented in this folder
+The discipline consists of `3 labouratory works (Lr)`, `1 modular control work (Kr1)` and `1 calculated graphic work (RgrTr12Kali)`. All of them are represented in this folder
