@@ -20,4 +20,4 @@
 - Визначити, чи є дерево майже повним
 ---
 Зображення роботи побудованого алгоритму представлено нижче
-![Lr7]()
+![Lr7](https://github.com/mickzle/KPI_Chores/blob/8d129b5a3e3e6c76cebe7766c8e6482ee64fe7de/2nd%20term/Programming%20of%20complex%20algorithms/lab7/Lr7.jpg)
