@@ -1,7 +1,13 @@
-# KPI_Chores
-This repo will show the major part of the programming tasks that were completed as a part of a study plan at my university
+![rect](https://capsule-render.vercel.app/api?type=rect&color=0:673AB7,100:73C2CF&text=%20%20KPI%20%20&fontAlign=30&fontSize=30&textBg=true&fontColor=bfe2e2&desc=labouratory%20works&descAlign=60&descAlignY=50&descSize=40)
 
-## First year
+The purpose of the repository is to show the major part of programming disciplines provided by the bachelor's degree program in Computer Science at Educational and Scientific Institute of Atomic and Thermal Energy, which is a part of Ihor Sikorsky Kyiv Polytechnic Institute <br>
+
+The degree program has a number **122 - Computer Science**  <br>
+
+The educational program is **Digital technologies in energy**
+
+
+## :one: First year
 - 1st term
   - [Programming of algorithmic structures](https://github.com/mickzle/KPI_Chores/tree/main/1st%20term/Programming%20of%20algorithmic%20structures)
   - [Algorithmization and programming](https://github.com/mickzle/KPI_Chores/tree/main/1st%20term/Algorithmization%20and%20programming)
@@ -9,7 +15,7 @@ This repo will show the major part of the programming tasks that were completed 
   - [Programming of complex algorithms](https://github.com/mickzle/KPI_Chores/tree/main/2nd%20term/Programming%20of%20complex%20algorithms)
   - [Operating Systems](https://github.com/mickzle/KPI_Chores/tree/main/2nd%20term/Operating%20systems)
 
-## Second year
+## :two: Second year
 - 1st term
   - [Object-oriented programming](https://github.com/mickzle/KPI_Chores/tree/main/3rd%20term/Object-oriented%20programming)
   - [WEB design and technologies](https://github.com/mickzle/KPI_Chores/tree/main/3rd%20term/WEB%20design%20and%20technologies)
