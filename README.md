@@ -6,6 +6,7 @@ The degree program has a number **122 - Computer Science**  <br>
 
 The educational program is **Digital technologies in energy**
 
+👣 Enroll year: 2021 
 
 ## :one: First year
 - 1st term
