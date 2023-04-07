@@ -7,6 +7,10 @@ The degree program has a number **122 - Computer Science**  <br>
 The educational program is **Digital technologies in energy**
 
 👣 Enroll year: 2021 
+<div align="center">
+    <img src="https://img.shields.io/github/repo-size/mickzle/KPI_Chores?style=for-the-badge&label=repository%20size&labelColor=6a58bc&color=73c1cf" alt="Repo size"/>
+    <img src="https://img.shields.io/github/last-commit/mickzle/KPI_Chores?style=for-the-badge&label=last%20commit&labelColor=6a58bc&color=73c1cf" alt="Last commit"/>     <img src="https://img.shields.io/github/languages/count/mickzle/KPI_Chores?style=for-the-badge&label=languages%20count&labelColor=6a58bc&color=73c1cf"   alt="Languages count"/>
+</div>
 
 ## :one: First year
 - 1st term
