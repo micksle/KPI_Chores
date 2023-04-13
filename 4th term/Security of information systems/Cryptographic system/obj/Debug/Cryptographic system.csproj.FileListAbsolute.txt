@@ -1,0 +1,11 @@
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\bin\Debug\Cryptographic_system.exe.config
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\bin\Debug\Cryptographic_system.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\bin\Debug\Cryptographic_system.pdb
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic system.csproj.AssemblyReference.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic system.csproj.SuggestedBindingRedirects.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic_system.Properties.Resources.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic_system.SystemForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic system.csproj.GenerateResource.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic system.csproj.CoreCompileInputs.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic_system.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Debug\Cryptographic_system.pdb
