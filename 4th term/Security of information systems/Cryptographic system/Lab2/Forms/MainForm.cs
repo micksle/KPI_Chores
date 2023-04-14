@@ -13,17 +13,14 @@ namespace Cryptographic_system.Lab2.Forms
         private static string key1;
         private static string key2;
         private static string key3;
-        private static bool[] counter = new bool[7];
+        private static bool[] counter = new bool[6];
 
         public MainForm()
         {
             InitializeComponent();
 
-            if (TextBox.Text == "")
-            {
-                encryptToolStripMenuItem.Enabled = false;
-                decryptToolStripMenuItem.Enabled = false;
-            }
+            encryptToolStripMenuItem.Enabled = false;
+            decryptToolStripMenuItem.Enabled = false;
 
             Key1.AutoSize = false;
             Key2.AutoSize = false;
@@ -79,7 +76,6 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void encryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("state  " + state);
             var trithemiusCipher = new TrithemiusCipher();
             trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, true);
             TextBox.Text = trithemiusCipher.FinalString;
@@ -88,7 +84,6 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void decryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("state  " + state);
             var trithemiusCipher = new TrithemiusCipher();
             trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, false);
             TextBox.Text = trithemiusCipher.FinalString;
@@ -99,6 +94,7 @@ namespace Cryptographic_system.Lab2.Forms
         {
             if (Key1.Text.Length == 0 || !int.TryParse(Key1.Text, out _))
             {
+                counter[0] = false;
                 encryptToolStripMenuItem.Enabled = false;
                 decryptToolStripMenuItem.Enabled = false;
             }
@@ -106,8 +102,11 @@ namespace Cryptographic_system.Lab2.Forms
             {
                 key1 = Key1.Text;
                 counter[0] = true;
-                encryptToolStripMenuItem.Enabled = true;
-                decryptToolStripMenuItem.Enabled = true;
+                if (IsActive())
+                {
+                    encryptToolStripMenuItem.Enabled = true;
+                    decryptToolStripMenuItem.Enabled = true;
+                }
             }
         }
 
@@ -115,6 +114,7 @@ namespace Cryptographic_system.Lab2.Forms
         {
             if (Key2.Text.Length == 0 || !int.TryParse(Key2.Text, out _))
             {
+                counter[1] = false;
                 encryptToolStripMenuItem.Enabled = false;
                 decryptToolStripMenuItem.Enabled = false;
             }
@@ -122,8 +122,11 @@ namespace Cryptographic_system.Lab2.Forms
             {
                 key2 = Key2.Text;
                 counter[1] = true;
-                encryptToolStripMenuItem.Enabled = true;
-                decryptToolStripMenuItem.Enabled = true;
+                if (IsActive())
+                {
+                    encryptToolStripMenuItem.Enabled = true;
+                    decryptToolStripMenuItem.Enabled = true;
+                }
             }
         }
 
@@ -131,6 +134,7 @@ namespace Cryptographic_system.Lab2.Forms
         {
             if (Key3.Text.Length == 0 || !int.TryParse(Key3.Text, out _))
             {
+                counter[2] = false;
                 encryptToolStripMenuItem.Enabled = false;
                 decryptToolStripMenuItem.Enabled = false;
             }
@@ -138,43 +142,86 @@ namespace Cryptographic_system.Lab2.Forms
             {
                 key3 = Key3.Text;
                 counter[2] = true;
-                encryptToolStripMenuItem.Enabled = true;
-                decryptToolStripMenuItem.Enabled = true;
+                if (IsActive())
+                {
+                    encryptToolStripMenuItem.Enabled = true;
+                    decryptToolStripMenuItem.Enabled = true;
+                }
             }
         }
 
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
-            targetString = TextBox.Text;
-            if (!string.IsNullOrEmpty(TextBox.Text))
-            {
+            if (string.IsNullOrEmpty(TextBox.Text))
+                counter[3] = false;
+            else
                 counter[3] = true;
+
+            if (IsActive())
+            {
+                encryptToolStripMenuItem.Enabled = true;
+                decryptToolStripMenuItem.Enabled = true;
             }
+            else
+            {
+                encryptToolStripMenuItem.Enabled = false;
+                decryptToolStripMenuItem.Enabled = false;
+            }
+
+            targetString = TextBox.Text;
+        }
+
+        private void MottoBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MottoBox.Text))
+                counter[5] = false;
+            else
+                counter[5] = true;
+
+            if (IsActive())
+            {
+                encryptToolStripMenuItem.Enabled = true;
+                decryptToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                encryptToolStripMenuItem.Enabled = false;
+                decryptToolStripMenuItem.Enabled = false;
+            }
+
+            motto = MottoBox.Text;
         }
 
         private void LinearRadio_CheckedChanged(object sender, EventArgs e)
         {
             state = State.LINEAR;
             counter[4] = true;
+            if (IsActive())
+            {
+                encryptToolStripMenuItem.Enabled = true;
+                decryptToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void NonLinear_CheckedChanged(object sender, EventArgs e)
         {
             state = State.NONLINEAR;
             counter[4] = true;
+            if (IsActive())
+            {
+                encryptToolStripMenuItem.Enabled = true;
+                decryptToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void Motto_CheckedChanged(object sender, EventArgs e)
         {
             state = State.MOTTO;
             counter[4] = true;
-        }
-
-        private void MottoBox_TextChanged(object sender, EventArgs e)
-        {
-            motto = MottoBox.Text;if (!string.IsNullOrEmpty(TextBox.Text))
+            if (IsActive())
             {
-                counter[3] = true;
+                encryptToolStripMenuItem.Enabled = true;
+                decryptToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -188,6 +235,21 @@ namespace Cryptographic_system.Lab2.Forms
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private bool IsActive()
+        {
+            var count = 0;
+
+            foreach (var b in counter)
+            {
+                if (b.Equals(true))
+                {
+                    count++;
+                }
+            }
+
+            return count == 6;
         }
     }
 }

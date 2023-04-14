@@ -237,8 +237,9 @@
       // closeFileToolStripMenuItem
       // 
       this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
+      this.closeFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
       this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-      this.closeFileToolStripMenuItem.Text = "Close file";
+      this.closeFileToolStripMenuItem.Text = "Reset file";
       this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
       // 
       // MainMenuStripMenuItem

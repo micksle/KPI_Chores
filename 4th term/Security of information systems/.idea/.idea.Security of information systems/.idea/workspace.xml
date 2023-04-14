@@ -9,28 +9,13 @@
     <projectFile>Security of information systems/Security of information systems.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.KeyForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.MainForm.resources" afterDir="false" />
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="update Lab2 SIS">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/SystemForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/SystemForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +130,7 @@
       <workItem from="1681418960581" duration="7000" />
       <workItem from="1681419228007" duration="83000" />
       <workItem from="1681419317282" duration="2969000" />
-      <workItem from="1681422345983" duration="15765000" />
+      <workItem from="1681422345983" duration="18242000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -238,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681421709619</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update Lab2 SIS">
+      <created>1681486522082</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681486522082</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +263,7 @@
     <MESSAGE value="update Lab1 SIS" />
     <MESSAGE value="Add lab2 v1" />
     <MESSAGE value="Add SIS Lab2 initial version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SIS Lab2 initial version" />
+    <MESSAGE value="update Lab2 SIS" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Lab2 SIS" />
   </component>
 </project>
