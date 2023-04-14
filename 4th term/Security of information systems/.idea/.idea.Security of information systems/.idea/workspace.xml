@@ -10,177 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/7d8b3da0-0018-413f-a9f7-1c34d5813244.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/8e3d8479-4740-493e-a0b1-ce3e7cad9b7e.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/d10451a8-e333-4ea2-a74b-82405eba8073.vsidx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/KeyForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/KeyForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/CaesarCipher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/connector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/bin/Debug/Cryptographic_system.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/bin/Debug/Cryptographic_system.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic system.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic_system.Properties.Resources.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic_system.SystemForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic_system.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic_system.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Properties.Resources.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.SystemForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.KeyForm.resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.MainForm.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/1e1a8e11-9938-4dd1-a2ef-45b259f31063.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/629efee6-5649-4be9-8554-0d387e999687.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/cbef311b-3477-48f3-ba3a-b982144045a4.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/ef8b6402-da61-43b3-a2b8-684b01f0f443.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/CreateFileForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/DecryptForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/EncryptForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/KeyForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/KeyForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Forms/MainForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarAlt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/CaesarCipher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/ICryptography.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/ICryptography.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/MainCode/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/Resources.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Debug/Cryptographic_system.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Debug/Security_of_information_systems.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/bin/Release/Security_of_information_systems.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic system.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Lab1.csproj.SuggestedBindingRedirects.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/Cryptographic system.csproj.SuggestedBindingRedirects.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security of information systems.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.CreateFileForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.DecryptForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.EncryptForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.KeyForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Forms.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.Properties.Resources.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Debug/Security_of_information_systems.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Lab1.csproj.SuggestedBindingRedirects.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.SuggestedBindingRedirects.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.CreateFileForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.DecryptForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.EncryptForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.KeyForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Forms.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.Properties.Resources.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/obj/Release/Security_of_information_systems.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/KeyForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Forms/MainForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Lab1_Alt.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/CaesarCipher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/ICryptography.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/MainCode/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Properties/Resources.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Properties/Resources.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Properties/Settings.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/Properties/Settings.settings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/bin/Debug/Lab1_Alt.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.KeyForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Forms.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.KeyForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.Properties.Resources.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.csproj.SuggestedBindingRedirects.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/Lab1_Alt.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_Alt/obj/Debug/TempPE/Lab2.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Forms/CIPHER.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Lab2.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/MainCode/CaesarCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/MainCode/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Properties/Resources.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Properties/Resources.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Properties/Settings.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/Properties/Settings.settings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Release/Lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.MainForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Release/Lab2.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/bin/Release/Lab2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Debug/Lab2.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.MainForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab1.Forms.KeyForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.Properties.Resources.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.csproj.SuggestedBindingRedirects.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab2.Forms.MainForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2/obj/Release/Lab2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Security of information systems.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/SystemForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/SystemForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/SystemForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -294,7 +144,8 @@
       <workItem from="1681418793650" duration="162000" />
       <workItem from="1681418960581" duration="7000" />
       <workItem from="1681419228007" duration="83000" />
-      <workItem from="1681419317282" duration="2052000" />
+      <workItem from="1681419317282" duration="2969000" />
+      <workItem from="1681422345983" duration="15765000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -373,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681396322912</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add SIS Lab2 initial version">
+      <created>1681421656903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681421656903</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add SIS Lab2 initial version">
+      <created>1681421709619</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681421709619</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +270,7 @@
     <MESSAGE value="add proper brute-force alg" />
     <MESSAGE value="update Lab1 SIS" />
     <MESSAGE value="Add lab2 v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add lab2 v1" />
+    <MESSAGE value="Add SIS Lab2 initial version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add SIS Lab2 initial version" />
   </component>
 </project>

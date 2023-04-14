@@ -67,6 +67,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab2\MainCode\CaesarCipher.cs" />
+    <Compile Include="Lab2\MainCode\State.cs" />
     <Compile Include="Lab2\MainCode\TrithemiusCipher.cs" />
     <Compile Include="SystemForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +81,7 @@
       <DependentUpon>KeyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab1\Forms\MainForm.resx" />
+    <EmbeddedResource Include="Lab2\Forms\MainForm.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

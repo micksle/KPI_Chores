@@ -16,12 +16,19 @@ namespace Cryptographic_system
         {
             var mainForm = new Lab1.Forms.MainForm();
             mainForm.Show();
+            Hide();
         }
 
         private void TrithemiusButton_Click(object sender, EventArgs e)
         {
             var mainForm = new Lab2.Forms.MainForm();
             mainForm.Show();
+            Hide();
+        }
+
+        private void SystemForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

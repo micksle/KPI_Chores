@@ -30,6 +30,13 @@
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
       this.Menu_panel = new System.Windows.Forms.Panel();
+      this.Alabel = new System.Windows.Forms.Label();
+      this.Motto = new System.Windows.Forms.RadioButton();
+      this.NonLinear = new System.Windows.Forms.RadioButton();
+      this.LinearRadio = new System.Windows.Forms.RadioButton();
+      this.MottoBox = new System.Windows.Forms.TextBox();
+      this.Clabel = new System.Windows.Forms.Label();
+      this.Blabel = new System.Windows.Forms.Label();
       this.Key3 = new System.Windows.Forms.TextBox();
       this.Key2 = new System.Windows.Forms.TextBox();
       this.Key1 = new System.Windows.Forms.TextBox();
@@ -38,6 +45,7 @@
       this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.closeFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.MainMenuStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.InfoMenu = new System.Windows.Forms.ToolStripMenuItem();
       this.designerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -53,67 +61,158 @@
       this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
       this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
       this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.Menu_panel.Controls.Add(this.Alabel);
+      this.Menu_panel.Controls.Add(this.Motto);
+      this.Menu_panel.Controls.Add(this.NonLinear);
+      this.Menu_panel.Controls.Add(this.LinearRadio);
+      this.Menu_panel.Controls.Add(this.MottoBox);
+      this.Menu_panel.Controls.Add(this.Clabel);
+      this.Menu_panel.Controls.Add(this.Blabel);
       this.Menu_panel.Controls.Add(this.Key3);
       this.Menu_panel.Controls.Add(this.Key2);
       this.Menu_panel.Controls.Add(this.Key1);
-      this.Menu_panel.Location = new System.Drawing.Point(0, 28);
+      this.Menu_panel.Location = new System.Drawing.Point(0, 24);
       this.Menu_panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
       this.Menu_panel.Name = "Menu_panel";
-      this.Menu_panel.Size = new System.Drawing.Size(882, 110);
+      this.Menu_panel.Size = new System.Drawing.Size(882, 136);
       this.Menu_panel.TabIndex = 5;
+      // 
+      // Alabel
+      // 
+      this.Alabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+      this.Alabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.Alabel.Location = new System.Drawing.Point(36, 81);
+      this.Alabel.Name = "Alabel";
+      this.Alabel.Size = new System.Drawing.Size(30, 23);
+      this.Alabel.TabIndex = 19;
+      this.Alabel.Text = "A:";
+      // 
+      // Motto
+      // 
+      this.Motto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+      this.Motto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.Motto.Location = new System.Drawing.Point(374, 25);
+      this.Motto.Name = "Motto";
+      this.Motto.Size = new System.Drawing.Size(104, 24);
+      this.Motto.TabIndex = 18;
+      this.Motto.TabStop = true;
+      this.Motto.Text = "Motto";
+      this.Motto.UseVisualStyleBackColor = true;
+      this.Motto.CheckedChanged += new System.EventHandler(this.Motto_CheckedChanged);
+      // 
+      // NonLinear
+      // 
+      this.NonLinear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+      this.NonLinear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.NonLinear.Location = new System.Drawing.Point(219, 25);
+      this.NonLinear.Name = "NonLinear";
+      this.NonLinear.Size = new System.Drawing.Size(104, 24);
+      this.NonLinear.TabIndex = 17;
+      this.NonLinear.TabStop = true;
+      this.NonLinear.Text = "NonLinear";
+      this.NonLinear.UseVisualStyleBackColor = true;
+      this.NonLinear.CheckedChanged += new System.EventHandler(this.NonLinear_CheckedChanged);
+      // 
+      // LinearRadio
+      // 
+      this.LinearRadio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.LinearRadio.Location = new System.Drawing.Point(66, 25);
+      this.LinearRadio.Name = "LinearRadio";
+      this.LinearRadio.Size = new System.Drawing.Size(104, 24);
+      this.LinearRadio.TabIndex = 16;
+      this.LinearRadio.TabStop = true;
+      this.LinearRadio.Text = "Linear";
+      this.LinearRadio.UseVisualStyleBackColor = true;
+      this.LinearRadio.CheckedChanged += new System.EventHandler(this.LinearRadio_CheckedChanged);
+      // 
+      // MottoBox
+      // 
+      this.MottoBox.AllowDrop = true;
+      this.MottoBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.MottoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+      this.MottoBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.MottoBox.Location = new System.Drawing.Point(541, 14);
+      this.MottoBox.MaxLength = 2000;
+      this.MottoBox.MinimumSize = new System.Drawing.Size(140, 50);
+      this.MottoBox.Multiline = true;
+      this.MottoBox.Name = "MottoBox";
+      this.MottoBox.Size = new System.Drawing.Size(300, 101);
+      this.MottoBox.TabIndex = 14;
+      this.MottoBox.TextChanged += new System.EventHandler(this.MottoBox_TextChanged);
+      // 
+      // Clabel
+      // 
+      this.Clabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+      this.Clabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.Clabel.Location = new System.Drawing.Point(338, 81);
+      this.Clabel.Name = "Clabel";
+      this.Clabel.Size = new System.Drawing.Size(30, 23);
+      this.Clabel.TabIndex = 13;
+      this.Clabel.Text = "C:";
+      // 
+      // Blabel
+      // 
+      this.Blabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+      this.Blabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.Blabel.Location = new System.Drawing.Point(183, 81);
+      this.Blabel.Name = "Blabel";
+      this.Blabel.Size = new System.Drawing.Size(30, 23);
+      this.Blabel.TabIndex = 12;
+      this.Blabel.Text = "B:";
       // 
       // Key3
       // 
+      this.Key3.Anchor = System.Windows.Forms.AnchorStyles.Top;
       this.Key3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.Key3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.Key3.Location = new System.Drawing.Point(283, 49);
+      this.Key3.Location = new System.Drawing.Point(374, 77);
       this.Key3.Name = "Key3";
       this.Key3.Size = new System.Drawing.Size(111, 38);
       this.Key3.TabIndex = 10;
       this.Key3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      this.Key3.Visible = false;
       this.Key3.TextChanged += new System.EventHandler(this.Key3_TextChanged);
       // 
       // Key2
       // 
+      this.Key2.Anchor = System.Windows.Forms.AnchorStyles.Top;
       this.Key2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.Key2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.Key2.Location = new System.Drawing.Point(155, 49);
+      this.Key2.Location = new System.Drawing.Point(219, 77);
       this.Key2.Name = "Key2";
       this.Key2.Size = new System.Drawing.Size(111, 38);
       this.Key2.TabIndex = 9;
       this.Key2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      this.Key2.Visible = false;
       this.Key2.TextChanged += new System.EventHandler(this.Key2_TextChanged);
       // 
       // Key1
       // 
+      this.Key1.Anchor = System.Windows.Forms.AnchorStyles.Top;
       this.Key1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.Key1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.Key1.Location = new System.Drawing.Point(26, 49);
+      this.Key1.Location = new System.Drawing.Point(66, 77);
       this.Key1.Name = "Key1";
       this.Key1.Size = new System.Drawing.Size(111, 38);
       this.Key1.TabIndex = 8;
       this.Key1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-      this.Key1.Visible = false;
       this.Key1.TextChanged += new System.EventHandler(this.Key1_TextChanged);
       // 
       // TextBox
       // 
       this.TextBox.AllowDrop = true;
       this.TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-      this.TextBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.TextBox.Location = new System.Drawing.Point(12, 159);
+      this.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.TextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.TextBox.Location = new System.Drawing.Point(14, 174);
       this.TextBox.Multiline = true;
       this.TextBox.Name = "TextBox";
-      this.TextBox.Size = new System.Drawing.Size(860, 382);
+      this.TextBox.Size = new System.Drawing.Size(849, 367);
       this.TextBox.TabIndex = 7;
       this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
       // 
       // FileMenu
       // 
       this.FileMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-      this.FileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.openFileToolStripMenuItem, this.saveFileToolStripMenuItem, this.closeFileToolStripMenuItem });
+      this.FileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.openFileToolStripMenuItem, this.saveFileToolStripMenuItem, this.closeFileToolStripMenuItem, this.MainMenuStripMenuItem });
       this.FileMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
       this.FileMenu.Name = "FileMenu";
       this.FileMenu.Size = new System.Drawing.Size(44, 24);
@@ -123,7 +222,7 @@
       // 
       this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
       this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-      this.openFileToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+      this.openFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
       this.openFileToolStripMenuItem.Text = "Open file";
       this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
       // 
@@ -131,16 +230,24 @@
       // 
       this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
       this.saveFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-      this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+      this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
       this.saveFileToolStripMenuItem.Text = "Save file";
       this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
       // 
       // closeFileToolStripMenuItem
       // 
       this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
-      this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+      this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
       this.closeFileToolStripMenuItem.Text = "Close file";
       this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
+      // 
+      // MainMenuStripMenuItem
+      // 
+      this.MainMenuStripMenuItem.Name = "MainMenuStripMenuItem";
+      this.MainMenuStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+      this.MainMenuStripMenuItem.Size = new System.Drawing.Size(207, 24);
+      this.MainMenuStripMenuItem.Text = "Main menu";
+      this.MainMenuStripMenuItem.Click += new System.EventHandler(this.MainMenuStripMenuItem_Click);
       // 
       // InfoMenu
       // 
@@ -204,9 +311,11 @@
       this.Location = new System.Drawing.Point(15, 15);
       this.MainMenuStrip = this.menuStrip1;
       this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+      this.MinimumSize = new System.Drawing.Size(860, 308);
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "System";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
       this.Menu_panel.ResumeLayout(false);
       this.Menu_panel.PerformLayout();
       this.menuStrip1.ResumeLayout(false);
@@ -214,6 +323,19 @@
       this.ResumeLayout(false);
       this.PerformLayout();
     }
+
+    private System.Windows.Forms.ToolStripMenuItem MainMenuStripMenuItem;
+
+    private System.Windows.Forms.RadioButton NonLinear;
+    private System.Windows.Forms.RadioButton Motto;
+
+    private System.Windows.Forms.RadioButton LinearRadio;
+
+    private System.Windows.Forms.TextBox MottoBox;
+
+    private System.Windows.Forms.Label Alabel;
+    private System.Windows.Forms.Label Blabel;
+    private System.Windows.Forms.Label Clabel;
 
     private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem encryptToolStripMenuItem;

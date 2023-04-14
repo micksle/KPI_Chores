@@ -37,6 +37,7 @@
             this.CreateFileButton = new System.Windows.Forms.Button();
             this.InfoButton = new System.Windows.Forms.Button();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.MainMenuButton = new System.Windows.Forms.Button();
             this.DecryptButton = new System.Windows.Forms.Button();
             this.Menu_panel.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +137,7 @@
             // Menu_panel
             // 
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(141)))), ((int)(((byte)(165)))));
+            this.Menu_panel.Controls.Add(this.MainMenuButton);
             this.Menu_panel.Controls.Add(this.BruteButton);
             this.Menu_panel.Controls.Add(this.OpenFileButton);
             this.Menu_panel.Controls.Add(this.EncryptButton);
@@ -147,6 +149,22 @@
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(868, 53);
             this.Menu_panel.TabIndex = 4;
+            // 
+            // MainMenuButton
+            // 
+            this.MainMenuButton.BackColor = System.Drawing.Color.FloralWhite;
+            this.MainMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MainMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MainMenuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.MainMenuButton.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuButton.Location = new System.Drawing.Point(721, 7);
+            this.MainMenuButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MainMenuButton.Name = "MainMenuButton";
+            this.MainMenuButton.Size = new System.Drawing.Size(114, 39);
+            this.MainMenuButton.TabIndex = 8;
+            this.MainMenuButton.Text = "Menu";
+            this.MainMenuButton.UseVisualStyleBackColor = false;
+            this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
             // DecryptButton
             // 
@@ -176,9 +194,12 @@
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Menu_panel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button MainMenuButton;
 
         private System.Windows.Forms.Button BruteButton;
         private System.Windows.Forms.Button OpenFileButton;

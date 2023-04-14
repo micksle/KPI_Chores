@@ -7,12 +7,13 @@ namespace Cryptographic_system.Lab2.Forms
 {
     public partial class MainForm : Form
     {
-        private static CaesarCipher caesarCipher;
-        private static TrithemiusCipher trithemiusCipher;
         private static string targetString;
+        private static string motto;
+        private static State state = State.NULL;
         private static string key1;
         private static string key2;
         private static string key3;
+        private static bool[] counter = new bool[7];
 
         public MainForm()
         {
@@ -71,18 +72,25 @@ namespace Cryptographic_system.Lab2.Forms
             key1 = null;
             key2 = null;
             key3 = null;
+            LinearRadio = null;
+            NonLinear = null;
+            Motto = null;
         }
 
         private void encryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trithemiusCipher.DoAction(targetString, key1, key2, key3, 2, true);
+            MessageBox.Show("state  " + state);
+            var trithemiusCipher = new TrithemiusCipher();
+            trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, true);
             TextBox.Text = trithemiusCipher.FinalString;
             trithemiusCipher.FinalString = "";
         }
 
         private void decryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trithemiusCipher.DoAction(targetString, key1, key2, key3, 2, false);
+            MessageBox.Show("state  " + state);
+            var trithemiusCipher = new TrithemiusCipher();
+            trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, false);
             TextBox.Text = trithemiusCipher.FinalString;
             trithemiusCipher.FinalString = "";
         }
@@ -97,6 +105,7 @@ namespace Cryptographic_system.Lab2.Forms
             else
             {
                 key1 = Key1.Text;
+                counter[0] = true;
                 encryptToolStripMenuItem.Enabled = true;
                 decryptToolStripMenuItem.Enabled = true;
             }
@@ -112,6 +121,7 @@ namespace Cryptographic_system.Lab2.Forms
             else
             {
                 key2 = Key2.Text;
+                counter[1] = true;
                 encryptToolStripMenuItem.Enabled = true;
                 decryptToolStripMenuItem.Enabled = true;
             }
@@ -127,6 +137,7 @@ namespace Cryptographic_system.Lab2.Forms
             else
             {
                 key3 = Key3.Text;
+                counter[2] = true;
                 encryptToolStripMenuItem.Enabled = true;
                 decryptToolStripMenuItem.Enabled = true;
             }
@@ -135,6 +146,48 @@ namespace Cryptographic_system.Lab2.Forms
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
             targetString = TextBox.Text;
+            if (!string.IsNullOrEmpty(TextBox.Text))
+            {
+                counter[3] = true;
+            }
+        }
+
+        private void LinearRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            state = State.LINEAR;
+            counter[4] = true;
+        }
+
+        private void NonLinear_CheckedChanged(object sender, EventArgs e)
+        {
+            state = State.NONLINEAR;
+            counter[4] = true;
+        }
+
+        private void Motto_CheckedChanged(object sender, EventArgs e)
+        {
+            state = State.MOTTO;
+            counter[4] = true;
+        }
+
+        private void MottoBox_TextChanged(object sender, EventArgs e)
+        {
+            motto = MottoBox.Text;if (!string.IsNullOrEmpty(TextBox.Text))
+            {
+                counter[3] = true;
+            }
+        }
+
+        private void MainMenuStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var systemForm = new SystemForm();
+            systemForm.Show();
+            Hide();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

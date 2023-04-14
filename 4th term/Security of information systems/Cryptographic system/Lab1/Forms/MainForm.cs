@@ -119,5 +119,17 @@ namespace Cryptographic_system.Lab1.Forms
 
             targetString = TextBox.Text;
         }
+
+        private void MainMenuButton_Click(object sender, EventArgs e)
+        {
+            var systemForm = new SystemForm();
+            systemForm.Show();
+            Hide();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

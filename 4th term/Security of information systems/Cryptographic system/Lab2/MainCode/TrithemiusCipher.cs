@@ -1,4 +1,6 @@
-﻿namespace Cryptographic_system.Lab2.MainCode
+﻿using System.Windows.Forms;
+
+namespace Cryptographic_system.Lab2.MainCode
 {
     // З'їв аґрусу — та ягода цілюща б'є жах інфекцій шипучим „ь“.
     // The five boxing wizards jump quickly
@@ -7,32 +9,35 @@
     {
         public string FinalString;
 
-        public void DoAction(string targetString, string key1, string key2, string key3, int cipherOption, bool encrypt)
+        public void DoAction(string targetString, string key1, string key2, string key3, string motto, State state,
+            bool encrypt)
         {
             var a = int.Parse(key1);
             var b = int.Parse(key2);
             var c = int.Parse(key3);
-            switch (cipherOption)
+            switch (state)
             {
-                case 1:
+                case State.LINEAR:
                     FinalString = Linear(targetString, a, b, encrypt);
                     break;
-                case 2:
+                case State.NONLINEAR:
                     FinalString = NonLinear(targetString, a, b, c, encrypt);
                     break;
-                // case 3:
-                //     FinalString = Slogan(targetString, a, b, encrypt);
-                //     break;
+                case State.MOTTO:
+                    FinalString = Motto(targetString, motto, encrypt);
+                    break;
+                default:
+                    MessageBox.Show("Some error occured!    ");
+                    break;
             }
         }
 
         private string Linear(string targetString, int a, int b, bool encrypt)
         {
-            
             var finalString = "";
             for (var i = 0; i < targetString.Length; i++)
             {
-                var key = (a * i + b) % 1112064;         //65536;
+                var key = (a * i + b) % 1112064; //65536;
 
                 int finalInt;
                 if (encrypt)
@@ -43,6 +48,7 @@
                 {
                     finalInt = ((int)targetString[i] - key + 1112064) % 1112064;
                 }
+
                 var finalChar = (char)finalInt;
                 finalString += finalChar;
             }
@@ -60,38 +66,64 @@
                 p++;
                 var key = a * (p * p) + b * p + c;
                 char finalChar;
-                
+
                 if (encrypt)
                     finalChar = (char)(value + key);
                 else
-                    finalChar =  (char)(value - key);
+                    finalChar = (char)(value - key);
                 finalString += finalChar;
             }
 
             return finalString;
         }
 
-        // public string Slogan(string targetString, string slogan, bool encrypt)
-        // {
-        //     var finalString = new StringBuilder();
-        //
-        //     foreach (var u in targetString)
-        //     {
-        //         var initialInt = (int)u;
-        //         int finalInt;
-        //
-        //         var step = a * initialInt * initialInt + b * initialInt + c;
-        //         
-        //         if (encrypt)
-        //             finalInt = (initialInt + step) % 65536;
-        //         else
-        //             finalInt = (initialInt - step % 65536 + 65536) % 65536;
-        //
-        //         var finalChar = (char)finalInt;
-        //         finalString.Append(finalChar);
-        //     }
-        //
-        //     return finalString.ToString();
-        // }
+        private string Motto(string targetString, string motto, bool encrypt)
+        {
+            var result = "";
+            var targetIndex = 0;
+
+            foreach (var c in targetString)
+            {
+                var shift = char.ToUpper(motto[targetIndex]) - 'A' + 1;
+                targetIndex = (targetIndex + 1) % motto.Length;
+
+                var code = (int)c;
+
+                if (encrypt)
+                {
+                    if (code >= 'A' && code <= 'Z')
+                    {
+                        code = 'A' + (code - 'A' + shift) % 26;
+                    }
+                    else if (code >= 'a' && code <= 'z')
+                    {
+                        code = 'a' + (code - 'a' + shift) % 26;
+                    }
+                    else if (code >= '0' && code <= '9')
+                    {
+                        code = '0' + (code - '0' + shift) % 10;
+                    }
+                }
+                else
+                {
+                    if (code >= 'A' && code <= 'Z')
+                    {
+                        code = 'A' + (code - 'A' - shift + 26) % 26;
+                    }
+                    else if (code >= 'a' && code <= 'z')
+                    {
+                        code = 'a' + (code - 'a' - shift + 26) % 26;
+                    }
+                    else if (code >= '0' && code <= '9')
+                    {
+                        code = '0' + (code - '0' - shift + 10) % 10;
+                    }
+                }
+
+                result += (char)code;
+            }
+
+            return result;
+        }
     }
 }
