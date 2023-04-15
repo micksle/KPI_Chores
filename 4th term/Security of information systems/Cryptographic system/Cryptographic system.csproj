@@ -69,19 +69,22 @@
     <Compile Include="Lab2\MainCode\CaesarCipher.cs" />
     <Compile Include="Lab2\MainCode\State.cs" />
     <Compile Include="Lab2\MainCode\TrithemiusCipher.cs" />
-    <Compile Include="SystemForm.cs">
+    <Compile Include="Main\Program.cs" />
+    <Compile Include="Main\SystemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemForm.Designer.cs">
+    <Compile Include="Main\SystemForm.Designer.cs">
       <DependentUpon>SystemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lab1\Forms\KeyForm.resx">
       <DependentUpon>KeyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab1\Forms\MainForm.resx" />
     <EmbeddedResource Include="Lab2\Forms\MainForm.resx" />
+    <EmbeddedResource Include="Main\SystemForm.resx">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,9 +95,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SystemForm.resx">
-      <DependentUpon>SystemForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +114,8 @@
   <ItemGroup>
     <Content Include="Resources\connector.png" />
     <Content Include="Resources\Logo.png" />
+    <Content Include="Resources\Logo_contrasted.png" />
+    <Content Include="Resources\Logo_half_contrasted.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

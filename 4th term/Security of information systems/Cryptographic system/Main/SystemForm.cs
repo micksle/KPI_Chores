@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Cryptographic_system.Lab1.Forms;
-using Cryptographic_system.Lab2.Forms;
 
-namespace Cryptographic_system
+namespace Cryptographic_system.Main
 {
     public partial class SystemForm : Form
     {

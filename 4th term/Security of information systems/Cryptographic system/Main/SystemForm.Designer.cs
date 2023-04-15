@@ -1,4 +1,4 @@
-﻿namespace Cryptographic_system
+﻿namespace Cryptographic_system.Main
 {
     partial class SystemForm
     {
@@ -45,7 +45,7 @@
             this.Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Title.Location = new System.Drawing.Point(244, 295);
+            this.Title.Location = new System.Drawing.Point(269, 295);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(440, 51);
             this.Title.TabIndex = 0;
@@ -54,8 +54,8 @@
             // MainPicture
             // 
             this.MainPicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MainPicture.Image = ((System.Drawing.Image)(resources.GetObject("MainPicture.Image")));
-            this.MainPicture.Location = new System.Drawing.Point(372, 112);
+            this.MainPicture.Image = global::Cryptographic_system.Properties.Resources.Logo_half_contrasted;
+            this.MainPicture.Location = new System.Drawing.Point(397, 112);
             this.MainPicture.Name = "MainPicture";
             this.MainPicture.Size = new System.Drawing.Size(156, 151);
             this.MainPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@
             this.CaesarButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CaesarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CaesarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CaesarButton.Location = new System.Drawing.Point(171, 428);
+            this.CaesarButton.Location = new System.Drawing.Point(196, 428);
             this.CaesarButton.Name = "CaesarButton";
             this.CaesarButton.Size = new System.Drawing.Size(213, 64);
             this.CaesarButton.TabIndex = 2;
@@ -82,7 +82,7 @@
             this.TrithemiusButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TrithemiusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TrithemiusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TrithemiusButton.Location = new System.Drawing.Point(533, 428);
+            this.TrithemiusButton.Location = new System.Drawing.Point(558, 428);
             this.TrithemiusButton.Name = "TrithemiusButton";
             this.TrithemiusButton.Size = new System.Drawing.Size(265, 64);
             this.TrithemiusButton.TabIndex = 3;
@@ -93,8 +93,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox1.Image = global::Cryptographic_system.Properties.Resources.connector;
-            this.pictureBox1.Location = new System.Drawing.Point(390, 455);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(415, 455);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@
             // 
             this.MadeBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.MadeBy.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MadeBy.Location = new System.Drawing.Point(835, 596);
+            this.MadeBy.Location = new System.Drawing.Point(885, 596);
             this.MadeBy.Name = "MadeBy";
             this.MadeBy.Size = new System.Drawing.Size(112, 19);
             this.MadeBy.TabIndex = 5;
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(944, 615);
+            this.ClientSize = new System.Drawing.Size(994, 615);
             this.Controls.Add(this.MadeBy);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TrithemiusButton);

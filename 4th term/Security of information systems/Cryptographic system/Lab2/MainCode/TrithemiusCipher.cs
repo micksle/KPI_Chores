@@ -2,12 +2,13 @@
 
 namespace Cryptographic_system.Lab2.MainCode
 {
-    // З'їв аґрусу — та ягода цілюща б'є жах інфекцій шипучим „ь“.
-    // The five boxing wizards jump quickly
+    // Факт ґринджол: бій псюг вщух, з'їм шче яєць
+    // The quick brown fox jumps over the lazy dog
 
     public class TrithemiusCipher
     {
         public string FinalString;
+        private const int UnicodeMaxValue = 65536;
 
         public void DoAction(string targetString, string key1, string key2, string key3, string motto, State state,
             bool encrypt)
@@ -27,7 +28,7 @@ namespace Cryptographic_system.Lab2.MainCode
                     FinalString = Motto(targetString, motto, encrypt);
                     break;
                 default:
-                    MessageBox.Show("Some error occured!    ");
+                    MessageBox.Show(@"Some error occured!");
                     break;
             }
         }
@@ -37,17 +38,13 @@ namespace Cryptographic_system.Lab2.MainCode
             var finalString = "";
             for (var i = 0; i < targetString.Length; i++)
             {
-                var key = (a * i + b) % 1112064; //65536;
+                var key = (a * i + b) % UnicodeMaxValue;
 
                 int finalInt;
                 if (encrypt)
-                {
-                    finalInt = ((int)targetString[i] + key) % 1112064;
-                }
+                    finalInt = ((int)targetString[i] + key) % UnicodeMaxValue;
                 else
-                {
-                    finalInt = ((int)targetString[i] - key + 1112064) % 1112064;
-                }
+                    finalInt = ((int)targetString[i] - key + UnicodeMaxValue) % UnicodeMaxValue;
 
                 var finalChar = (char)finalInt;
                 finalString += finalChar;
@@ -77,6 +74,25 @@ namespace Cryptographic_system.Lab2.MainCode
             return finalString;
         }
 
+        private string Alt(string targetString, int a, int b, int c, bool encrypt)
+        {
+            var finalString = "";
+            for (var p = 0; p < targetString.Length; p++)
+            {
+                var key = (a * (p * p) + b * p + c) % UnicodeMaxValue;
+                char finalChar;
+
+                if (encrypt)
+                    finalChar = (char) ((targetString[p] + key) % UnicodeMaxValue);
+                else
+                    finalChar = (char) ((targetString[p] - key + UnicodeMaxValue) % UnicodeMaxValue);
+
+                finalString += finalChar;
+            }
+
+            return finalString;
+        }
+
         private string Motto(string targetString, string motto, bool encrypt)
         {
             var result = "";
@@ -87,40 +103,40 @@ namespace Cryptographic_system.Lab2.MainCode
                 var shift = char.ToUpper(motto[targetIndex]) - 'A' + 1;
                 targetIndex = (targetIndex + 1) % motto.Length;
 
-                var code = (int)c;
+                var value = (int)c;
 
                 if (encrypt)
                 {
-                    if (code >= 'A' && code <= 'Z')
+                    if (value >= 'A' && value <= 'Z')
                     {
-                        code = 'A' + (code - 'A' + shift) % 26;
+                        value = 'A' + (value - 'A' + shift) % 26;
                     }
-                    else if (code >= 'a' && code <= 'z')
+                    else if (value >= 'a' && value <= 'z')
                     {
-                        code = 'a' + (code - 'a' + shift) % 26;
+                        value = 'a' + (value - 'a' + shift) % 26;
                     }
-                    else if (code >= '0' && code <= '9')
+                    else if (value >= '0' && value <= '9')
                     {
-                        code = '0' + (code - '0' + shift) % 10;
+                        value = '0' + (value - '0' + shift) % 10;
                     }
                 }
                 else
                 {
-                    if (code >= 'A' && code <= 'Z')
+                    if (value >= 'A' && value <= 'Z')
                     {
-                        code = 'A' + (code - 'A' - shift + 26) % 26;
+                        value = 'A' + (value - 'A' - shift + 26) % 26;
                     }
-                    else if (code >= 'a' && code <= 'z')
+                    else if (value >= 'a' && value <= 'z')
                     {
-                        code = 'a' + (code - 'a' - shift + 26) % 26;
+                        value = 'a' + (value - 'a' - shift + 26) % 26;
                     }
-                    else if (code >= '0' && code <= '9')
+                    else if (value >= '0' && value <= '9')
                     {
-                        code = '0' + (code - '0' - shift + 10) % 10;
+                        value = '0' + (value - '0' - shift + 10) % 10;
                     }
                 }
 
-                result += (char)code;
+                result += (char)value;
             }
 
             return result;

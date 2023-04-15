@@ -44,6 +44,7 @@
       this.FileMenu = new System.Windows.Forms.ToolStripMenuItem();
       this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
       this.closeFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.MainMenuStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.InfoMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,11 @@
       this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.encryptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.decryptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+      this.ExpandControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.hideControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.encryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+      this.decryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.Menu_panel.SuspendLayout();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
@@ -212,7 +218,7 @@
       // FileMenu
       // 
       this.FileMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
-      this.FileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.openFileToolStripMenuItem, this.saveFileToolStripMenuItem, this.closeFileToolStripMenuItem, this.MainMenuStripMenuItem });
+      this.FileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.openFileToolStripMenuItem, this.saveFileToolStripMenuItem, this.toolStripSeparator2, this.closeFileToolStripMenuItem, this.MainMenuStripMenuItem });
       this.FileMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
       this.FileMenu.Name = "FileMenu";
       this.FileMenu.Size = new System.Drawing.Size(44, 24);
@@ -234,12 +240,17 @@
       this.saveFileToolStripMenuItem.Text = "Save file";
       this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
       // 
+      // toolStripSeparator2
+      // 
+      this.toolStripSeparator2.Name = "toolStripSeparator2";
+      this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+      // 
       // closeFileToolStripMenuItem
       // 
       this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
       this.closeFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
       this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-      this.closeFileToolStripMenuItem.Text = "Reset file";
+      this.closeFileToolStripMenuItem.Text = "Reset";
       this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
       // 
       // MainMenuStripMenuItem
@@ -267,7 +278,7 @@
       // 
       // menuStrip1
       // 
-      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.FileMenu, this.InfoMenu, this.runToolStripMenuItem });
+      this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.FileMenu, this.InfoMenu, this.runToolStripMenuItem, this.encryptToolStripMenuItem1, this.decryptToolStripMenuItem1 });
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Size = new System.Drawing.Size(882, 28);
@@ -276,7 +287,7 @@
       // 
       // runToolStripMenuItem
       // 
-      this.runToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.encryptToolStripMenuItem, this.decryptToolStripMenuItem });
+      this.runToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.encryptToolStripMenuItem, this.decryptToolStripMenuItem, this.toolStripSeparator1, this.ExpandControlsToolStripMenuItem, this.hideControlsToolStripMenuItem });
       this.runToolStripMenuItem.Name = "runToolStripMenuItem";
       this.runToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
       this.runToolStripMenuItem.Text = "Run";
@@ -286,7 +297,7 @@
       this.encryptToolStripMenuItem.Name = "encryptToolStripMenuItem";
       this.encryptToolStripMenuItem.ShortcutKeyDisplayString = "";
       this.encryptToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-      this.encryptToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+      this.encryptToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
       this.encryptToolStripMenuItem.Text = "Encrypt";
       this.encryptToolStripMenuItem.Click += new System.EventHandler(this.encryptToolStripMenuItem_Click);
       // 
@@ -294,9 +305,44 @@
       // 
       this.decryptToolStripMenuItem.Name = "decryptToolStripMenuItem";
       this.decryptToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-      this.decryptToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+      this.decryptToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
       this.decryptToolStripMenuItem.Text = "Decrypt";
       this.decryptToolStripMenuItem.Click += new System.EventHandler(this.decryptToolStripMenuItem_Click);
+      // 
+      // toolStripSeparator1
+      // 
+      this.toolStripSeparator1.Name = "toolStripSeparator1";
+      this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+      // 
+      // ExpandControlsToolStripMenuItem
+      // 
+      this.ExpandControlsToolStripMenuItem.Name = "ExpandControlsToolStripMenuItem";
+      this.ExpandControlsToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+      this.ExpandControlsToolStripMenuItem.Text = "Expand controls";
+      this.ExpandControlsToolStripMenuItem.Click += new System.EventHandler(this.ExpandControlsToolStripMenuItem_Click);
+      // 
+      // hideControlsToolStripMenuItem
+      // 
+      this.hideControlsToolStripMenuItem.Name = "hideControlsToolStripMenuItem";
+      this.hideControlsToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+      this.hideControlsToolStripMenuItem.Text = "Hide controls";
+      this.hideControlsToolStripMenuItem.Click += new System.EventHandler(this.hideControlsToolStripMenuItem_Click);
+      // 
+      // encryptToolStripMenuItem1
+      // 
+      this.encryptToolStripMenuItem1.Name = "encryptToolStripMenuItem1";
+      this.encryptToolStripMenuItem1.Size = new System.Drawing.Size(70, 24);
+      this.encryptToolStripMenuItem1.Text = "Encrypt";
+      this.encryptToolStripMenuItem1.Visible = false;
+      this.encryptToolStripMenuItem1.Click += new System.EventHandler(this.encryptToolStripMenuItem_Click);
+      // 
+      // decryptToolStripMenuItem1
+      // 
+      this.decryptToolStripMenuItem1.Name = "decryptToolStripMenuItem1";
+      this.decryptToolStripMenuItem1.Size = new System.Drawing.Size(73, 24);
+      this.decryptToolStripMenuItem1.Text = "Decrypt";
+      this.decryptToolStripMenuItem1.Visible = false;
+      this.decryptToolStripMenuItem1.Click += new System.EventHandler(this.decryptToolStripMenuItem_Click);
       // 
       // MainForm
       // 
@@ -315,7 +361,7 @@
       this.MinimumSize = new System.Drawing.Size(860, 308);
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "System";
+      this.Text = "Trithemius";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
       this.Menu_panel.ResumeLayout(false);
       this.Menu_panel.PerformLayout();
@@ -324,6 +370,15 @@
       this.ResumeLayout(false);
       this.PerformLayout();
     }
+
+    private System.Windows.Forms.ToolStripMenuItem hideControlsToolStripMenuItem;
+
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+    private System.Windows.Forms.ToolStripMenuItem encryptToolStripMenuItem1;
+    private System.Windows.Forms.ToolStripMenuItem decryptToolStripMenuItem1;
+
+    private System.Windows.Forms.ToolStripMenuItem ExpandControlsToolStripMenuItem;
 
     private System.Windows.Forms.ToolStripMenuItem MainMenuStripMenuItem;
 

@@ -194,6 +194,7 @@
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Caesar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Menu_panel.ResumeLayout(false);
             this.ResumeLayout(false);

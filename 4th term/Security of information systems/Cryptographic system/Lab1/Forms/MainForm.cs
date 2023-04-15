@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using Cryptographic_system.Lab1.MainCode;
+using Cryptographic_system.Main;
 
 namespace Cryptographic_system.Lab1.Forms
 {
