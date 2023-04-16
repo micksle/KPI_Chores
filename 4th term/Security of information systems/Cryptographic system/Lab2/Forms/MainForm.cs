@@ -21,7 +21,9 @@ namespace Cryptographic_system.Lab2.Forms
             InitializeComponent();
 
             encryptToolStripMenuItem.Enabled = false;
+            encryptToolStripMenuItem1.Enabled = false;
             decryptToolStripMenuItem.Enabled = false;
+            decryptToolStripMenuItem1.Enabled = false;
 
             Key1.AutoSize = false;
             Key2.AutoSize = false;
@@ -62,21 +64,18 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void closeFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TextBox.Text = "";
-            MottoBox.Text = "";
-            Key1.Text = "";
-            Key2.Text = "";
-            Key3.Text = "";
+            TextBox.Text = null;
+            MottoBox.Text = null;
+            Key1.Text = null;
+            Key2.Text = null;
+            Key3.Text = null;
             targetString = null;
-            key1 = null;
-            key2 = null;
-            key3 = null;
-            encryptToolStripMenuItem1.Visible = false;
-            decryptToolStripMenuItem1.Visible = false;
             LinearRadio.Checked = false;
             NonLinear.Checked = false;
             Motto.Checked = false;
-
+            encryptToolStripMenuItem1.Visible = false;
+            decryptToolStripMenuItem1.Visible = false;
+            
             for (var i = 0; i < counter.Length; i++)
             {
                 counter[i] = false;
@@ -101,7 +100,7 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void Key1_TextChanged(object sender, EventArgs e)
         {
-            if (Key1.Text.Length == 0 || !int.TryParse(Key1.Text, out _))
+            if (string.IsNullOrEmpty(Key1.Text) || !int.TryParse(Key1.Text, out _))
             {
                 counter[0] = false;
             }
@@ -116,7 +115,7 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void Key2_TextChanged(object sender, EventArgs e)
         {
-            if (Key2.Text.Length == 0 || !int.TryParse(Key2.Text, out _))
+            if (string.IsNullOrEmpty(Key2.Text) || !int.TryParse(Key2.Text, out _))
             {
                 counter[1] = false;
             }
@@ -131,7 +130,7 @@ namespace Cryptographic_system.Lab2.Forms
 
         private void Key3_TextChanged(object sender, EventArgs e)
         {
-            if (Key3.Text.Length == 0 || !int.TryParse(Key3.Text, out _))
+            if (string.IsNullOrEmpty(Key3.Text) || !int.TryParse(Key3.Text, out _))
             {
                 counter[2] = false;
             }
@@ -219,17 +218,16 @@ namespace Cryptographic_system.Lab2.Forms
 
         private bool IsActive() // method to count whether the Encrypt/Decrypt buttons should be enabled
         {
-            var count = 0;
-
-            foreach (var b in counter)
+            switch (state)
             {
-                if (b.Equals(true))
-                {
-                    count++;
-                }
+                case State.LINEAR when counter[0] && counter[1] && counter[3] && counter[4]:
+                case State.NONLINEAR when counter[0] && counter[1] && counter[2] && counter[3] && counter[4]:
+                case State.MOTTO when counter[5] && counter[3] && counter[4]:
+                    return true;
+                case State.NULL:
+                default:
+                    return false;
             }
-
-            return count == 6;
         }
 
         private void ExpandControlsToolStripMenuItem_Click(object sender, EventArgs e)
