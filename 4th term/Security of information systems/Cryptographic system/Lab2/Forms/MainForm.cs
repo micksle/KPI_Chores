@@ -75,7 +75,7 @@ namespace Cryptographic_system.Lab2.Forms
             Motto.Checked = false;
             encryptToolStripMenuItem1.Visible = false;
             decryptToolStripMenuItem1.Visible = false;
-            
+
             for (var i = 0; i < counter.Length; i++)
             {
                 counter[i] = false;
@@ -85,7 +85,21 @@ namespace Cryptographic_system.Lab2.Forms
         private void encryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var trithemiusCipher = new TrithemiusCipher();
-            trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, true);
+            // trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, true);
+
+            switch (state)
+            {
+                case State.LINEAR:
+                    trithemiusCipher.DoActio(targetString, state, true, key1, key2);
+                    break;
+                case State.NONLINEAR:
+                    trithemiusCipher.DoActio(targetString, state, true, key1, key2, key3);
+                    break;
+                case State.MOTTO:
+                    trithemiusCipher.DoActio(targetString, state, true, motto);
+                    break;
+            }
+
             TextBox.Text = trithemiusCipher.FinalString;
             trithemiusCipher.FinalString = "";
         }
@@ -93,7 +107,20 @@ namespace Cryptographic_system.Lab2.Forms
         private void decryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var trithemiusCipher = new TrithemiusCipher();
-            trithemiusCipher.DoAction(targetString, key1, key2, key3, motto, state, false);
+            
+            switch (state)
+            {
+                case State.LINEAR:
+                    trithemiusCipher.DoActio(targetString, state, false, key1, key2);
+                    break;
+                case State.NONLINEAR:
+                    trithemiusCipher.DoActio(targetString, state, false, key1, key2, key3);
+                    break;
+                case State.MOTTO:
+                    trithemiusCipher.DoActio(targetString, state, false, motto);
+                    break;
+            }
+            
             TextBox.Text = trithemiusCipher.FinalString;
             trithemiusCipher.FinalString = "";
         }
@@ -240,6 +267,25 @@ namespace Cryptographic_system.Lab2.Forms
         {
             encryptToolStripMenuItem1.Visible = false;
             decryptToolStripMenuItem1.Visible = false;
+        }
+
+        private void MottoAddPicture_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                MottoBox.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+        }
+
+        private void MottoBox_Enter(object sender, EventArgs e)
+        {
+            MottoAddPicture.Visible = true;
+        }
+
+        private void MottoBox_Leave(object sender, EventArgs e)
+        {
+            MottoAddPicture.Visible = false;
         }
     }
 }

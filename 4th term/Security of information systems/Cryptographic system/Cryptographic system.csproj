@@ -112,6 +112,9 @@
     <None Include="Resources\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Add_Button.png" />
+    <Content Include="Resources\Add_Button1.png" />
+    <Content Include="Resources\Add_Button2.png" />
     <Content Include="Resources\connector.png" />
     <Content Include="Resources\Logo.png" />
     <Content Include="Resources\Logo_contrasted.png" />

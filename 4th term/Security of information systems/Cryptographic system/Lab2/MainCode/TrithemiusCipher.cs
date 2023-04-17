@@ -8,7 +8,34 @@ namespace Cryptographic_system.Lab2.MainCode
     public class TrithemiusCipher
     {
         public string FinalString;
-        private const int UnicodeMaxValue = 65536;
+        private const int UnicodeMaxValue = 55295; // 65536;
+
+        public void DoActio(string targetString, State state, bool encrypt, params string[] keys)
+        {
+            int a;
+            int b;
+            int c;
+            switch (state)
+            {
+                case State.LINEAR:
+                    a = int.Parse(keys[0]);
+                    b = int.Parse(keys[1]);
+                    FinalString = Equation(targetString, 0, a, b, encrypt);
+                    break;
+                case State.NONLINEAR:
+                    a = int.Parse(keys[0]);
+                    b = int.Parse(keys[1]);
+                    c = int.Parse(keys[2]);
+                    FinalString = Equation(targetString, a, b, c, encrypt);
+                    break;
+                case State.MOTTO:
+                    FinalString = Motto(targetString, keys[0], encrypt);
+                    break;
+                default:
+                    MessageBox.Show(@"Some error occured!");
+                    break;
+            }
+        }
 
         public void DoAction(string targetString, string key1, string key2, string key3, string motto, State state,
             bool encrypt)
@@ -19,10 +46,10 @@ namespace Cryptographic_system.Lab2.MainCode
             switch (state)
             {
                 case State.LINEAR:
-                    FinalString = Linear(targetString, a, b, encrypt);
+                    FinalString = Equation(targetString, 0, a, b, encrypt);
                     break;
                 case State.NONLINEAR:
-                    FinalString = NonLinear(targetString, a, b, c, encrypt);
+                    FinalString = Equation(targetString, a, b, c, encrypt);
                     break;
                 case State.MOTTO:
                     FinalString = Motto(targetString, motto, encrypt);
@@ -33,48 +60,7 @@ namespace Cryptographic_system.Lab2.MainCode
             }
         }
 
-        private string Linear(string targetString, int a, int b, bool encrypt)
-        {
-            var finalString = "";
-            for (var i = 0; i < targetString.Length; i++)
-            {
-                var key = (a * i + b) % UnicodeMaxValue;
-
-                int finalInt;
-                if (encrypt)
-                    finalInt = ((int)targetString[i] + key) % UnicodeMaxValue;
-                else
-                    finalInt = ((int)targetString[i] - key + UnicodeMaxValue) % UnicodeMaxValue;
-
-                var finalChar = (char)finalInt;
-                finalString += finalChar;
-            }
-
-            return finalString;
-        }
-
-        private string NonLinear(string targetString, int a, int b, int c, bool encrypt)
-        {
-            var finalString = "";
-            var p = 0;
-
-            foreach (var value in targetString)
-            {
-                p++;
-                var key = a * (p * p) + b * p + c;
-                char finalChar;
-
-                if (encrypt)
-                    finalChar = (char)(value + key);
-                else
-                    finalChar = (char)(value - key);
-                finalString += finalChar;
-            }
-
-            return finalString;
-        }
-
-        private string Alt(string targetString, int a, int b, int c, bool encrypt)
+        private static string Equation(string targetString, int a, int b, int c, bool encrypt)
         {
             var finalString = "";
             for (var p = 0; p < targetString.Length; p++)
@@ -83,9 +69,16 @@ namespace Cryptographic_system.Lab2.MainCode
                 char finalChar;
 
                 if (encrypt)
-                    finalChar = (char) ((targetString[p] + key) % UnicodeMaxValue);
+                {
+                    finalChar = (char)((targetString[p] + key) % UnicodeMaxValue);
+                    if (targetString[p] + key < 0)
+                    {
+                        finalChar = (char) (targetString[p] + key + UnicodeMaxValue);
+                    } 
+                }
                 else
-                    finalChar = (char) ((targetString[p] - key + UnicodeMaxValue) % UnicodeMaxValue);
+                    // finalChar = (char)((targetString[p] - (key % UnicodeMaxValue) + UnicodeMaxValue) % UnicodeMaxValue);
+                    finalChar = (char)((targetString[p] - key + UnicodeMaxValue) % UnicodeMaxValue);
 
                 finalString += finalChar;
             }
@@ -93,53 +86,40 @@ namespace Cryptographic_system.Lab2.MainCode
             return finalString;
         }
 
-        private string Motto(string targetString, string motto, bool encrypt)
+        private static string Motto(string targetString, string motto, bool encrypt)
         {
-            var result = "";
-            var targetIndex = 0;
+            while (motto.Length < targetString.Length)
+                motto += motto;
 
-            foreach (var c in targetString)
+            var finalString = "";
+            for (var i = 0; i < targetString.Length; i++)
             {
-                var shift = char.ToUpper(motto[targetIndex]) - 'A' + 1;
-                targetIndex = (targetIndex + 1) % motto.Length;
-
-                var value = (int)c;
+                var targetInt = (int)targetString[i];
+                var mottoInt = (int)motto[i];
+                int finalInt;
 
                 if (encrypt)
                 {
-                    if (value >= 'A' && value <= 'Z')
-                    {
-                        value = 'A' + (value - 'A' + shift) % 26;
-                    }
-                    else if (value >= 'a' && value <= 'z')
-                    {
-                        value = 'a' + (value - 'a' + shift) % 26;
-                    }
-                    else if (value >= '0' && value <= '9')
-                    {
-                        value = '0' + (value - '0' + shift) % 10;
-                    }
+                    finalInt = (targetInt + mottoInt) % char.MaxValue;
                 }
                 else
                 {
-                    if (value >= 'A' && value <= 'Z')
+                    finalInt = (targetInt - mottoInt) % char.MaxValue;
+                    
+                    if (targetInt - mottoInt == 0)
+                        finalInt = targetInt;
+
+                    if (finalInt < 0)
                     {
-                        value = 'A' + (value - 'A' - shift + 26) % 26;
-                    }
-                    else if (value >= 'a' && value <= 'z')
-                    {
-                        value = 'a' + (value - 'a' - shift + 26) % 26;
-                    }
-                    else if (value >= '0' && value <= '9')
-                    {
-                        value = '0' + (value - '0' - shift + 10) % 10;
+                        var temp = finalInt;
+                        finalInt = temp + char.MaxValue;
                     }
                 }
 
-                result += (char)value;
+                finalString += char.ConvertFromUtf32(finalInt);
             }
 
-            return result;
+            return finalString;
         }
     }
 }

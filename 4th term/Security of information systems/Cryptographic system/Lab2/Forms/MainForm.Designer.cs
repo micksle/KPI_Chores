@@ -30,6 +30,7 @@
     {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
       this.Menu_panel = new System.Windows.Forms.Panel();
+      this.MottoAddPicture = new System.Windows.Forms.PictureBox();
       this.Alabel = new System.Windows.Forms.Label();
       this.Motto = new System.Windows.Forms.RadioButton();
       this.NonLinear = new System.Windows.Forms.RadioButton();
@@ -59,6 +60,7 @@
       this.encryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.decryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.Menu_panel.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.MottoAddPicture)).BeginInit();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -67,6 +69,7 @@
       this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
       this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
       this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.Menu_panel.Controls.Add(this.MottoAddPicture);
       this.Menu_panel.Controls.Add(this.Alabel);
       this.Menu_panel.Controls.Add(this.Motto);
       this.Menu_panel.Controls.Add(this.NonLinear);
@@ -82,6 +85,20 @@
       this.Menu_panel.Name = "Menu_panel";
       this.Menu_panel.Size = new System.Drawing.Size(882, 136);
       this.Menu_panel.TabIndex = 5;
+      // 
+      // MottoAddPicture
+      // 
+      this.MottoAddPicture.BackColor = System.Drawing.Color.White;
+      this.MottoAddPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.MottoAddPicture.Image = global::Cryptographic_system.Properties.Resources.Add_Button2;
+      this.MottoAddPicture.Location = new System.Drawing.Point(542, 25);
+      this.MottoAddPicture.Name = "MottoAddPicture";
+      this.MottoAddPicture.Size = new System.Drawing.Size(18, 18);
+      this.MottoAddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.MottoAddPicture.TabIndex = 20;
+      this.MottoAddPicture.TabStop = false;
+      this.MottoAddPicture.Visible = false;
+      this.MottoAddPicture.Click += new System.EventHandler(this.MottoAddPicture_Click);
       // 
       // Alabel
       // 
@@ -137,7 +154,7 @@
       this.MottoBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
       this.MottoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
       this.MottoBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.MottoBox.Location = new System.Drawing.Point(541, 14);
+      this.MottoBox.Location = new System.Drawing.Point(562, 25);
       this.MottoBox.MaxLength = 2000;
       this.MottoBox.MinimumSize = new System.Drawing.Size(140, 50);
       this.MottoBox.Multiline = true;
@@ -145,6 +162,8 @@
       this.MottoBox.Size = new System.Drawing.Size(300, 101);
       this.MottoBox.TabIndex = 14;
       this.MottoBox.TextChanged += new System.EventHandler(this.MottoBox_TextChanged);
+      this.MottoBox.Enter += new System.EventHandler(this.MottoBox_Enter);
+      this.MottoBox.Leave += new System.EventHandler(this.MottoBox_Leave);
       // 
       // Clabel
       // 
@@ -278,6 +297,7 @@
       // 
       // menuStrip1
       // 
+      this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.FileMenu, this.InfoMenu, this.runToolStripMenuItem, this.encryptToolStripMenuItem1, this.decryptToolStripMenuItem1 });
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
@@ -365,6 +385,7 @@
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
       this.Menu_panel.ResumeLayout(false);
       this.Menu_panel.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.MottoAddPicture)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
       this.ResumeLayout(false);
@@ -414,7 +435,9 @@
 
     private System.Windows.Forms.Panel Menu_panel;
 
-    #endregion
-  }
+        #endregion
+
+        private System.Windows.Forms.PictureBox MottoAddPicture;
+    }
 }
 
