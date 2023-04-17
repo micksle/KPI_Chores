@@ -162,6 +162,10 @@
       this.MottoBox.Size = new System.Drawing.Size(300, 101);
       this.MottoBox.TabIndex = 14;
       this.MottoBox.TextChanged += new System.EventHandler(this.MottoBox_TextChanged);
+      this.MottoBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MottoBox_DragDrop);
+      this.MottoBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MottoBox_DragEnter);
+      this.MottoBox.DragOver += new System.Windows.Forms.DragEventHandler(this.MottoBox_DragOver);
+      this.MottoBox.DragLeave += new System.EventHandler(this.MottoBox_DragLeave);
       this.MottoBox.Enter += new System.EventHandler(this.MottoBox_Enter);
       this.MottoBox.Leave += new System.EventHandler(this.MottoBox_Leave);
       // 

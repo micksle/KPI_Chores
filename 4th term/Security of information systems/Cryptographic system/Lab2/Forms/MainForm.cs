@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using Cryptographic_system.Lab2.MainCode;
 using Cryptographic_system.Main;
@@ -107,7 +109,7 @@ namespace Cryptographic_system.Lab2.Forms
         private void decryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var trithemiusCipher = new TrithemiusCipher();
-            
+
             switch (state)
             {
                 case State.LINEAR:
@@ -120,7 +122,7 @@ namespace Cryptographic_system.Lab2.Forms
                     trithemiusCipher.DoActio(targetString, state, false, motto);
                     break;
             }
-            
+
             TextBox.Text = trithemiusCipher.FinalString;
             trithemiusCipher.FinalString = "";
         }
@@ -286,6 +288,30 @@ namespace Cryptographic_system.Lab2.Forms
         private void MottoBox_Leave(object sender, EventArgs e)
         {
             MottoAddPicture.Visible = false;
+        }
+
+        private void MottoBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text)) // FileDrop
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
+        private void MottoBox_DragDrop(object sender, DragEventArgs e)
+        {
+            MottoBox.BackColor = Color.White;
+            MottoBox.Text = e.Data.GetData(DataFormats.Text).ToString();
+        }
+
+        private void MottoBox_DragLeave(object sender, EventArgs e)
+        {
+            MottoBox.BackColor = Color.White;
+        }
+
+        private void MottoBox_DragOver(object sender, DragEventArgs e)
+        {
+            MottoBox.BackColor = Color.FromArgb(195, 195, 195);
         }
     }
 }

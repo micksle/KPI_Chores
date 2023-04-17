@@ -10,9 +10,30 @@
     <projectFile>TempFiles/TempFiles.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Add visual update">
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Update cipher methods">
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/security of information systems.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/security of information systems.metadata.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/security of information systems.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/security of information systems.projects.v5.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Security of information systems/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/7d8b3da0-0018-413f-a9f7-1c34d5813244.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/8e3d8479-4740-493e-a0b1-ce3e7cad9b7e.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/b3a0846f-c5a1-42aa-929a-462c0371b7ff.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/FileContentIndex/d10451a8-e333-4ea2-a74b-82405eba8073.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Security of information systems/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
@@ -27,7 +48,9 @@
     <setting file="file://$PROJECT_DIR$/ConsoleApp1/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mickle/RiderProjects/KPI_Chores/4th term/Security of information systems/Cryptographic system/Lab2/Forms/MainForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mickle/RiderProjects/KPI_Chores/4th term/Security of information systems/Cryptographic system/Properties/Resources.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,24 +101,6 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="TempFiles" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TempFiles/TempFiles.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="Console" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
     <configuration name="console" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -115,7 +120,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue=".NET Project.TempFiles" />
       <item itemvalue=".NET Project.Cryptographic system" />
       <item itemvalue=".NET Project.console" />
     </list>
@@ -157,7 +161,9 @@
       <workItem from="1681419317282" duration="2969000" />
       <workItem from="1681422345983" duration="24886000" />
       <workItem from="1681555558790" duration="7377000" />
-      <workItem from="1681572099924" duration="1668000" />
+      <workItem from="1681572099924" duration="17803000" />
+      <workItem from="1681681463473" duration="789000" />
+      <workItem from="1681724422962" duration="7058000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -278,7 +284,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681562233371</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Major buttons update">
+      <created>1681661980161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681661980161</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update cipher methods">
+      <created>1681724692324</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681724692324</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update cipher methods">
+      <created>1681724804124</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681724804124</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +372,8 @@
     <MESSAGE value="Update Lab2 SIS final stage" />
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Add visual update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add visual update" />
+    <MESSAGE value="Major buttons update" />
+    <MESSAGE value="Update cipher methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update cipher methods" />
   </component>
 </project>
