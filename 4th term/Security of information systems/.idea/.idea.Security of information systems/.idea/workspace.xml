@@ -10,24 +10,18 @@
     <projectFile>TempFiles/TempFiles.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Final interface stage">
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Visual finalization of the program">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/CaesarCipher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button.png" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Resources/Add_Button2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Resources/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Resources/Logo_contrasted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Security of information systems.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +147,7 @@
       <workItem from="1681555558790" duration="7377000" />
       <workItem from="1681572099924" duration="17803000" />
       <workItem from="1681681463473" duration="789000" />
-      <workItem from="1681724422962" duration="8955000" />
+      <workItem from="1681724422962" duration="11845000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -302,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681770508938</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Visual finalization of the program">
+      <created>1681897593050</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681897593050</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +373,7 @@
     <MESSAGE value="Major buttons update" />
     <MESSAGE value="Update cipher methods" />
     <MESSAGE value="Final interface stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final interface stage" />
+    <MESSAGE value="Visual finalization of the program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visual finalization of the program" />
   </component>
 </project>

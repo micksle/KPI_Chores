@@ -90,7 +90,7 @@
       // 
       this.MottoAddPicture.BackColor = System.Drawing.Color.White;
       this.MottoAddPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-      this.MottoAddPicture.Image = global::Cryptographic_system.Properties.Resources.Add_Button2;
+      this.MottoAddPicture.Image = global::Cryptographic_system.Properties.Resources.Add_Button;
       this.MottoAddPicture.Location = new System.Drawing.Point(542, 25);
       this.MottoAddPicture.Name = "MottoAddPicture";
       this.MottoAddPicture.Size = new System.Drawing.Size(18, 18);
