@@ -66,7 +66,6 @@
     <Compile Include="Lab2\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lab2\MainCode\CaesarCipher.cs" />
     <Compile Include="Lab2\MainCode\State.cs" />
     <Compile Include="Lab2\MainCode\TrithemiusCipher.cs" />
     <Compile Include="Main\Program.cs" />

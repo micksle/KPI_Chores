@@ -92,13 +92,13 @@ namespace Cryptographic_system.Lab2.Forms
             switch (state)
             {
                 case State.LINEAR:
-                    trithemiusCipher.DoActio(targetString, state, true, key1, key2);
+                    trithemiusCipher.DoAction(targetString, state, true, key1, key2);
                     break;
                 case State.NONLINEAR:
-                    trithemiusCipher.DoActio(targetString, state, true, key1, key2, key3);
+                    trithemiusCipher.DoAction(targetString, state, true, key1, key2, key3);
                     break;
                 case State.MOTTO:
-                    trithemiusCipher.DoActio(targetString, state, true, motto);
+                    trithemiusCipher.DoAction(targetString, state, true, motto);
                     break;
             }
 
@@ -113,13 +113,13 @@ namespace Cryptographic_system.Lab2.Forms
             switch (state)
             {
                 case State.LINEAR:
-                    trithemiusCipher.DoActio(targetString, state, false, key1, key2);
+                    trithemiusCipher.DoAction(targetString, state, false, key1, key2);
                     break;
                 case State.NONLINEAR:
-                    trithemiusCipher.DoActio(targetString, state, false, key1, key2, key3);
+                    trithemiusCipher.DoAction(targetString, state, false, key1, key2, key3);
                     break;
                 case State.MOTTO:
-                    trithemiusCipher.DoActio(targetString, state, false, motto);
+                    trithemiusCipher.DoAction(targetString, state, false, motto);
                     break;
             }
 

@@ -10,7 +10,7 @@ namespace Cryptographic_system.Lab2.MainCode
         public string FinalString;
         private const int UnicodeMaxValue = 55295; // 65536;
 
-        public void DoActio(string targetString, State state, bool encrypt, params string[] keys)
+        public void DoAction(string targetString, State state, bool encrypt, params string[] keys)
         {
             int a;
             int b;
@@ -30,29 +30,6 @@ namespace Cryptographic_system.Lab2.MainCode
                     break;
                 case State.MOTTO:
                     FinalString = Motto(targetString, keys[0], encrypt);
-                    break;
-                default:
-                    MessageBox.Show(@"Some error occured!");
-                    break;
-            }
-        }
-
-        public void DoAction(string targetString, string key1, string key2, string key3, string motto, State state,
-            bool encrypt)
-        {
-            var a = int.Parse(key1);
-            var b = int.Parse(key2);
-            var c = int.Parse(key3);
-            switch (state)
-            {
-                case State.LINEAR:
-                    FinalString = Equation(targetString, 0, a, b, encrypt);
-                    break;
-                case State.NONLINEAR:
-                    FinalString = Equation(targetString, a, b, c, encrypt);
-                    break;
-                case State.MOTTO:
-                    FinalString = Motto(targetString, motto, encrypt);
                     break;
                 default:
                     MessageBox.Show(@"Some error occured!");
