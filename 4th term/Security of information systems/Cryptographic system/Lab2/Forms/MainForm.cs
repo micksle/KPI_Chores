@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 using Cryptographic_system.Lab2.MainCode;
 using Cryptographic_system.Main;

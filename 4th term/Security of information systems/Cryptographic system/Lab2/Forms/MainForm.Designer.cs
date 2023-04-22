@@ -153,7 +153,7 @@
       this.MottoBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
       this.MottoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
       this.MottoBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.MottoBox.Location = new System.Drawing.Point(562, 25);
+      this.MottoBox.Location = new System.Drawing.Point(562, 20);
       this.MottoBox.MaxLength = 2000;
       this.MottoBox.MinimumSize = new System.Drawing.Size(140, 50);
       this.MottoBox.Multiline = true;

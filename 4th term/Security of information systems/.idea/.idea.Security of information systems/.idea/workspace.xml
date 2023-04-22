@@ -10,104 +10,7 @@
     <projectFile>TempFiles/TempFiles.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Third.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab3/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab3/Forms/MainForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab3/Forms/MainForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab3/MainCode/GammaCipher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/connector1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/connector_45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Resources/connector_45_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab3.Forms.MainForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/29bb1e5f-0792-4851-a7aa-0678f398c244.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/39241f41-1749-4370-b12d-c3cd0f092256.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.AssemblyInfoInputs1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.assets1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.csproj.AssemblyReference1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.csproj.CoreCompileInputs1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.genruntimeconfig1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp11.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp11.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp11.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp12.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp12.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp13.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp13.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp14.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp15.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp16.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApp17.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/ConsoleApplication1.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.Forms.KeyForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.Forms.MainForm.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.Properties.Resources.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.csproj.GenerateResource1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.csproj.SuggestedBindingRedirects.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab1_Alt3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab2.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab2.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Lab2.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Security_of_information_systems.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Security_of_information_systems.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Security_of_information_systems1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/Security_of_information_systems1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/apphost1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/faae3510-fdae-47d3-8ce5-21aa5b8c27e2.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/project.nuget1.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2023_13_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/CaesarCipher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/TrithemiusCipher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/bin/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ConsoleApp1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/ref/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/obj/Release/net6.0/refint/ConsoleApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Main.SystemForm.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Main.SystemForm.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Properties.Resources.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Properties.Resources.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Add Lab3 files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,11 +19,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b76c3e709534801a173f34a1d6b3dfc522790/65/c10c3266/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f2103c576aef635626cde2a8c1caee4f5b23ca724d7d5f17e13aeb1e04cad/Random.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -235,7 +138,7 @@
       <workItem from="1681724422962" duration="11891000" />
       <workItem from="1681938461824" duration="13061000" />
       <workItem from="1682029131167" duration="19147000" />
-      <workItem from="1682112445050" duration="11969000" />
+      <workItem from="1682112445050" duration="12337000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -398,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681901342478</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add Lab3 files">
+      <created>1682196351962</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1682196351962</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,6 +380,7 @@
     <MESSAGE value="Final interface stage" />
     <MESSAGE value="Visual finalization of the program" />
     <MESSAGE value="Final update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final update" />
+    <MESSAGE value="Add Lab3 files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Lab3 files" />
   </component>
 </project>
