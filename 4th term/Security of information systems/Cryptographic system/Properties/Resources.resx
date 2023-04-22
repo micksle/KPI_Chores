@@ -68,4 +68,16 @@
   <data name="Add_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="connector_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connector_45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connector_45_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connector_45_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connector1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connector1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connector_45_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connector_45_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

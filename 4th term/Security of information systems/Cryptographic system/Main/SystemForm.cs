@@ -24,6 +24,13 @@ namespace Cryptographic_system.Main
             Hide();
         }
 
+        private void GammaCipher_Click(object sender, EventArgs e)
+        {
+            var mainForm = new Lab3.Forms.MainForm();
+            mainForm.Show();
+            Hide();
+        }
+        
         private void SystemForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

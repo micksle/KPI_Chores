@@ -108,7 +108,6 @@
       this.Alabel.Name = "Alabel";
       this.Alabel.Size = new System.Drawing.Size(30, 23);
       this.Alabel.TabIndex = 19;
-      this.Alabel.Text = "A:";
       // 
       // Motto
       // 
@@ -177,7 +176,6 @@
       this.Clabel.Name = "Clabel";
       this.Clabel.Size = new System.Drawing.Size(30, 23);
       this.Clabel.TabIndex = 13;
-      this.Clabel.Text = "C:";
       // 
       // Blabel
       // 
@@ -187,7 +185,6 @@
       this.Blabel.Name = "Blabel";
       this.Blabel.Size = new System.Drawing.Size(30, 23);
       this.Blabel.TabIndex = 12;
-      this.Blabel.Text = "B:";
       // 
       // Key3
       // 
@@ -253,7 +250,6 @@
       this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
       this.openFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
       this.openFileToolStripMenuItem.Text = "Open file";
-      this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
       // 
       // saveFileToolStripMenuItem
       // 
@@ -307,7 +303,6 @@
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Size = new System.Drawing.Size(882, 28);
       this.menuStrip1.TabIndex = 6;
-      this.menuStrip1.Text = "menuStrip1";
       // 
       // runToolStripMenuItem
       // 
@@ -385,7 +380,6 @@
       this.MinimumSize = new System.Drawing.Size(860, 308);
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Trithemius";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
       this.Menu_panel.ResumeLayout(false);
       this.Menu_panel.PerformLayout();

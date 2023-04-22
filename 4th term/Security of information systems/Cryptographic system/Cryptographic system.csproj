@@ -68,6 +68,13 @@
     </Compile>
     <Compile Include="Lab2\MainCode\State.cs" />
     <Compile Include="Lab2\MainCode\TrithemiusCipher.cs" />
+    <Compile Include="Lab3\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab3\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab3\MainCode\GammaCipher.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Main\SystemForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab1\Forms\MainForm.resx" />
     <EmbeddedResource Include="Lab2\Forms\MainForm.resx" />
+    <EmbeddedResource Include="Lab3\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\SystemForm.resx">
       <DependentUpon>SystemForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +123,10 @@
   <ItemGroup>
     <Content Include="Resources\Add_Button.png" />
     <Content Include="Resources\connector.png" />
+    <Content Include="Resources\connector1.png" />
+    <Content Include="Resources\connector_45.png" />
+    <Content Include="Resources\connector_45_2.png" />
+    <Content Include="Resources\connector_45_21.png" />
     <Content Include="Resources\Logo_half_contrasted.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

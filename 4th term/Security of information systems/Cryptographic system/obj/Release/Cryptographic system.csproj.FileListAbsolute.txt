@@ -12,3 +12,4 @@ C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information system
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Release\Cryptographic_system.Lab1.Forms.MainForm.resources
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Release\Cryptographic_system.Lab2.Forms.MainForm.resources
 C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Release\Cryptographic_system.Main.SystemForm.resources
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\Cryptographic system\obj\Release\Cryptographic_system.Lab3.Forms.MainForm.resources
