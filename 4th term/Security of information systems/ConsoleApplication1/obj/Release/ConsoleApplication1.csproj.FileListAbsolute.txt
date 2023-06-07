@@ -1,0 +1,7 @@
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.AssemblyReference.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.SuggestedBindingRedirects.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\obj\Release\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+C:\Users\mickle\RiderProjects\KPI_Chores\4th term\Security of information systems\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
