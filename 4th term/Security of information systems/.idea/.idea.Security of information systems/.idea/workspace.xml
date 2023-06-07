@@ -10,7 +10,25 @@
     <projectFile>TempFiles/TempFiles.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="Add Lab3 files" />
+    <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab4/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab4/Forms/MainForm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab4/Forms/MainForm.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab4/MainCode/BookCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/MainCode/TrithemiusCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab3/MainCode/GammaCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab3/MainCode/GammaCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +40,8 @@
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mickle/RiderProjects/KPI_Chores/4th term/Security of information systems/Cryptographic system/Main/SystemForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mickle/RiderProjects/KPI_Chores/4th term/Security of information systems/Cryptographic system/Main/SystemForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -308,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682196351962</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fixup! Revert &quot;Add BookCipher.cs&quot;">
+      <created>1686177472367</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686177472367</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +408,7 @@
     <MESSAGE value="Visual finalization of the program" />
     <MESSAGE value="Final update" />
     <MESSAGE value="Add Lab3 files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Lab3 files" />
+    <MESSAGE value="fixup! Revert &quot;Add BookCipher.cs&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! Revert &quot;Add BookCipher.cs&quot;" />
   </component>
 </project>

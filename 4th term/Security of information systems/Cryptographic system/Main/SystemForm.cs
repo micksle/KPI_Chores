@@ -35,5 +35,12 @@ namespace Cryptographic_system.Main
         {
             Application.Exit();
         }
+
+        private void PoemButton_Click(object sender, EventArgs e)
+        {
+            var mainForm = new Lab4.Forms.MainForm();
+            mainForm.Show();
+            Hide();
+        }
     }
 }

@@ -75,6 +75,13 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab3\MainCode\GammaCipher.cs" />
+    <Compile Include="Lab4\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab4\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab4\MainCode\BookCipher.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Main\SystemForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +96,9 @@
     <EmbeddedResource Include="Lab1\Forms\MainForm.resx" />
     <EmbeddedResource Include="Lab2\Forms\MainForm.resx" />
     <EmbeddedResource Include="Lab3\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab4\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\SystemForm.resx">

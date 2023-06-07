@@ -5,6 +5,7 @@ namespace Cryptographic_system.Lab3.MainCode
     public class GammaCipher
     {
         public string FinalString;
+        private const int UnicodeMaxValue = 55295;
 
         public void DoAction(string targetString, string seedValue, bool encrypt)
         {
@@ -20,7 +21,7 @@ namespace Cryptographic_system.Lab3.MainCode
             var gamma = new int[targetString.Length];
             for (var i = 0; i < gamma.Length; i++)
             {
-                gamma[i] = random.Next(55295);
+                gamma[i] = random.Next(UnicodeMaxValue);
                 finalString += (char)(targetString[i] ^ gamma[i]);
             }
 

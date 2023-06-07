@@ -54,8 +54,7 @@ namespace Cryptographic_system.Lab2.MainCode
                     } 
                 }
                 else
-                    // finalChar = (char)((targetString[p] - (key % UnicodeMaxValue) + UnicodeMaxValue) % UnicodeMaxValue);
-                    finalChar = (char)((targetString[p] - key + UnicodeMaxValue) % UnicodeMaxValue);
+                   finalChar = (char)((targetString[p] - key + UnicodeMaxValue) % UnicodeMaxValue);
 
                 finalString += finalChar;
             }
