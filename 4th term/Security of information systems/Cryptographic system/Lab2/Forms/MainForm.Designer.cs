@@ -250,6 +250,7 @@
       this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
       this.openFileToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
       this.openFileToolStripMenuItem.Text = "Open file";
+      this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click_1);
       // 
       // saveFileToolStripMenuItem
       // 

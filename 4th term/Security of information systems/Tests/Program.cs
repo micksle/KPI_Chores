@@ -1,21 +1,63 @@
-﻿namespace Tests
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace Tests
 {
     class Program
     {
         public static void Main()
         {
-            var str = "恲㼠뤡왥瞻预缊㱷䷥핖眞ӳ紑ꠓ䖰曆᭛擼烳쇞頙쾾㪾沈핡悘Ȝ✊盇젨൳㡛䉂";
-            var seed = 146855;
-            Random random = new Random(seed);
-            byte[] gamma = new byte[str.Length];
-            random.NextBytes(gamma);
+            var targetString =
+                "Щастям б'єш жук їх глицю в фон й ґедзь пріч. The quick brown fox jumps over the lazy dog";
+            string key = "ABCDABCD";
+            string iv = "ABCDEFGH";
 
-            byte[] inputBytes = System.Text.Encoding.Unicode.GetBytes(str);
-            byte[] encryptedBytes = new byte[inputBytes.Length];
-            for (int i = 0; i < gamma.Length; i++)
+            byte[] encryptedData = Encrypt(targetString, key, iv);
+            Console.WriteLine("Encrypted data: " + Convert.ToBase64String(encryptedData));
+
+            string decryptedText = Decrypt(encryptedData, key, iv);
+            Console.WriteLine("Decrypted text: " + decryptedText);
+        }
+        static byte[] Encrypt(string text, string key, string iv)
+        {
+            using (DESCryptoServiceProvider cryptic = new DESCryptoServiceProvider())
             {
-                encryptedBytes[i] = (byte)(inputBytes[i] ^ gamma[i]);
-                Console.Write((int)str[i] + " - ");
+                cryptic.Key = Encoding.ASCII.GetBytes(key);
+                cryptic.Mode = CipherMode.CBC;
+                cryptic.IV = Encoding.ASCII.GetBytes(iv);
+
+                byte[] data = Encoding.UTF8.GetBytes(text);
+
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, cryptic.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cryptoStream.Write(data, 0, data.Length);
+                        cryptoStream.FlushFinalBlock();
+                        return memoryStream.ToArray();
+                    }
+                }
+            }
+        }
+
+        static string Decrypt(byte[] encryptedData, string key, string iv)
+        {
+            using (DESCryptoServiceProvider cryptic = new DESCryptoServiceProvider())
+            {
+                cryptic.Key = Encoding.ASCII.GetBytes(key);
+                cryptic.Mode = CipherMode.CBC;
+                cryptic.IV = Encoding.ASCII.GetBytes(iv);
+
+                using (MemoryStream memoryStream = new MemoryStream(encryptedData))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, cryptic.CreateDecryptor(), CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader(cryptoStream))
+                        {
+                            return streamReader.ReadToEnd();
+                        }
+                    }
+                }
             }
         }
     }

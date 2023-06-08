@@ -42,5 +42,12 @@ namespace Cryptographic_system.Main
             mainForm.Show();
             Hide();
         }
+
+        private void SymmetricButton_Click(object sender, EventArgs e)
+        {
+            var mainForm = new Lab5.Forms.MainForm();
+            mainForm.Show();
+            Hide();
+        }
     }
 }

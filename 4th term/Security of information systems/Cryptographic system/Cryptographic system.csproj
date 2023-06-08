@@ -82,6 +82,13 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab4\MainCode\BookCipher.cs" />
+    <Compile Include="Lab5\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab5\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab5\MainCode\InitializeVector.cs" />
     <Compile Include="Lab5\MainCode\SymmetricCipher.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Main\SystemForm.cs">
@@ -100,6 +107,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab4\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab5\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\SystemForm.resx">
@@ -139,9 +149,6 @@
     <Content Include="Resources\connector_45_2.png" />
     <Content Include="Resources\connector_45_21.png" />
     <Content Include="Resources\Logo_half_contrasted.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lab5\Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

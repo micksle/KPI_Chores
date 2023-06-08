@@ -44,7 +44,7 @@ namespace Cryptographic_system.Lab2.Forms
         Group: TP-12");
         }
 
-        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openFileToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
