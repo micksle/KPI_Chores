@@ -82,6 +82,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab4\MainCode\BookCipher.cs" />
+    <Compile Include="Lab5\MainCode\SymmetricCipher.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Main\SystemForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +139,9 @@
     <Content Include="Resources\connector_45_2.png" />
     <Content Include="Resources\connector_45_21.png" />
     <Content Include="Resources\Logo_half_contrasted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lab5\Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

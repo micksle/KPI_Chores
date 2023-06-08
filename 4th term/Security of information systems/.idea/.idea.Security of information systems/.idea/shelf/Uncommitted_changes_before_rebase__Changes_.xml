@@ -1,0 +1,84 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1686177410120" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" />
+    <option name="AFTER_PATH" value="Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic system.csproj.GenerateResource.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/Tests.csproj.CoreCompileInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests.csproj.CoreCompileInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/obj/Release/Cryptographic_system.exe" />
+    <option name="AFTER_PATH" value="Cryptographic system/obj/Release/Cryptographic_system.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic_system.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/refint/Tests.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/Tests.genruntimeconfig.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests.genruntimeconfig.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/ref/Tests.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests1.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/obj/Release/Cryptographic_system.pdb" />
+    <option name="AFTER_PATH" value="Cryptographic system/obj/Release/Cryptographic_system.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic_system.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" />
+    <option name="AFTER_PATH" value="Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic system.csproj.CoreCompileInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Tests/obj/Release/net6.0/apphost.exe" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/apphost.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/apphost.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Tests/bin/Release/net6.0/Tests.pdb" />
+    <option name="AFTER_PATH" value="Tests/bin/Release/net6.0/Tests.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/Tests.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests1.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/bin/Release/Cryptographic_system.exe" />
+    <option name="AFTER_PATH" value="Cryptographic system/bin/Release/Cryptographic_system.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic_system1.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Tests/bin/Release/net6.0/Tests.dll" />
+    <option name="AFTER_PATH" value="Tests/bin/Release/net6.0/Tests.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests2.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/obj/Release/net6.0/Tests.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests3.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Cryptographic system/bin/Release/Cryptographic_system.pdb" />
+    <option name="AFTER_PATH" value="Cryptographic system/bin/Release/Cryptographic_system.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Cryptographic_system1.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Tests/bin/Release/net6.0/Tests.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Tests.exe" />
+  </binary>
+</changelist>

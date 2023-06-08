@@ -64,7 +64,7 @@ namespace Cryptographic_system.Lab4.Forms
 
         private void designerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($@"
+            MessageBox.Show(@"
          Personal info:
 
         Name: Yaroslav
