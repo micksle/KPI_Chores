@@ -11,39 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d4b24fe-3df6-4e5c-8e37-165769313712" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/MainCode/InitializeVector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/MainCode/SymmetricCipher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.Lab5.Forms.MainForm.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/ref/Tests.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/refint/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Security of information systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Cryptographic system.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Main/SystemForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab4/MainCode/BookCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab4/MainCode/BookCipher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/Forms/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cryptographic system/Lab5/MainCode/SymmetricCipher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/Lab5/MainCode/SymmetricCipher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic system.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Cryptographic system/obj/Release/Cryptographic_system.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Release/net6.0/Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/obj/Release/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Release/net6.0/Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Tests.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab1/MainCode/CaesarCipher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/Lab2/Forms/MainForm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mickle/RiderProjects/KPI_Chores/4th term/Security of information systems/Cryptographic system/Lab4/MainCode/BookCipher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Cryptographic system/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -63,7 +48,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2MI8Y9y52OO1b2zQopd6PyR2nY2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,7 +73,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.console">
+  <component name="RunManager" selected=".NET Project.Cryptographic system">
     <configuration name="Cryptographic system" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Cryptographic system/bin/Release/Cryptographic_system.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -174,7 +159,8 @@
       <workItem from="1682029131167" duration="19147000" />
       <workItem from="1682112445050" duration="12337000" />
       <workItem from="1686204713284" duration="6745000" />
-      <workItem from="1686215362505" duration="6369000" />
+      <workItem from="1686215362505" duration="12386000" />
+      <workItem from="1693676387550" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="Update lab1 SIS">
       <created>1677444364021</created>
@@ -365,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686214144434</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add SIS lab5 initial version">
+      <created>1686221806201</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686221806201</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +434,7 @@
     <MESSAGE value="fixup! Revert &quot;Add BookCipher.cs&quot;" />
     <MESSAGE value="Add SIS Lab4 files" />
     <MESSAGE value="Update SIS Lab4 files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update SIS Lab4 files" />
+    <MESSAGE value="Add SIS lab5 initial version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add SIS lab5 initial version" />
   </component>
 </project>

@@ -31,7 +31,6 @@ namespace Cryptographic_system.Lab4.MainCode
 
             keyMatrix = new char[rowLength, colsLength];
 
-            // Заповнення ключа символами вірша
             for (var i = 0; i < rowLength; i++)
             {
                 var line = row[i];
@@ -65,7 +64,6 @@ namespace Cryptographic_system.Lab4.MainCode
             {
                 int row, col;
 
-                // Пошук символу у ключі шифрування
                 var positions = new List<Tuple<int, int>>();
                 for (var i = 0; i < keyMatrix.GetLength(0); i++)
                 {

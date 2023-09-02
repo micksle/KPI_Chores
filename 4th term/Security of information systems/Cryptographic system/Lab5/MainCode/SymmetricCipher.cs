@@ -8,52 +8,76 @@ namespace Cryptographic_system.Lab5.MainCode
     public class SymmetricCipher
     {
         public string FinalString;
-        DESCryptoServiceProvider cryptic = new DESCryptoServiceProvider();
 
-        public void DoAction(string targetString, string keyValue, InitializeVector vector, CipherMode mode, bool encrypt)
+        public void DoAction(string targetString, string keyValue, string IVvalue, InitializeVector vector,
+            CipherMode mode, bool encrypt)
         {
             if (encrypt)
             {
-                var finalString = Encrypt(targetString, keyValue, "vector");
-                FinalString = Convert.ToBase64String(finalString);
+                switch (vector)
+                {
+                    case InitializeVector.DES: Encrypt(targetString, keyValue, IVvalue, new DESCryptoServiceProvider(), mode); break;
+                    case InitializeVector.TripleDES: Encrypt(targetString, keyValue, IVvalue, new TripleDESCryptoServiceProvider(), mode); break;
+                    case InitializeVector.AES: Encrypt(targetString, keyValue, IVvalue, new AesCryptoServiceProvider(),mode); break;
+                }
             }
             else
             {
-                var finalString = Decrypt(targetString, keyValue, "vector");
-                FinalString = finalString;
+                switch (vector)
+                {
+                    case InitializeVector.DES: Decrypt(targetString, keyValue, IVvalue, new DESCryptoServiceProvider(),mode); break;
+                    case InitializeVector.TripleDES: Decrypt(targetString, keyValue, IVvalue, new TripleDESCryptoServiceProvider(),mode); break;
+                    case InitializeVector.AES: Decrypt(targetString, keyValue, IVvalue, new AesCryptoServiceProvider(),mode); break;
+                }
             }
         }
 
-        private static byte[] Encrypt(string text, string key, string iv)
+        private void Encrypt(string targetString, string keyValue, string IV, SymmetricAlgorithm cs, CipherMode mode)
         {
-            var cryptic = new DESCryptoServiceProvider();
-            cryptic.Key = Encoding.ASCII.GetBytes(key);
-            cryptic.Mode = CipherMode.CBC;
-            cryptic.IV = Encoding.ASCII.GetBytes(iv);
+            cs.Key = TrimValue(keyValue, cs);
+            cs.IV = TrimValue(IV, cs);
+            cs.Mode = mode;
 
-            var data = Encoding.UTF8.GetBytes(text);
+            var stream = new FileStream(@"C:\Users\mickle\Desktop\БІС\Symmetric1.txt", FileMode.OpenOrCreate,
+                FileAccess.Write);
 
-            var memoryStream = new MemoryStream();
-            var cryptoStream = new CryptoStream(memoryStream, cryptic.CreateEncryptor(), CryptoStreamMode.Write);
-            {
-                cryptoStream.Write(data, 0, data.Length);
-                cryptoStream.FlushFinalBlock();
-                return memoryStream.ToArray();
-            }
+            var crStream = new CryptoStream(stream,
+                cs.CreateEncryptor(), CryptoStreamMode.Write);
+
+            var data = Encoding.UTF8.GetBytes(targetString);
+            crStream.Write(data, 0, data.Length);
+            FinalString = Encoding.UTF8.GetString(data);
+
+            crStream.Close();
+            stream.Close();
         }
 
-        private static string Decrypt(string targetString, string key, string iv)
+        private void Decrypt(string targetString, string keyValue, string IV, SymmetricAlgorithm cs, CipherMode mode)
         {
-            var cryptic = new DESCryptoServiceProvider();
-            var encryptedData = Encoding.UTF8.GetBytes(targetString);
-            cryptic.Key = Encoding.ASCII.GetBytes(key);
-            cryptic.Mode = CipherMode.CBC;
-            cryptic.IV = Encoding.ASCII.GetBytes(iv);
+            cs.Key = TrimValue(keyValue, cs);
+            cs.IV = TrimValue(IV, cs);
+            cs.Mode = mode;
 
-            var memoryStream = new MemoryStream(encryptedData);
-            var cryptoStream = new CryptoStream(memoryStream, cryptic.CreateDecryptor(), CryptoStreamMode.Read);
-            var streamReader = new StreamReader(cryptoStream);
-            return streamReader.ReadToEnd();
+            var stream = new FileStream(@"C:\Users\mickle\Desktop\БІС\Symmetric1.txt", FileMode.OpenOrCreate,
+                FileAccess.Read);
+
+            var crStream = new CryptoStream(stream,
+                cs.CreateDecryptor(), CryptoStreamMode.Read);
+
+            var reader = new StreamReader(crStream);
+            var data = reader.ReadToEnd();
+
+            FinalString = data;
+            crStream.Close();
+            stream.Close();
+        }
+
+        private static byte[] TrimValue(string value, SymmetricAlgorithm cryptoProvider)
+        {
+            var val = Encoding.ASCII.GetBytes(value);
+            var trimmedKey = new byte[cryptoProvider.KeySize / 8];
+            Array.Copy(val, trimmedKey, Math.Min(val.Length, trimmedKey.Length));
+            return trimmedKey;
         }
     }
 }

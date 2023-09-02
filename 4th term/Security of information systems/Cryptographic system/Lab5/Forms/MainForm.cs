@@ -11,7 +11,8 @@ namespace Cryptographic_system.Lab5.Forms
     {
         private static string targetString; // string to cipher
         private static string keyValue; // variable for storing - motto (key) 
-        private static bool[] counter = new bool[3]; // Indicator whether Encrypt/Decrypt should be enabled
+        private static string IVvalue; // variable for storing - motto (key) 
+        private static bool[] counter = new bool[5]; // Indicator whether Encrypt/Decrypt should be enabled
         private static CipherMode mode = CipherMode.CBC;
         private static InitializeVector state = InitializeVector.NULL; // Enum - which cipher method to use
 
@@ -23,9 +24,6 @@ namespace Cryptographic_system.Lab5.Forms
             encryptToolStripMenuItem1.Enabled = false;
             decryptToolStripMenuItem.Enabled = false;
             decryptToolStripMenuItem1.Enabled = false;
-
-            KeyPanel.AutoSize = false;
-            KeyPanel.Height = 30;
         }
 
 
@@ -51,7 +49,8 @@ namespace Cryptographic_system.Lab5.Forms
         private void closeFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TextBox.Text = null;
-            KeyPanel.Text = null;
+            KeyBox.Text = null;
+            IVbox.Text = null;
             targetString = null;
             radioButtonDes.Checked = false;
             trippleDESRadio.Checked = false;
@@ -92,13 +91,13 @@ namespace Cryptographic_system.Lab5.Forms
             switch (state)
             {
                 case InitializeVector.DES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.DES, mode, true);
+                    symmetricCipher.DoAction(targetString, keyValue, IVvalue, InitializeVector.DES, mode, true);
                     break;
                 case InitializeVector.TripleDES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.TripleDES, mode, true);
+                    symmetricCipher.DoAction(targetString, keyValue, IVvalue, InitializeVector.TripleDES, mode, true);
                     break;
                 case InitializeVector.AES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.AES, mode, true);
+                    symmetricCipher.DoAction(targetString, keyValue, IVvalue, InitializeVector.AES, mode, true);
                     break;
             }
 
@@ -109,19 +108,7 @@ namespace Cryptographic_system.Lab5.Forms
         private void decryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var symmetricCipher = new SymmetricCipher();
-
-            switch (state)
-            {
-                case InitializeVector.DES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.DES, mode, false);
-                    break;
-                case InitializeVector.TripleDES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.TripleDES, mode, false);
-                    break;
-                case InitializeVector.AES:
-                    symmetricCipher.DoAction(targetString, keyValue, InitializeVector.AES, mode, false);
-                    break;
-            }
+            symmetricCipher.DoAction(targetString, keyValue, IVvalue, InitializeVector.DES, mode, false);
 
             TextBox.Text = symmetricCipher.FinalString;
             symmetricCipher.FinalString = "";
@@ -175,11 +162,11 @@ namespace Cryptographic_system.Lab5.Forms
 
         private static bool IsActive() // method to count whether the Encrypt/Decrypt buttons should be enabled
         {
-            if (counter[0] && counter[1] && counter[2])
+            if (counter[0] && counter[1] && counter[2] && counter[3] && counter[4])
             {
                 return true;
             }
-
+        
             return false;
         }
 
@@ -222,6 +209,28 @@ namespace Cryptographic_system.Lab5.Forms
         {
             mode = CipherMode.CFB;
             counter[2] = true;
+            TryToEnable();
+        }
+
+        private void KeyBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(KeyBox.Text))
+                counter[3] = false;
+            else
+                counter[3] = true;
+            
+            keyValue = KeyBox.Text;
+            TryToEnable();
+        }
+
+        private void IVbox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IVbox.Text))
+                counter[4] = false;
+            else
+                counter[4] = true;
+            
+            IVvalue = IVbox.Text;
             TryToEnable();
         }
     }

@@ -50,6 +50,9 @@ namespace Cryptographic_system.Lab5.Forms
             this.encryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.decryptToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.IVbox = new System.Windows.Forms.TextBox();
+            this.KeyBox = new System.Windows.Forms.TextBox();
+            this.IVlabel = new System.Windows.Forms.Label();
             this.grpMode = new System.Windows.Forms.GroupBox();
             this.CFBRadio = new System.Windows.Forms.RadioButton();
             this.ECBRadio = new System.Windows.Forms.RadioButton();
@@ -59,7 +62,6 @@ namespace Cryptographic_system.Lab5.Forms
             this.radioButtonDes = new System.Windows.Forms.RadioButton();
             this.AesRadio = new System.Windows.Forms.RadioButton();
             this.KeyLabel = new System.Windows.Forms.Label();
-            this.KeyPanel = new System.Windows.Forms.TextBox();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.Menu_panel.SuspendLayout();
@@ -201,15 +203,44 @@ namespace Cryptographic_system.Lab5.Forms
             this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(126)))), ((int)(((byte)(126)))));
             this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Menu_panel.Controls.Add(this.IVbox);
+            this.Menu_panel.Controls.Add(this.KeyBox);
+            this.Menu_panel.Controls.Add(this.IVlabel);
             this.Menu_panel.Controls.Add(this.grpMode);
             this.Menu_panel.Controls.Add(this.grpIV);
             this.Menu_panel.Controls.Add(this.KeyLabel);
-            this.Menu_panel.Controls.Add(this.KeyPanel);
             this.Menu_panel.Location = new System.Drawing.Point(0, 22);
             this.Menu_panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(882, 149);
             this.Menu_panel.TabIndex = 8;
+            // 
+            // IVbox
+            // 
+            this.IVbox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.IVbox.Location = new System.Drawing.Point(601, 90);
+            this.IVbox.Name = "IVbox";
+            this.IVbox.Size = new System.Drawing.Size(182, 34);
+            this.IVbox.TabIndex = 31;
+            this.IVbox.TextChanged += new System.EventHandler(this.IVbox_TextChanged);
+            // 
+            // KeyBox
+            // 
+            this.KeyBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.KeyBox.Location = new System.Drawing.Point(601, 25);
+            this.KeyBox.Name = "KeyBox";
+            this.KeyBox.Size = new System.Drawing.Size(182, 34);
+            this.KeyBox.TabIndex = 30;
+            this.KeyBox.TextChanged += new System.EventHandler(this.KeyBox_TextChanged);
+            // 
+            // IVlabel
+            // 
+            this.IVlabel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.IVlabel.Location = new System.Drawing.Point(530, 90);
+            this.IVlabel.Name = "IVlabel";
+            this.IVlabel.Size = new System.Drawing.Size(65, 34);
+            this.IVlabel.TabIndex = 29;
+            this.IVlabel.Text = "IV:";
             // 
             // grpMode
             // 
@@ -319,20 +350,9 @@ namespace Cryptographic_system.Lab5.Forms
             this.KeyLabel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.KeyLabel.Location = new System.Drawing.Point(530, 25);
             this.KeyLabel.Name = "KeyLabel";
-            this.KeyLabel.Size = new System.Drawing.Size(100, 34);
+            this.KeyLabel.Size = new System.Drawing.Size(65, 34);
             this.KeyLabel.TabIndex = 25;
             this.KeyLabel.Text = "Key:";
-            // 
-            // KeyPanel
-            // 
-            this.KeyPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.KeyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.KeyPanel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.KeyPanel.Location = new System.Drawing.Point(530, 73);
-            this.KeyPanel.Name = "KeyPanel";
-            this.KeyPanel.Size = new System.Drawing.Size(217, 38);
-            this.KeyPanel.TabIndex = 24;
-            this.KeyPanel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TextBox
             // 
@@ -372,6 +392,12 @@ namespace Cryptographic_system.Lab5.Forms
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.TextBox IVbox;
+
+        private System.Windows.Forms.TextBox KeyBox;
+
+        private System.Windows.Forms.Label IVlabel;
+
         private System.Windows.Forms.GroupBox grpMode;
 
         private System.Windows.Forms.GroupBox grpIV;
@@ -379,8 +405,6 @@ namespace Cryptographic_system.Lab5.Forms
         private System.Windows.Forms.TextBox TextBox;
 
         private System.Windows.Forms.Label KeyLabel;
-
-        private System.Windows.Forms.TextBox KeyPanel;
 
         private System.Windows.Forms.RadioButton radioButtonDes;
         private System.Windows.Forms.RadioButton trippleDESRadio;

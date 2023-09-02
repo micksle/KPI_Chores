@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iDriETeOLnP9xXEnD+1LBkikJHJ6C2eubw+s4YIV1Pu/pyo5z3OJxM/zAome4AwrPWDqgNI1xIWTo2UfyClFCw==",
+  "dgSpecHash": "YkEO2zJwotOdP2zJY2WQNhETt9ZbFHTOAR7KUWJ1jT4caC07dx5oklH1yzKcSG5ni4k1r5DRK9ELJxZoI9ihHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mickle\\RiderProjects\\KPI_Chores\\4th term\\Security of information systems\\Tests\\Tests.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mickle\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\mickle\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\mickle\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\mickle\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
