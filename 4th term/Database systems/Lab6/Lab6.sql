@@ -3,10 +3,8 @@ USE lab6;
 
 CALL create_tables;
 CALL fill_values;
-CALL add_extra_values;
 CALL select_tables;
 
-CALL truncate_tables;
 CALL delete_tables;
 
 SELECT * FROM driver;
@@ -14,7 +12,7 @@ SELECT * FROM expenses;
 SELECT * FROM route;
 SELECT * FROM transportation;
 SELECT * FROM salary;
-SELECT * FROM costOfTransportation;
+SELECT * FROM Cost_Of_Transportation;
 # -------------- -------------- -------------- DATABASE MANAGEMENT -------------- -------------- --------------
 # -------------- -------------- -------------- |-------- --------| -------------- -------------- --------------
 DELIMITER $$
@@ -34,7 +32,7 @@ CREATE TABLE driver (
 CREATE TABLE expenses(
 	ID INT NOT NULL AUTO_INCREMENT, 
 	Name VARCHAR(20) NOT NULL,
-	Sum DOUBLE NOT NULL,
+	Sum DECIMAL(10, 2) NOT NULL,
 	Comment VARCHAR(40) DEFAULT(NULL),
 
 	PRIMARY KEY(ID)
@@ -45,12 +43,12 @@ CREATE TABLE route (
 	DepartureName VARCHAR(30) NOT NULL,
 	ArrivalName VARCHAR(30) NOT NULL,
 	Distance DOUBLE NOT NULL,
-	Payment DECIMAL(8,2) NOT NULL,
+	Payment DECIMAL(10, 2) NOT NULL,
     Expenses DOUBLE,
 
+	PRIMARY KEY (ID),
 	CHECK (Distance > 0 AND Payment > 0 AND Expenses > 0),
-	CHECK (LENGTH(DepartureName) > 2 AND LENGTH(ArrivalName) > 2),
-	PRIMARY KEY (ID)
+	CHECK (LENGTH(DepartureName) > 2 AND LENGTH(ArrivalName) > 2)
 );
 
 CREATE TABLE transportation (
@@ -73,14 +71,14 @@ CREATE TABLE salary(
 	ID INT NOT NULL AUTO_INCREMENT, 
 	Transportation_ID INT NOT NULL,
 	Driver_ID INT NOT NULL,
-	TotalSalary INT,
+	TotalSalary DECIMAL(8,2),
 
 	PRIMARY KEY(ID),
 	CONSTRAINT s_transportation_CONST FOREIGN KEY (Transportation_ID) REFERENCES transportation(ID) ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT s_driver_CONST FOREIGN KEY (Driver_ID) REFERENCES driver(ID) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE costOfTransportation (
+CREATE TABLE Cost_Of_Transportation (
 	ID INT NOT NULL AUTO_INCREMENT,
 	Salary_ID INT NOT NULL,
     Salary INT NOT NULL,
@@ -151,82 +149,14 @@ INSERT INTO transportation (Route_ID, FirstDriver_ID, DepartureTime, ArrivalTime
 	(10, 3, '2023-05-27 07:08:10', '2023-05-27 23:59:01', 11.8),
 	(4, 7, '2023-05-03 14:00:23', '2023-05-03 23:25:31', 2.8),
 	(3, 8, '2023-04-12 14:22:53', current_timestamp(), 3.6);
-
-INSERT INTO salary (Transportation_ID, Driver_ID)
-	SELECT transportation.ID, transportation.FirstDriver_ID  FROM transportation;
-END $$
-DELIMITER ;
-CALL fill_values;
-
-# |---------------------------------------------------------------|
-DELIMITER $$
-CREATE PROCEDURE define_EU(IN Route_ID INT, OUT IsEU BOOLEAN)
-BEGIN
-	SET @DepartureName = (SELECT DepartureName FROM route WHERE Route_ID = route.ID);
-	SET @ArrivalName = (SELECT ArrivalName FROM route WHERE Route_ID = route.ID);
     
-	SET IsEU = (CASE
-		WHEN (@DepartureName IN('Riga', 'Warsaw', 'TalliNn', 'Poznań')
-			OR @ArrivalName IN('Riga', 'Warsaw', 'TalliNn', 'Poznań'))
-            THEN true
-		ELSE
-			false
-        END);
-END $$
-DELIMITER ;
-
-DELIMITER $$
-CREATE PROCEDURE count_expenses(IN Route_ID INT)
-BEGIN
-    DECLARE isEU BOOLEAN;
-    
-	SET @Distance = (SELECT Distance FROM route WHERE Route_ID = route.ID);
-
-    -- Виклик процедури define_EU та отримання значень
-    CALL define_EU(Route_ID, isEU);
-    
-    -- SET @IsEU = (SELECT Route_id, @IsEU FROM define_EU);
-    
-	SET @Fuel = (SELECT Sum FROM expenses WHERE Name = 'Fuel');
-	SET @Supplies = (SELECT Sum FROM expenses WHERE Name = 'Supplies');
-	SET @Permission = (SELECT Sum FROM expenses WHERE Name = 'Permission');
-    
-    # 17 - fuel comsamption by the bus, 0.4 - supplies per 1000 km
-    SET @BasicExpenses = (((@Distance * 17) / 100) * @Fuel) + (((@Distance * 0.4) / 1000) * @Supplies); # fuel + supplies
-    SET @ExtraExpenses = IF(isEU = true, @Permission, 0);
-    
-	UPDATE route SET Expenses = FORMAT((@BasicExpenses + @ExtraExpenses), 2) WHERE route.ID = Route_ID;
-END $$
-DELIMITER ;
-# |---------------------------------------------------------------|
-
-DELIMITER $$
-CREATE PROCEDURE add_extra_values()
-BEGIN
-	CALL count_expenses(1);
-	CALL count_expenses(2);
-	CALL count_expenses(3);
-	CALL count_expenses(4);
-	CALL count_expenses(5);
-	CALL count_expenses(6);
-	CALL count_expenses(7);
-	CALL count_expenses(8);
-	CALL count_expenses(9);
-	CALL count_expenses(10);
-	CALL count_expenses(11);
-	CALL count_expenses(12);
-	CALL count_expenses(13);
-	CALL count_expenses(14);
-	CALL count_expenses(15);
-	CALL count_expenses(16);
-	
-	INSERT INTO costOfTransportation (Salary_ID, Salary, Expenses, FullCost) 
+INSERT INTO Cost_Of_Transportation (Salary_ID, Salary, Expenses, FullCost) 
 		SELECT s.ID, s.TotalSalary, r.Expenses, ROUND((s.TotalSalary + r.Expenses), 2) FROM salary AS s
 			INNER JOIN transportation AS t ON s.Transportation_ID = t.ID
 			INNER JOIN route AS r ON r.ID = t.Route_ID;
 END $$
 DELIMITER ;
-CALL add_extra_values;
+CALL fill_values;
 
 DELIMITER $$
 CREATE PROCEDURE select_tables()
@@ -236,28 +166,15 @@ BEGIN
 	SELECT * FROM route;
 	SELECT * FROM transportation;
 	SELECT * FROM salary;
-	SELECT * FROM costOfTransportation;
+	SELECT * FROM Cost_Of_Transportation;
 END $$
 DELIMITER ;
 CALL select_tables;
 
 DELIMITER $$
-CREATE PROCEDURE truncate_tables()
-BEGIN
-	TRUNCATE TABLE costOfTransportation;
-	TRUNCATE TABLE salary;
-	TRUNCATE TABLE transportation;
-	TRUNCATE TABLE route;
-    TRUNCATE TABLE expenses;
-	TRUNCATE TABLE driver;
-END $$
-DELIMITER ;
-CALL truncate_tables;
-
-DELIMITER $$
 CREATE PROCEDURE delete_tables()
 BEGIN
-	DROP TABLE IF EXISTS costOfTransportation;
+	DROP TABLE IF EXISTS Cost_Of_Transportation;
 	DROP TABLE IF EXISTS salary;
 	DROP TABLE IF EXISTS transportation;
 	DROP TABLE IF EXISTS route;
@@ -270,16 +187,52 @@ CALL delete_tables;
 
 DROP PROCEDURE IF EXISTS create_tables;
 DROP PROCEDURE IF EXISTS fill_values;
-DROP PROCEDURE IF EXISTS add_extra_values;
 DROP PROCEDURE IF EXISTS select_tables;
 DROP PROCEDURE IF EXISTS delete_tables;
 
-DROP PROCEDURE IF EXISTS define_EU;
-DROP PROCEDURE IF EXISTS count_expenses;
-DROP PROCEDURE IF EXISTS count_total_salary;
 
 DROP DATABASE IF EXISTS lab6;
-# |---------------------------------------------------------------|
+# |-------------- -------------- -------------- -------------- -------------- --------------|
+# |-------------- -------------- -------------- -------------- -------------- --------------|
+DELIMITER $$
+CREATE TRIGGER calculate_route_payment
+BEFORE INSERT ON route
+FOR EACH ROW
+BEGIN
+	SET @Distance = NEW.Distance;
+    
+	SET NEW.Payment = CASE
+			WHEN @Distance > 900 THEN ROUND(@Distance * 2.3, 2)
+			WHEN @Distance < 500 THEN ROUND(@Distance * 1.9, 2)
+            ELSE ROUND(@Distance * 2.01, 2)
+        END;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER calculate_route_expenses
+BEFORE INSERT ON route
+FOR EACH ROW FOLLOWS calculate_route_payment
+BEGIN
+    DECLARE isEU BOOLEAN;
+
+    SET isEU = (CASE
+        WHEN (NEW.DepartureName IN ('Riga', 'Warsaw', 'TalliNn', 'Poznań')
+            OR NEW.ArrivalName IN ('Riga', 'Warsaw', 'TalliNn', 'Poznań')) THEN true
+        ELSE false
+    END);
+
+    SET @Fuel = (SELECT Sum FROM expenses WHERE Name = 'Fuel');
+    SET @Supplies = (SELECT Sum FROM expenses WHERE Name = 'Supplies');
+    SET @Permission = (SELECT Sum FROM expenses WHERE Name = 'Permission');
+
+    -- 17 - fuel consumption by the bus, 0.4 - supplies per 1000 km
+    SET @BasicExpenses = (((NEW.Distance * 17) / 100) * @Fuel) + (((NEW.Distance * 0.4) / 1000) * @Supplies); -- fuel + supplies
+    SET @ExtraExpenses = IF(isEU = true, @Permission, 0);         -- permission to pass the border
+
+    SET NEW.Expenses = FORMAT((@BasicExpenses + @ExtraExpenses), 2);
+END $$
+DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER calculate_salary
@@ -346,38 +299,52 @@ END $$
 DELIMITER ;
 
 
+DROP TRIGGER IF EXISTS calculate_route_payment;
+DROP TRIGGER IF EXISTS calculate_route_expenses;
 DROP TRIGGER IF EXISTS calculate_salary;
-# |---------------------------------------------------------------|
-
-CREATE OR REPLACE VIEW salary_view AS
-SELECT s.ID as ID,
-		d.ID as Driver_ID,
+# |-------------- -------------- -------------- -------------- -------------- --------------|
+# |-------------- -------------- -------------- -------------- -------------- --------------|
+CREATE OR REPLACE VIEW transportation_view AS
+SELECT t.ID AS ID,
+        r.ID AS Route_ID,
+        r.ArrivalName,
+        r.DepartureName,
+        t.ArrivalTime,
+        t.DepartureTime,
+		t.FirstDriver_ID,
 		d.name,
         d.surname,
-        d.Experience,
-        t.ID as Transportation_ID,
-        t.FirstDriver_ID,
-        t.SecondDriver_ID,
-        t.Bonus,
-        r.ID as Route_ID,
-        r.Payment,
-        s.TotalSalary
+        COALESCE(t.SecondDriver_ID, 'missing') AS Partner
+FROM transportation AS t
+	INNER JOIN driver AS d ON d.ID = t.FirstDriver_ID
+	INNER JOIN route AS r ON t.Route_ID = r.ID
+ORDER BY t.ID;
+
+CREATE OR REPLACE VIEW salary_view AS
+SELECT s.ID AS ID,
+        t.ID AS Transportation_ID,
+		d.ID AS Driver_ID,
+		d.name,
+        d.surname,
+        s.TotalSalary AS Salary
 FROM salary AS s
 	INNER JOIN transportation AS t ON t.ID = s.Transportation_ID
 	INNER JOIN driver AS d ON d.ID = s.Driver_ID
-	INNER JOIN route AS r ON t.Route_ID = r.ID
 ORDER BY s.ID;
 
+SELECT * FROM transportation_view;
 SELECT * FROM salary_view;
+
+DROP VIEW IF EXISTS transportation_view;
 DROP VIEW IF EXISTS salary_view;
 # -------------- -------------- -------------- RELATOINAL  ALGEBRA -------------- -------------- --------------
 # -------------- -------------- -------------- |----- LAB6 ------| -------------- -------------- --------------
 
 # |-------- ОБ'ЄДНАННЯ --------| 
 
-SELECT Expenses FROM costOfTransportation
+SELECT Expenses FROM Cost_Of_Transportation
 	UNION 
-    SELECT Salary FROM costOfTransportation;
+    SELECT Salary FROM Cost_Of_Transportation;
 
 # |-------- ПЕРЕТИН --------| 
 
@@ -458,7 +425,7 @@ SELECT t.Route_ID,
 # |-------- ДІЛЕННЯ --------| 
 
 SELECT *, TRUNCATE((Expenses / FullCost * 100), 2) AS Exp_to_FullCost
-	FROM costoftransportation AS c
+	FROM Cost_Of_Transportation AS c
 	WHERE NOT EXISTS (
 		SELECT *
         FROM salary
@@ -478,7 +445,7 @@ SELECT ID,
 SELECT Expenses,
 	FullCost, 
     TRUNCATE((Expenses / FullCost * 100), 2) AS 'Expenses_To_FullCost, %' 
-    FROM costofTransportation;
+    FROM Cost_Of_Transportation;
 
 # |-------- ПІДБИТТЯ ПІДСУМКІВ --------| 
 
@@ -579,18 +546,18 @@ FROM route AS r
         
 # |-------- ПРИКЛАДИ ВИКОРИСТАННЯ CASE або IF В ЗАПИТАХ UPDATE, DELETE --------| 
  
-CREATE TABLE tempTable SELECT * FROM costOfTransportation; 
+CREATE TABLE tempTable SELECT * FROM Cost_Of_Transportation; 
 DROP TABLE tempTable;
 
 SELECT * FROM tempTable;
-SELECT * FROM costOfTransportation;
+SELECT * FROM Cost_Of_Transportation;
     
 UPDATE tempTable
 SET Salary = 
   CASE
-    WHEN Salary < (SELECT AVG(FullCost) FROM costOfTransportation) 
+    WHEN Salary < (SELECT AVG(FullCost) FROM Cost_Of_Transportation) 
 		THEN Salary + (Salary * 5 / 100)
-    WHEN Salary >= (SELECT AVG(FullCost) FROM costOfTransportation)
+    WHEN Salary >= (SELECT AVG(FullCost) FROM Cost_Of_Transportation)
 		THEN Salary + (Salary * 2 / 100)
     ELSE Salary
   END;
@@ -598,9 +565,9 @@ SET Salary =
 DELETE FROM tempTable WHERE ID 
 	IN (SELECT tempTable.ID FROM (
 		SELECT t.ID, 
-			IF (c.FullCost > (SELECT AVG(FullCost) FROM costOfTransportation), '1', '2') AS group_name
+			IF (c.FullCost > (SELECT AVG(FullCost) FROM Cost_Of_Transportation), '1', '2') AS group_name
 		FROM tempTable t
-		JOIN costOfTransportation c ON t.ID = c.ID) AS subquery 
+		JOIN Cost_Of_Transportation c ON t.ID = c.ID) AS subquery 
 		WHERE group_name = '1' OR group_name = '2') 
 	ORDER BY tempTable.FullCost DESC
 	LIMIT 2;
