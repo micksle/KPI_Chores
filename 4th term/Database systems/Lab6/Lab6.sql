@@ -282,56 +282,94 @@ DROP DATABASE IF EXISTS lab6;
 # |---------------------------------------------------------------|
 
 DELIMITER $$
-CREATE TRIGGER add_salary_info
-    AFTER INSERT ON transportation
-    FOR EACH ROW
+CREATE TRIGGER calculate_salary
+AFTER INSERT ON transportation
+FOR EACH ROW
 BEGIN
-    IF (NEW.SecondDriver_ID IS NOT NULL) THEN
-		SET @SecondDriverValue = true;
-	ELSE 
-		SET @SecondDriverValue = false;
-	END IF;
-  
+    DECLARE FirstDriverSalary DECIMAL(10, 2);
+    DECLARE SecondDriverSalary DECIMAL(10, 2);
+
+    SET @BonusValue = NEW.Bonus;
 	SET @PaymentValue = (
-		SELECT r.Payment FROM transportation AS t
-		INNER JOIN route AS r ON t.route_ID = r.ID
-        WHERE r.ID = NEW.Route_ID
-        LIMIT 1); -- the routes may repeat but the overall price will still be the same so it doesnt metter which one to choose (could`ve been SELECT AVG(r.Paument) as well
-   
-	SET @ExperienceValue = (
-		SELECT Experience FROM transportation AS t
-		INNER JOIN driver AS d ON d.ID = NEW.FirstDriver_ID
-        WHERE d.id = NEW.FirstDriver_ID
+		SELECT Payment FROM route
+		WHERE ID = NEW.Route_ID 
+        LIMIT 1);
+
+    SET @ExperienceValue = (
+		SELECT Experience FROM driver
+		WHERE ID = NEW.FirstDriver_ID
         LIMIT 1);
         
-	SET @BonusValue = NEW.Bonus;
+    SET FirstDriverSalary = @PaymentValue;
 
-	SET @FinalPayment = @PaymentValue;
-    SET @ExperienceGT4 = (@PaymentValue * 0.05);				-- + 5% of income for the route if it is > 4 years of exp
-    SET @ExperienceGT10 = (@PaymentValue * 0.1);				-- + 10% of income for the route if it is > 10 years of exp
-    SET @TwoDrivers = (@PaymentValue * 0.3); 					-- - 30% of income for the route if it is a route w partner
-    SET @Bonus = (@PaymentValue * @BonusValue / 100);			-- + bonus percentage for specific routes
-    
-	IF @SecondDriverValue = true THEN
-		SET @FinalPayment = @FinalPayment - @TwoDrivers;
-	END IF;
-    
     IF @BonusValue IS NOT NULL THEN
-		SET @FinalPayment = @FinalPayment + @Bonus;
-	END IF;
-    
-    IF @ExperienceValue >= 10 THEN
-		SET @FinalPayment = @FinalPayment + @ExperienceGT10; 
-	ELSEIF @ExperienceValue >= 4 THEN
-		SET @FinalPayment = @FinalPayment + @ExperienceGT4; 
+        SET FirstDriverSalary = FirstDriverSalary + (@PaymentValue * @BonusValue / 100);
     END IF;
-    
-    INSERT INTO salary(Transportation_ID, Driver_ID, TotalSalary) VALUES (NEW.ID, NEW.FirstDriver_ID, ROUND(@FinalPayment));
+
+    -- Розрахунок додаткової надбавки для першого водія залежно від досвіду
+    IF @ExperienceValue >= 10 THEN
+        SET FirstDriverSalary = FirstDriverSalary + (@PaymentValue * 0.1); -- +10%
+    ELSEIF @ExperienceValue >= 4 THEN
+        SET FirstDriverSalary = FirstDriverSalary + (@PaymentValue * 0.05); -- +5%
+    END IF;
+
+    -- Якщо є другий водій
+    IF NEW.SecondDriver_ID IS NOT NULL THEN
+        SET @ExperienceValue = (
+			SELECT Experience FROM driver
+            WHERE ID = NEW.SecondDriver_ID
+            LIMIT 1);
+
+        SET SecondDriverSalary = @PaymentValue;
+
+        IF @BonusValue IS NOT NULL THEN
+            SET SecondDriverSalary = SecondDriverSalary + (@PaymentValue * @BonusValue / 100);
+        END IF;
+
+    -- Розрахунок додаткової надбавки для другого водія залежно від досвіду
+        IF @ExperienceValue >= 10 THEN
+            SET SecondDriverSalary = SecondDriverSalary + (@PaymentValue * 0.1); -- +10%
+        ELSEIF @ExperienceValue >= 4 THEN
+            SET SecondDriverSalary = SecondDriverSalary + (@PaymentValue * 0.05); -- +5%
+        END IF;
+    END IF;
+
+    -- Зберігаємо зарплати в таблиці salary
+    INSERT INTO salary (Transportation_ID, Driver_ID, TotalSalary)
+    VALUES (NEW.ID, NEW.FirstDriver_ID, FirstDriverSalary);
+
+    IF NEW.SecondDriver_ID IS NOT NULL THEN
+        INSERT INTO salary (Transportation_ID, Driver_ID, TotalSalary)
+        VALUES (NEW.ID, NEW.SecondDriver_ID, SecondDriverSalary);
+    END IF;
 END $$
 DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS add_salary_info;
+DROP TRIGGER IF EXISTS calculate_salary;
+# |---------------------------------------------------------------|
+
+CREATE OR REPLACE VIEW salary_view AS
+SELECT s.ID as ID,
+		d.ID as Driver_ID,
+		d.name,
+        d.surname,
+        d.Experience,
+        t.ID as Transportation_ID,
+        t.FirstDriver_ID,
+        t.SecondDriver_ID,
+        t.Bonus,
+        r.ID as Route_ID,
+        r.Payment,
+        s.TotalSalary
+FROM salary AS s
+	INNER JOIN transportation AS t ON t.ID = s.Transportation_ID
+	INNER JOIN driver AS d ON d.ID = s.Driver_ID
+	INNER JOIN route AS r ON t.Route_ID = r.ID
+ORDER BY s.ID;
+
+SELECT * FROM salary_view;
+DROP VIEW IF EXISTS salary_view;
 # -------------- -------------- -------------- RELATOINAL  ALGEBRA -------------- -------------- --------------
 # -------------- -------------- -------------- |----- LAB6 ------| -------------- -------------- --------------
 
