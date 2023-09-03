@@ -1,11 +1,13 @@
 CREATE DATABASE lab6;
 USE lab6;
 
-
 CALL create_tables;
 CALL fill_values;
 CALL add_extra_values;
 CALL select_tables;
+
+CALL truncate_tables;
+CALL delete_tables;
 
 SELECT * FROM driver;
 SELECT * FROM expenses;
@@ -196,57 +198,6 @@ BEGIN
 	UPDATE route SET Expenses = FORMAT((@BasicExpenses + @ExtraExpenses), 2) WHERE route.ID = Route_ID;
 END $$
 DELIMITER ;
-
-DELIMITER $$
-CREATE PROCEDURE count_total_salary(IN Salary_ID INT)
-BEGIN
-	IF (SELECT SecondDriver_ID FROM salary AS s
-		INNER JOIN transportation ON s.transportation_ID = transportation.ID
-        WHERE s.ID = Salary_ID)
-		IS NOT NULL THEN SET @SecondDriverValue = true;
-	ELSE 
-		SET @SecondDriverValue = false;
-	END IF;
-    
-	SET @PaymentValue = (
-		SELECT r.Payment FROM salary AS s
-		INNER JOIN transportation AS t ON s.transportation_ID = t.ID
-		INNER JOIN route AS r ON t.route_ID = r.ID
-        WHERE s.ID = Salary_ID
-	);
-        
-	SET @ExperienceValue = (SELECT Experience FROM salary AS s
-		INNER JOIN transportation AS t ON s.transportation_ID = t.ID
-		INNER JOIN driver AS d ON d.ID = t.FirstDriver_ID 
-        WHERE s.ID = Salary_ID);  -- OR d.ID = t.SecondDriver_ID) 
-        
-	SET @BonusValue = (SELECT Bonus FROM salary AS s
-		INNER JOIN transportation AS t ON s.transportation_ID = t.ID
-        WHERE s.ID = Salary_ID);
-
-    SET @FinalPayment = @PaymentValue;
-    SET @ExperienceGT4 = (@PaymentValue * 0.05);
-    SET @ExperienceGT10 = (@PaymentValue * 0.1);
-    SET @TwoDrivers = (@PaymentValue * 0.3); 
-    SET @Bonus = (@PaymentValue * @BonusValue / 100);
-    
-	IF @SecondDriverValue = true THEN
-		SET @FinalPayment = @FinalPayment - @TwoDrivers;
-	END IF;
-    
-    IF @BonusValue IS NOT NULL THEN
-		SET @FinalPayment = @FinalPayment + @Bonus;
-	END IF;
-    
-    IF @ExperienceValue >= 10 THEN
-		SET @FinalPayment = @FinalPayment + @ExperienceGT10; 
-	ELSEIF @Experience >= 4 AND @Experience < 10 THEN
-		SET @FinalPayment = @FinalPayment + @ExperienceGT4; 
-    END IF;
-    
-	UPDATE salary SET TotalSalary = ROUND(@FinalPayment) WHERE salary.ID = Salary_ID;
-END $$
-DELIMITER ;
 # |---------------------------------------------------------------|
 
 DELIMITER $$
@@ -269,23 +220,6 @@ BEGIN
 	CALL count_expenses(15);
 	CALL count_expenses(16);
 	
-	CALL count_total_salary(1);
-	CALL count_total_salary(2);
-	CALL count_total_salary(3);
-	CALL count_total_salary(4);
-	CALL count_total_salary(5);
-	CALL count_total_salary(6);
-	CALL count_total_salary(7);
-	CALL count_total_salary(8);
-	CALL count_total_salary(9);
-	CALL count_total_salary(10);
-	CALL count_total_salary(11);
-	CALL count_total_salary(12);
-	CALL count_total_salary(13);
-	CALL count_total_salary(14);
-	CALL count_total_salary(15);
-	CALL count_total_salary(16);
-	
 	INSERT INTO costOfTransportation (Salary_ID, Salary, Expenses, FullCost) 
 		SELECT s.ID, s.TotalSalary, r.Expenses, ROUND((s.TotalSalary + r.Expenses), 2) FROM salary AS s
 			INNER JOIN transportation AS t ON s.Transportation_ID = t.ID
@@ -306,6 +240,19 @@ BEGIN
 END $$
 DELIMITER ;
 CALL select_tables;
+
+DELIMITER $$
+CREATE PROCEDURE truncate_tables()
+BEGIN
+	TRUNCATE TABLE costOfTransportation;
+	TRUNCATE TABLE salary;
+	TRUNCATE TABLE transportation;
+	TRUNCATE TABLE route;
+    TRUNCATE TABLE expenses;
+	TRUNCATE TABLE driver;
+END $$
+DELIMITER ;
+CALL truncate_tables;
 
 DELIMITER $$
 CREATE PROCEDURE delete_tables()
@@ -332,6 +279,59 @@ DROP PROCEDURE IF EXISTS count_expenses;
 DROP PROCEDURE IF EXISTS count_total_salary;
 
 DROP DATABASE IF EXISTS lab6;
+# |---------------------------------------------------------------|
+
+DELIMITER $$
+CREATE TRIGGER add_salary_info
+    AFTER INSERT ON transportation
+    FOR EACH ROW
+BEGIN
+    IF (NEW.SecondDriver_ID IS NOT NULL) THEN
+		SET @SecondDriverValue = true;
+	ELSE 
+		SET @SecondDriverValue = false;
+	END IF;
+  
+	SET @PaymentValue = (
+		SELECT r.Payment FROM transportation AS t
+		INNER JOIN route AS r ON t.route_ID = r.ID
+        WHERE r.ID = NEW.Route_ID
+        LIMIT 1); -- the routes may repeat but the overall price will still be the same so it doesnt metter which one to choose (could`ve been SELECT AVG(r.Paument) as well
+   
+	SET @ExperienceValue = (
+		SELECT Experience FROM transportation AS t
+		INNER JOIN driver AS d ON d.ID = NEW.FirstDriver_ID
+        WHERE d.id = NEW.FirstDriver_ID
+        LIMIT 1);
+        
+	SET @BonusValue = NEW.Bonus;
+
+	SET @FinalPayment = @PaymentValue;
+    SET @ExperienceGT4 = (@PaymentValue * 0.05);				-- + 5% of income for the route if it is > 4 years of exp
+    SET @ExperienceGT10 = (@PaymentValue * 0.1);				-- + 10% of income for the route if it is > 10 years of exp
+    SET @TwoDrivers = (@PaymentValue * 0.3); 					-- - 30% of income for the route if it is a route w partner
+    SET @Bonus = (@PaymentValue * @BonusValue / 100);			-- + bonus percentage for specific routes
+    
+	IF @SecondDriverValue = true THEN
+		SET @FinalPayment = @FinalPayment - @TwoDrivers;
+	END IF;
+    
+    IF @BonusValue IS NOT NULL THEN
+		SET @FinalPayment = @FinalPayment + @Bonus;
+	END IF;
+    
+    IF @ExperienceValue >= 10 THEN
+		SET @FinalPayment = @FinalPayment + @ExperienceGT10; 
+	ELSEIF @ExperienceValue >= 4 THEN
+		SET @FinalPayment = @FinalPayment + @ExperienceGT4; 
+    END IF;
+    
+    INSERT INTO salary(Transportation_ID, Driver_ID, TotalSalary) VALUES (NEW.ID, NEW.FirstDriver_ID, ROUND(@FinalPayment));
+END $$
+DELIMITER ;
+
+
+DROP TRIGGER IF EXISTS add_salary_info;
 # -------------- -------------- -------------- RELATOINAL  ALGEBRA -------------- -------------- --------------
 # -------------- -------------- -------------- |----- LAB6 ------| -------------- -------------- --------------
 
